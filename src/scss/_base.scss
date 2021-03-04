@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'PT Mono', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: $dark;
+}
+
+body {
+    background-color: $primary;
+}
+
+.container {
+    max-width: 90vw;
+    margin: 0 auto;
+}
