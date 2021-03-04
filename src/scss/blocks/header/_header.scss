@@ -4,15 +4,18 @@
         margin-top: 3rem;
         margin-left: 5rem;
         width: 40vw;
+
         &_list {
             display: flex;
             justify-content: space-between;
             list-style-type: none;
             transition: .3s;
+            
         &_item {
             position: relative;
             display: inline-block;
             padding: 10px 5px;
+            color: $dark;
             &_link {
                 letter-spacing: 0.1em;
                 

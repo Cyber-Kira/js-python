@@ -4,6 +4,10 @@
         width: 80vw;
         justify-content: space-between;
         align-items: center;
+
+        &_img {
+            width: 400px;
+        }
     }
     &_hero {
         display: flex;
@@ -32,6 +36,7 @@
             justify-content: space-between;
             width: 20vw;
             font-size: 1.125rem;
+            color: $secondary;
 
             &_first {
                 margin-bottom: 1rem;
