@@ -1,25 +1,32 @@
 .header {
     font-size: 1.25rem;
     &_nav {
-        margin-top: 3rem;
-        margin-left: 5rem;
-        width: 40vw;
+        margin-top: 1.5rem;
+        display: flex;
+        justify-content: center;
 
         &_list {
-            display: flex;
-            justify-content: space-between;
             list-style-type: none;
-            transition: .3s;
+            text-align: center;
+
+            @media screen and (min-width: 625px) {
+                display: flex;
+                flex-direction: row;
+            }
+
+            @media screen and (min-width: 1024px) {
+                width: 90vw;
+            }
             
         &_item {
             position: relative;
-            display: inline-block;
-            padding: 10px 5px;
             color: $dark;
+            
             &_link {
+                display: inline-block;
                 letter-spacing: 0.1em;
-                
-                padding: 10px 5px;
+                padding: 15px 10px;
+                width: 100%;
 
                 &:after {    
                     position: absolute;
@@ -36,6 +43,9 @@
                   &:hover:after { 
                     width: 100%; 
                     left: 0; 
+                  }
+                  &:active {
+                      color: blueviolet;
                   }
                 }
             }

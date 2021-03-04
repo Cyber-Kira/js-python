@@ -1,42 +1,89 @@
 .main {
     &_wrapper {
         display: flex;
-        width: 80vw;
-        justify-content: space-between;
-        align-items: center;
 
         &_img {
-            width: 400px;
+            display: none;
+
+            @media screen and (min-width: 1024px) {
+                width: 200px;
+                display: inline-block;
+            }
+
+            @media screen and (min-width: 1440px) {
+                width: 300px;
+                display: inline-block;
+            }
+
+            @media screen and (min-width: 1700px) {
+                width: 400px;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            justify-content: space-between;
+            align-items: center;
+            width: 80vw;
         }
     }
     &_hero {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-self: center;
-
-        height: 70vh;
         
         &_header {
-            font-size: 4rem;
-            margin-bottom: 1.5rem;
+            font-size: 2rem;
+
+            margin-bottom: 2rem;
+            margin-top: 3rem;
+
             font-weight: 400;
             color: $dark;
+
+            @media screen and (min-width: 1024px) {
+                font-size: 4rem;
+            }
         }
 
         &_text {
             font-size: 1.3rem;
             margin-bottom: 3rem;
-            width: 40vw;
             color: $secondary;
+
+            @media screen and (min-width: 1024px) {
+                width: 50vw;
+            }
+
+            @media screen and (min-width: 1324px) {
+                width: 40vw;
+            }
         }
 
         &_info {
             display: flex;
             justify-content: space-between;
-            width: 20vw;
             font-size: 1.125rem;
             color: $secondary;
+
+            @media screen and (min-width: 400px) {
+                width: 80vw;
+            }
+
+            @media screen and (min-width: 600px) {
+                width: 60vw;
+            }
+
+            @media screen and (min-width: 768px) {
+                width: 40vw;
+            }
+
+            @media screen and (min-width: 1024px) {
+                width: 30vw;
+            }
+
+            @media screen and (min-width: 1440px) {
+                width: 22vw;
+            }
+
 
             &_first {
                 margin-bottom: 1rem;

@@ -1,16 +1,17 @@
 .footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-top: 4rem;
 
-    width: 100vw;
-    height: 10vh;
-    &_text {
-        width: 60%;
+    @media screen and (min-width: 625px) {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        
         text-align: center;
+    }
+
+    &_text {
         color: $secondary;
+        padding-bottom: 2rem;
     }
 }
