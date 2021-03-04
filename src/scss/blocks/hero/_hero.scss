@@ -1,0 +1,41 @@
+.main {
+    &_wrapper {
+        display: flex;
+        width: 80vw;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &_hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+
+        height: 70vh;
+        
+        &_header {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+            color: $dark;
+        }
+
+        &_text {
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
+            width: 40vw;
+            color: $secondary;
+        }
+
+        &_info {
+            display: flex;
+            justify-content: space-between;
+            width: 20vw;
+            font-size: 1.125rem;
+
+            &_first {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}
