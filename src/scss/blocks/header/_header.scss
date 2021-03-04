@@ -1,0 +1,42 @@
+.header {
+    font-size: 1.25rem;
+    &_nav {
+        margin-top: 3rem;
+        margin-left: 5rem;
+        width: 40vw;
+        &_list {
+            display: flex;
+            justify-content: space-between;
+            list-style-type: none;
+            transition: .3s;
+        &_item {
+            position: relative;
+            display: inline-block;
+            padding: 10px 5px;
+            &_link {
+                letter-spacing: 0.1em;
+                
+                padding: 10px 5px;
+
+                &:after {    
+                    position: absolute;
+                    background: none repeat scroll 0 0 transparent;
+                    bottom: 0;
+                    content: "";
+                    display: block;
+                    height: 1px;
+                    width: 0;
+                    left: 50%;
+                    background: $dark;
+                    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                  }
+                  &:hover:after { 
+                    width: 100%; 
+                    left: 0; 
+                  }
+                }
+            }
+        }
+    }
+    
+}
