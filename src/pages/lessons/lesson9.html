@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../css/style.css">
+   <title>Document</title>
+</head>
+
+<body>
+   <header class="header">
+      <nav class="header_nav">
+         <ul class="header_nav_list">
+            <li class="header_nav_list_item"><a class="header_nav_list_item_link" href="#">Уроки</a></li>
+            <li class="header_nav_list_item"><a class="header_nav_list_item_link" href="#">Практические</a></li>
+            <li class="header_nav_list_item"><a class="header_nav_list_item_link" href="#">Лабораторные</a></li>
+            <li class="header_nav_list_item"><a class="header_nav_list_item_link" href="#">Тест</a></li>
+         </ul>
+      </nav>
+   </header>
+
+   <div class="wrapper">
+      <div class="sidebar">
+         <ul>
+            <li><a href="#">Уроки</a></li>
+            <li><a href="#">Практические</a></li>
+            <li><a href="#">Лабораторные</a></li>
+            <li><a href="#">Тест</a></li>
+         </ul>
+      </div>
+      <div class="main_content">
+         <h1>Числа: целые, вещественные, комплексные</h1>
+         <p>Числа в Python 3: целые, вещественные, комплексные. Работа с числами и операции над ними.</p>
+
+         <h2>Целые числа (int)</h2>
+         <p>Числа в Python 3 ничем не отличаются от обычных чисел. Они поддерживают набор самых обычных математических
+            операций:</p>
+         <table border="1">
+            <tbody valign="top">
+               <tr>
+                  <td>x + y</td>
+                  <td>Сложение</td>
+               </tr>
+               <tr>
+                  <td>x - y</td>
+                  <td>Вычитание</td>
+               </tr>
+               <tr>
+                  <td>x * y</td>
+                  <td>Умножение</td>
+               </tr>
+               <tr>
+                  <td>x / y</td>
+                  <td>Деление</td>
+               </tr>
+               <tr>
+                  <td>x // y</td>
+                  <td>Получение целой части от деления</td>
+               </tr>
+               <tr>
+                  <td>x % y</td>
+                  <td>Остаток от деления</td>
+               </tr>
+               <tr>
+                  <td>-x</td>
+                  <td>Смена знака числа</td>
+               </tr>
+               <tr>
+                  <td>abs(x)</td>
+                  <td>Модуль числа</td>
+               </tr>
+               <tr>
+                  <td>divmod(x, y)</td>
+                  <td>Пара (x // y, x % y)</td>
+               </tr>
+               <tr>
+                  <td>x ** y</td>
+                  <td>Возведение в степень</td>
+               </tr>
+               <tr>
+                  <td>pow(x, y[, z])</td>
+                  <td>x<sup>y</sup> по модулю (если модуль задан)</td>
+               </tr>
+            </tbody>
+         </table>
+         <p>Также нужно отметить, что целые числа в python 3, в отличие от многих других языков, поддерживают длинную
+            арифметику (однако, это требует больше памяти).</p>
+         <pre>
+<code>
+>>> 255 + 34
+289
+>>> 5 * 2
+10
+>>> 20 / 3
+6.666666666666667
+>>> 20 // 3
+6
+>>> 20 % 3
+2
+>>> 3 ** 4
+81
+>>> pow(3, 4)
+81
+>>> pow(3, 4, 27)
+0
+>>> 3 ** 150
+369988485035126972924700782451696644186473100389722973815184405301748249
+</code>
+</pre>
+         <h3>Битовые операции</h3>
+         <p>Над целыми числами также можно производить битовые операции</p>
+         <table border="1">
+            <tbody valign="top">
+               <tr>
+                  <td>x | y</td>
+                  <td>Побитовое <i>или</i></td>
+               </tr>
+               <tr>
+                  <td>x ^ y</td>
+                  <td>Побитовое <i>исключающее или</i></td>
+               </tr>
+               <tr>
+                  <td>x &amp; y</td>
+                  <td>Побитовое <i>и</i></td>
+               </tr>
+               <tr>
+                  <td>x &lt;&lt; n</td>
+                  <td>Битовый сдвиг влево</td>
+               </tr>
+               <tr>
+                  <td>x &gt;&gt; y</td>
+                  <td>Битовый сдвиг вправо</td>
+               </tr>
+               <tr>
+                  <td>~x</td>
+                  <td>Инверсия битов</td>
+               </tr>
+            </tbody>
+         </table>
+         <h3>Дополнительные методы</h3>
+         <p>int.bit_length() - количество бит, необходимых для представления числа в двоичном виде, без учёта знака и
+            лидирующих нулей.</p>
+         <pre>
+<code>
+>>> n = -37
+>>> bin(n)
+'-0b100101'
+>>> n.bit_length()
+6
+</code>
+</pre>
+         <p>int.to_bytes(length, byteorder, *, signed=False) - возвращает строку байтов, представляющих это число.</p>
+         <pre>
+<code>
+>>> (1024).to_bytes(2, byteorder='big')
+b'\x04\x00'
+>>> (1024).to_bytes(10, byteorder='big')
+b'\x00\x00\x00\x00\x00\x00\x00\x00\x04\x00'
+>>> (-1024).to_bytes(10, byteorder='big', signed=True)
+b'\xff\xff\xff\xff\xff\xff\xff\xff\xfc\x00'
+>>> x = 1000
+>>> x.to_bytes((x.bit_length() // 8) + 1, byteorder='little')
+b'\xe8\x03'
+</code>
+</pre>
+         <p>classmethod int.from_bytes(bytes, byteorder, *, signed=False) - возвращает число из данной строки байтов.
+         </p>
+         <pre>
+<code>
+>>> int.from_bytes(b'\x00\x10', byteorder='big')
+16
+>>> int.from_bytes(b'\x00\x10', byteorder='little')
+4096
+>>> int.from_bytes(b'\xfc\x00', byteorder='big', signed=True)
+-1024
+>>> int.from_bytes(b'\xfc\x00', byteorder='big', signed=False)
+64512
+>>> int.from_bytes([255, 0, 0], byteorder='big')
+16711680
+</code>
+</pre>
+         <h3>Системы счисления</h3>
+         <p>Те, у кого в школе была информатика, знают, что числа могут быть представлены не только в десятичной системе
+            счисления. К примеру, в компьютере используется двоичный код, и, к примеру, число 19 в двоичной системе
+            счисления будет выглядеть как 10011. Также иногда нужно переводить числа из одной системы счисления в
+            другую. Python для этого предоставляет несколько функций:</p>
+         <ul>
+            <li>
+               <p>int([object], [основание системы счисления]) - преобразование к целому числу в десятичной системе
+                  счисления. По умолчанию система счисления десятичная, но можно задать любое основание от 2 до 36
+                  включительно.</p>
+            </li>
+            <li>
+               <p>bin(x) - преобразование целого числа в двоичную строку.</p>
+            </li>
+            <li>
+               <p>hex(х) - преобразование целого числа в шестнадцатеричную строку.</p>
+            </li>
+            <li>
+               <p>oct(х) - преобразование целого числа в восьмеричную строку.</p>
+            </li>
+         </ul>
+         <p>Примеры:</p>
+         <pre>
+<code>
+>>> a = int('19') # Переводим строку в число
+>>> b = int('19.5')  # Строка не является целым числом
+Traceback (most recent call last):
+   File "", line 1, in
+ValueError: invalid literal for int() with base 10: '19.5'
+>>> c = int(19.5)  # Применённая к числу с плавающей точкой, отсекает дробную часть
+>>> print(a, c)
+19 19
+>>> bin(19)
+'0b10011'
+>>> oct(19)
+'0o23'
+>>> hex(19)
+'0x13'
+>>> 0b10011  # Так тоже можно записывать числовые константы
+19
+>>> int('10011', 2)
+19
+>>> int('0b10011', 2)
+19
+</code>
+</pre>
+
+         <h2>Вещественные числа (float)</h2>
+         <p>Вещественные числа поддерживают те же операции, что и целые. Однако (из-за представления чисел в компьютере)
+            вещественные числа неточны, и это может привести к ошибкам:</p>
+<pre>
+<code>
+>>> 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1
+0.9999999999999999
+</code>
+</pre>
+         <p>Для высокой точности используют другие объекты (например Decimal и <a href="#">Fraction</a>)).</p>
+         <p>Также вещественные числа не поддерживают длинную арифметику:</p>
+         <pre>
+<code>
+>>> a = 3 ** 1000
+>>> a + 0.1
+Traceback (most recent call last):
+   File "", line 1, in
+OverflowError: int too large to convert to float
+</code>
+</pre>
+         <p>Простенькие примеры работы с числами:</p>
+<pre>
+<code>
+>>> c = 150
+>>> d = 12.9
+>>> c + d
+162.9
+>>> p = abs(d - c)  # Модуль числа
+>>> print(p)
+137.1
+>>> round(p)  # Округление
+137
+</code>
+</pre>
+         <h3>Дополнительные методы</h3>
+         <p>float.as_integer_ratio() - пара целых чисел, чьё отношение равно этому числу.</p>
+         <p>float.is_integer() - является ли значение целым числом.</p>
+         <p>float.hex() - переводит float в hex (шестнадцатеричную систему счисления).</p>
+         <p>classmethod float.fromhex(s) - float из шестнадцатеричной строки.</p>
+<pre>
+<code>
+>>> (10.5).hex()
+'0x1.5000000000000p+3'
+>>> float.fromhex('0x1.5000000000000p+3')
+10.5
+</code>
+</pre>
+         <p>Помимо стандартных выражений для работы с числами (а в Python их не так уж и много), в составе Python есть
+            несколько полезных модулей.</p>
+         <p><a href="#">Модуль math</a> предоставляет более сложные математические функции.</p>
+<pre>
+<code>
+>>> import math
+>>> math.pi
+3.141592653589793
+>>> math.sqrt(85)
+9.219544457292887
+</code>
+</pre>
+         <p><a href="#">Модуль random</a> реализует генератор случайных чисел и функции случайного выбора.</p>
+<pre>
+<code>
+>>> import random
+>>> random.random()
+0.15651968855132303
+</code>
+</pre>
+
+         <h2>Комплексные числа (complex)</h2>
+         <p>В Python встроены также и комплексные числа:</p>
+<pre>
+<code>
+>>> x = complex(1, 2)
+>>> print(x)
+(1+2j)
+>>> y = complex(3, 4)
+>>> print(y)
+(3+4j)
+>>> z = x + y
+>>> print(x)
+(1+2j)
+>>> print(z)
+(4+6j)
+>>> z = x * y
+>>> print(z)
+(-5+10j)
+>>> z = x / y
+>>> print(z)
+(0.44+0.08j)
+>>> print(x.conjugate())  # Сопряжённое число
+(1-2j)
+>>> print(x.imag)  # Мнимая часть
+2.0
+>>> print(x.real)  # Действительная часть
+1.0
+>>> print(x > y)  # Комплексные числа нельзя сравнить
+Traceback (most recent call last):
+   File "", line 1, in
+TypeError: unorderable types: complex() > complex()
+>>> print(x == y)  # Но можно проверить на равенство
+False
+>>> abs(3 + 4j)  # Модуль комплексного числа
+5.0
+>>> pow(3 + 4j, 2)  # Возведение в степень
+(-7+24j)
+</code>
+</pre>
+         <p>Также для работы с комплексными числами используется также <a href="#">модуль cmath</a>.</p>
+      </div>
+      <div class="info">
+         <ul>
+            <li><a href="#first">Скачать Python</a></li>
+            <li><a href="#second">Установка Python на Windows</a></li>
+         </ul>
+      </div>
+   </div>
+</body>
+
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../css/style.css">
+   <title>Document</title>
+</head>
+
+<body>
+   <header class="header">
+      <nav class="header_nav">
+         <ul class="header_nav_list">
+            <li class="header_nav_list_item"><a class="header_nav_list_item_link" href="#">Уроки</a></li>
+            <li class="header_nav_list_item"><a class="header_nav_list_item_link" href="#">Практические</a></li>
+            <li class="header_nav_list_item"><a class="header_nav_list_item_link" href="#">Лабораторные</a></li>
+            <li class="header_nav_list_item"><a class="header_nav_list_item_link" href="#">Тест</a></li>
+         </ul>
+      </nav>
+   </header>
+
+   <div class="wrapper">
+      <div class="sidebar">
+         <ul>
+            <li><a href="#">Уроки</a></li>
+            <li><a href="#">Практические</a></li>
+            <li><a href="#">Лабораторные</a></li>
+            <li><a href="#">Тест</a></li>
+         </ul>
+      </div>
+      <div class="main_content">
+         <p>Моя программа не работает! Что делать? В данной статье я постараюсь собрать наиболее частые ошибки
+            начинающих программировать на python 3, а также расскажу, как их исправлять.</p>
+         <p><strong>Проблема</strong>: Моя программа не запускается. На доли секунды появляется чёрное окошко, а затем исчезает.</p>
+         <p><strong>Причина</strong>: после окончания выполнения программы (после выполнения всего кода или при возникновении исключения
+            программа закрывается. И если вы её вызвали двойным кликом по иконке (а вы, скорее всего, вызвали её именно
+            так), то она закроется вместе с окошком, в котором находится вывод программы.</p>
+         <p><strong>Решение</strong>: запускать программу через IDLE или через консоль.</p>
+         <hr>
+         <p><strong>Проблема</strong>: Не работает функция input. Пишет SyntaxError.</p>
+         <p><strong>Пример кода</strong>:</p>
+         <pre>
+<code>
+>>> a = input()
+hello world
+   File "<string>", line 1
+      hello world
+               ^
+SyntaxError: unexpected EOF while parsing
+</code>
+</pre>
+         <p><strong>Причина</strong>: Вы запустили Python 2.</p>
+         <p><strong>Решение</strong>: Установить Python 3.</p>
+         <hr>
+         <p><strong>Проблема</strong>: Где-то увидел простую программу, а она не работает.</p>
+         <p><strong>Пример кода</strong>:</p>
+         <pre>
+<code>
+name = raw_input()
+print name
+</code>
+</pre>
+         <p><strong>Ошибка</strong>:</p>
+         <pre>
+<code>
+File "a.py", line 3
+print name
+         ^
+SyntaxError: invalid syntax
+</code>
+</pre>
+         <p><strong>Причина</strong>: Вам подсунули программу на Python 2.</p>
+         <p><strong>Решение</strong>: Прочитать об отличиях Python 2 от Python 3. Переписать её на Python 3. Например, данная программа
+            на Python 3 будет выглядеть так:</p>
+         <pre>
+<code>
+name = input()
+print(name)
+</code>
+</pre>
+         <hr>
+         <p><strong>Проблема</strong>: TypeError: Can't convert 'int' object to str implicitly.</p>
+         <p><strong>Пример кода</strong>:</p>
+         <pre>
+<code>
+>>> a = input() + 5
+8
+Traceback (most recent call last):
+   File "<stdin>", line 1, in <module>
+TypeError: Can't convert 'int' object to str implicitly
+</code>
+</pre>
+         <p><strong>Причина</strong>: Нельзя складывать строку с числом.</p>
+         <p><strong>Решение</strong>: Привести строку к числу с помощью функции int(). Кстати, заметьте, что функция input() всегда
+            возвращает строку!</p>
+         <pre>
+<code>
+>>> a = int(input()) + 5
+8
+>>> a
+13
+</code>
+</pre>
+         <hr>
+         <p><strong>Проблема</strong>: SyntaxError: invalid syntax.</p>
+         <p><strong>Пример кода</strong>:</p>
+         <pre>
+<code>
+a = 5
+if a == 5
+      print('Ура!')
+</code>
+</pre>
+         <p><strong>Ошибка</strong>:</p>
+         <pre>
+<code>
+File "a.py", line 3
+if a == 5
+         ^
+SyntaxError: invalid syntax
+</code>
+</pre>
+         <p><strong>Причина</strong>: Забыто двоеточие.</p>
+         <p><strong>Решение</strong>:</p>
+         <pre>
+<code>
+a = 5
+if a == 5:
+      print('Ура!')
+</code>
+</pre>
+         <hr>
+         <p><strong>Проблема</strong>: SyntaxError: invalid syntax.</p>
+         <p><strong>Пример кода</strong>:</p>
+         <pre>
+<code>
+a = 5
+if a = 5:
+   print('Ура!')
+</code>
+</pre>
+         <p><strong>Ошибка</strong>:</p>
+         <pre>
+<code>
+File "a.py", line 3
+if a = 5
+      ^
+SyntaxError: invalid syntax
+</code>
+</pre>
+         <p><strong>Причина</strong>: Забыто равно.</p>
+         <p><strong>Решение</strong>:</p>
+         <pre>
+<code>
+a = 5
+if a == 5:
+      print('Ура!')
+</code>
+</pre>
+         <hr>
+         <p><strong>Проблема</strong>: NameError: name 'a' is not defined.</p>
+         <p><strong>Пример кода</strong>:</p>
+         <pre>
+<code>print(a)</code>
+</pre>
+         <p><strong>Причина</strong>: Переменная "a" не существует. Возможно, вы опечатались в названии или забыли инициализировать её.
+         </p>
+         <p><strong>Решение</strong>: Исправить опечатку.</p>
+         <pre>
+<code>
+a = 10
+print(a)
+</code>
+</pre>
+         <hr>
+         <p><strong>Проблема</strong>: IndentationError: expected an indented block.</p>
+         <p><strong>Пример кода</strong>:</p>
+         <pre>
+<code>
+a = 10
+if a > 0:
+print(a)
+</code>
+</pre>
+         <p><strong>Причина</strong>: Нужен отступ.</p>
+         <p><strong>Решение</strong>:</p>
+         <pre>
+<code>
+a = 10
+if a > 0:
+      print(a)
+</code>
+</pre>
+         <hr>
+         <p><strong>Проблема</strong>: TabError: inconsistent use of tabs and spaces in indentation.</p>
+         <p><strong>Пример кода</strong>:</p>
+         <pre>
+<code>
+a = 10
+if a > 0:
+      print(a)
+      print('Ура!')
+</code>
+</pre>
+         <p><strong>Ошибка</strong>:</p>
+         <pre>
+<code>
+File "a.py", line 5
+print('Ура!')
+               ^
+TabError: inconsistent use of tabs and spaces in indentation
+</code>
+</pre>
+         <p><strong>Причина</strong>: Смешение пробелов и табуляции в отступах.</p>
+         <p><strong>Решение</strong>: Исправить отступы.</p>
+         <pre>
+<code>
+a = 10
+if a > 0:
+      print(a)
+      print('Ура!')
+</code>
+</pre>
+         <hr>
+         <p><strong>Проблема</strong>: UnboundLocalError: local variable 'a' referenced before assignment.</p>
+         <p><strong>Пример кода</strong>:</p>
+         <pre>
+<code>
+def f():
+   a += 1
+   print(a)
+
+a = 10
+f()
+</code>
+</pre>
+         <p><strong>Ошибка</strong>:</p>
+         <pre>
+<code>
+Traceback (most recent call last):
+   File "a.py", line 7, in <module>
+      f()
+   File "a.py", line 3, in f
+      a += 1
+UnboundLocalError: local variable 'a' referenced before assignment
+</code>
+</pre>
+         <p><strong>Причина</strong>: Попытка обратиться к локальной переменной, которая ещё не создана.</p>
+         <p><strong>Решение</strong>:</p>
+         <pre>
+<code>
+def f():
+   global a
+   a += 1
+   print(a)
+
+a = 10
+f()
+</code>
+</pre>
+         <hr>
+         <p><strong>Проблема</strong>: Программа выполнилась, но в файл ничего не записалось / записалось не всё.</p>
+         <p><strong>Пример кода</strong>:</p>
+         <pre>
+<code>
+>>> f = open('output.txt', 'w', encoding='utf-8')
+>>> f.write('bla')
+3
+>>>
+</code>
+</pre>
+         <p><strong>Причина</strong>: Не закрыт файл, часть данных могла остаться в буфере.</p>
+         <p><strong>Решение</strong>:</p>
+         <pre>
+<code>
+>>> f = open('output.txt', 'w', encoding='utf-8')
+>>> f.write('bla')
+3
+>>> f.close()
+>>>
+</code>
+</pre>
+      </div>
+      <div class="info">
+         <ul>
+            <li><a href="#first">Скачать Python</a></li>
+            <li><a href="#second">Установка Python на Windows</a></li>
+         </ul>
+      </div>
+   </div>
+</body>
+
+</html>

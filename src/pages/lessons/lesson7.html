@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="header_nav">
+            <ul class="header_nav_list">
+                <li class="header_nav_list_item"><a class="header_nav_list_item_link" href="#">Уроки</a></li>
+                <li class="header_nav_list_item"><a class="header_nav_list_item_link" href="#">Практические</a></li>
+                <li class="header_nav_list_item"><a class="header_nav_list_item_link" href="#">Лабораторные</a></li>
+                <li class="header_nav_list_item"><a class="header_nav_list_item_link" href="#">Тест</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="wrapper">
+        <div class="sidebar">
+            <ul>
+                <li><a href="#">Уроки</a></li>
+                <li><a href="#">Практические</a></li>
+                <li><a href="#">Лабораторные</a></li>
+                <li><a href="#">Тест</a></li>
+            </ul>
+        </div>
+        <div class="main_content">
+            <h1>Циклы</h1>
+            <p>В этой статье я расскажу о циклах for и while, операторах break и continue, а также о слове else,
+                которое, будучи употребленное с циклом, может сделать программный код несколько более понятным.</p>
+            <h2>Цикл while</h2>
+            <p>While - один из самых универсальных циклов в Python, поэтому довольно медленный. Выполняет тело цикла до
+                тех пор, пока условие цикла истинно.</p>
+<pre>
+<code>
+>>> i = 5
+>>> while i < 15:
+...     print(i)
+...     i = i + 2
+...
+5
+7
+9
+11
+13
+</code>
+</pre>
+            <h2>Цикл for</h2>
+            <p>Цикл for уже чуточку сложнее, чуть менее универсальный, но выполняется гораздо быстрее цикла while. Этот
+                цикл проходится по любому итерируемому объекту (например строке или списку), и во время каждого прохода
+                выполняет тело цикла.</p>
+<pre>
+<code>
+>>> for i in 'hello world':
+...     print(i * 2, end='')
+...
+hheelllloo  wwoorrlldd
+</code>
+</pre>
+            <h2>Оператор continue</h2>
+<pre>
+<code>
+>>> for i in 'hello world':
+...     if i == 'o':
+...         continue
+...     print(i * 2, end='')
+...
+hheellll  wwrrlldd
+</code>
+</pre>
+            <h2>Оператор break</h2>
+            <p>Оператор break досрочно прерывает цикл.</p>
+<pre>
+<code>
+>>> for i in 'hello world':
+...     if i == 'o':
+...         break
+...     print(i * 2, end='')
+...
+hheellll
+</code>
+</pre>
+            <h2>Волшебное слово else</h2>
+            <p>Слово else, примененное в цикле for или while, проверяет, был ли произведен выход из цикла инструкцией
+                break, или же "естественным" образом. Блок инструкций внутри else выполнится только в том случае, если
+                выход из цикла произошел без помощи break.</p>
+<pre>
+<code>
+>>> for i in 'hello world':
+...     if i == 'a':
+...         break
+... else:
+...     print('Буквы a в строке нет')
+...
+Буквы a в строке нет
+</code>
+</pre>
+        </div>
+        <div class="info">
+            <ul>
+                <li><a href="#first">Скачать Python</a></li>
+                <li><a href="#second">Установка Python на Windows</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

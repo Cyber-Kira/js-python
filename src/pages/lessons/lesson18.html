@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="header_nav">
+            <ul class="header_nav_list">
+                <li class="header_nav_list_item"><a class="header_nav_list_item_link" href="#">Уроки</a></li>
+                <li class="header_nav_list_item"><a class="header_nav_list_item_link" href="#">Практические</a></li>
+                <li class="header_nav_list_item"><a class="header_nav_list_item_link" href="#">Лабораторные</a></li>
+                <li class="header_nav_list_item"><a class="header_nav_list_item_link" href="#">Тест</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="wrapper">
+        <div class="sidebar">
+            <ul>
+                <li><a href="#">Уроки</a></li>
+                <li><a href="#">Практические</a></li>
+                <li><a href="#">Лабораторные</a></li>
+                <li><a href="#">Тест</a></li>
+            </ul>
+        </div>
+        <div class="main_content">
+            <h1>Байты (bytes и bytearray)</h1>
+            <p>Байтовые строки в Python - что это такое и с чем это едят? Байтовые строки очень похожи на обычные
+                строки, но с некоторыми отличиями. Попробуем выяснить, с какими.</p>
+            <p>Что такое байты? Байт - минимальная единица хранения и обработки цифровой информации. Последовательность
+                байт представляет собой какую-либо информацию (текст, картинку, мелодию...).</p>
+            <p>Создаём байтовую строку:</p>
+<pre>
+<code>
+>>> b'bytes'
+b'bytes'
+>>> 'Байты'.encode('utf-8')
+b'\xd0\x91\xd0\xb0\xd0\xb9\xd1\x82\xd1\x8b'
+>>> bytes('bytes', encoding = 'utf-8')
+b'bytes'
+>>> bytes([50, 100, 76, 72, 41])
+b'2dLH)'
+</code>
+</pre>
+            <p>Если первые три способа нам уже известны (<a href="#">тут</a>, <a href="#">тут</a> и <a
+                    href="#">тут</a>), то последний нужно пояснить. Функция bytes принимает список чисел от 0 до 255 и
+                возвращает байты, получающиеся применением функции chr.</p>
+<pre>
+<code>
+>>> chr(50)
+'2'
+>>> chr(100)
+'d'
+>>> chr(76)
+'L'
+</code>
+</pre>
+            <p>Что делать с байтами? Хотя байтовые строки поддерживают практически все строковые методы, с ними мало что
+                нужно делать. Обычно их надо записать в <a href="#">файл</a> / прочесть из файла и преобразовать во
+                что-либо другое (конечно, если очень хочется, то можно и распечатать). Для преобразования в строку
+                используется метод decode:</p>
+<pre>
+<code>
+>>> b'\xd0\x91\xd0\xb0\xd0\xb9\xd1\x82\xd1\x8b'.decode('utf-8')
+'Байты'
+</code>
+</pre>
+
+            <h2>Bytearray</h2>
+            <p>Bytearray в python - массив байт. От типа bytes отличается только тем, что является изменяемым. Про него,
+                в общем-то, больше рассказать нечего.</p>
+<pre>
+<code>
+>>> b = bytearray(b'hello world!')
+>>> b
+bytearray(b'hello world!')
+>>> b[0]
+104
+>>> b[0] = b'h'
+Traceback (most recent call last):
+File "", line 1, in
+    b[0] = b'h'
+TypeError: an integer is required
+>>> b[0] = 105
+>>> b
+bytearray(b'iello world!')
+>>> for i in range(len(b)):
+...     b[i] += i
+...
+>>> b
+bytearray(b'ifnos%}vzun,')
+</code>
+</pre>
+        </div>
+        <div class="info">
+            <ul>
+                <li><a href="#first">Скачать Python</a></li>
+                <li><a href="#second">Установка Python на Windows</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

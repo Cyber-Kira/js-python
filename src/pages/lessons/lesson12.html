@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="header_nav">
+            <ul class="header_nav_list">
+                <li class="header_nav_list_item"><a class="header_nav_list_item_link" href="#">Уроки</a></li>
+                <li class="header_nav_list_item"><a class="header_nav_list_item_link" href="#">Практические</a></li>
+                <li class="header_nav_list_item"><a class="header_nav_list_item_link" href="#">Лабораторные</a></li>
+                <li class="header_nav_list_item"><a class="header_nav_list_item_link" href="#">Тест</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="wrapper">
+        <div class="sidebar">
+            <ul>
+                <li><a href="#">Уроки</a></li>
+                <li><a href="#">Практические</a></li>
+                <li><a href="#">Лабораторные</a></li>
+                <li><a href="#">Тест</a></li>
+            </ul>
+        </div>
+        <div class="main_content">
+            <h1>Индексы и срезы</h1>
+            <p>Сегодня мы поговорим об операциях взятия индекса и среза.</p>
+
+            <h2>Взятие элемента по индексу</h2>
+            <p>Как и в других языках программирования, взятие по индексу:</p>
+            <pre>
+<code>
+>>> a = [1, 3, 8, 7]
+>>> a[0]
+1
+>>> a[3]
+7
+>>> a[4]
+Traceback (most recent call last):
+File "<stdin>", line 1, in <module>
+IndexError: list index out of range
+</code>
+</pre>
+            <p>Как и во многих других языках, нумерация элементов начинается с нуля. При попытке доступа к
+                несуществующему индексу возникает исключение IndexError.</p>
+            <p>В данном примере переменная a являлась <a href="#">списком</a>, однако взять элемент по индексу можно и у
+                других типов: строк, кортежей.</p>
+            <p>В Python также поддерживаются отрицательные индексы, при этом нумерация идёт с конца, например:</p>
+            <pre>
+<code>
+>>> a = [1, 3, 8, 7]
+>>> a[-1]
+7
+>>> a[-4]
+1
+>>> a[-5]
+Traceback (most recent call last):
+File "<stdin>", line 1, in <module>
+IndexError: list index out of range
+</code>
+</pre>
+            <h2>Срезы</h2>
+            <p>В Python, кроме индексов, существуют ещё и срезы.</p>
+            <p>item[START:STOP:STEP] - берёт срез от номера START, до STOP (не включая его), с шагом STEP. По умолчанию
+                START = 0, STOP = длине объекта, STEP = 1.</p>
+            <p>Соответственно, какие-нибудь (а возможно, и все) параметры могут быть опущены.</p>
+            <pre>
+<code>
+>>> a = [1, 3, 8, 7]
+>>> a[:]
+[1, 3, 8, 7]
+>>> a[1:]
+[3, 8, 7]
+>>> a[:3]
+[1, 3, 8]
+>>> a[::2]
+[1, 8]
+</code>
+</pre>
+            <p>Также все эти параметры могут быть и отрицательными:</p>
+            <pre>
+<code>
+>>> a = [1, 3, 8, 7]
+>>> a[::-1]
+[7, 8, 3, 1]
+>>> a[:-2]
+[1, 3]
+>>> a[-2::-1]
+[8, 3, 1]
+>>> a[1:4:-1]
+[]
+</code>
+</pre>
+            <p>В последнем примере получился пустой список, так как START < STOP, а STEP отрицательный. То же самое
+                    произойдёт, если диапазон значений окажется за пределами объекта:</p> 
+<pre>
+<code>
+>>> a = [1, 3, 8, 7]
+>>> a[10:20]
+[]
+</code>
+</pre>
+            <p>Также с помощью срезов можно не только извлекать элементы, но и добавлять и удалять элементы (разумеется,
+                только для изменяемых последовательностей).</p>
+            <pre>
+<code>
+>>> a = [1, 3, 8, 7]
+>>> a[1:3] = [0, 0, 0]
+>>> a
+[1, 0, 0, 0, 7]
+>>> del a[:-3]
+>>> a
+[0, 0, 7]
+</code>
+</pre>
+        </div>
+        <div class="info">
+            <ul>
+                <li><a href="#first">Скачать Python</a></li>
+                <li><a href="#second">Установка Python на Windows</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

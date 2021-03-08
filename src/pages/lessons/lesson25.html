@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="header_nav">
+            <ul class="header_nav_list">
+                <li class="header_nav_list_item"><a class="header_nav_list_item_link" href="#">Уроки</a></li>
+                <li class="header_nav_list_item"><a class="header_nav_list_item_link" href="#">Практические</a></li>
+                <li class="header_nav_list_item"><a class="header_nav_list_item_link" href="#">Лабораторные</a></li>
+                <li class="header_nav_list_item"><a class="header_nav_list_item_link" href="#">Тест</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="wrapper">
+        <div class="sidebar">
+            <ul>
+                <li><a href="#">Уроки</a></li>
+                <li><a href="#">Практические</a></li>
+                <li><a href="#">Лабораторные</a></li>
+                <li><a href="#">Тест</a></li>
+            </ul>
+        </div>
+        <div class="main_content">
+            <h1>Инкапсуляция, наследование, полиморфизм</h1>
+            <p>Недавно мы говорили об <a href="#">основах объектно-ориентированного программирования в python</a>,
+                теперь продолжим эту тему и поговорим о таких понятиях ООП, как инкапсуляция, наследование и
+                полиморфизм.</p>
+
+            <h2>Инкапсуляция</h2>
+            <p>Инкапсуляция — ограничение доступа к составляющим объект компонентам (методам и переменным). Инкапсуляция
+                делает некоторые из компонент доступными только внутри класса.</p>
+            <p>Инкапсуляция в Python работает лишь на уровне соглашения между программистами о том, какие атрибуты
+                являются общедоступными, а какие — внутренними.</p>
+            <p>Одиночное подчеркивание в начале имени атрибута говорит о том, что переменная или метод не предназначен
+                для использования вне методов класса, однако атрибут доступен по этому имени.</p>
+<pre>
+<code>
+class A:
+    def _private(self):
+        print("Это приватный метод!")
+
+>>> a = A()
+>>> a._private()
+Это приватный метод!
+</code>
+</pre>
+            <p>Двойное подчеркивание в начале имени атрибута даёт большую защиту: атрибут становится недоступным по
+                этому имени.</p>
+<pre>
+<code>
+>>> class B:
+...     def __private(self):
+...         print("Это приватный метод!")
+...
+>>> b = B()
+>>> b.__private()
+Traceback (most recent call last):
+File "<stdin>", line 1, in <module>
+AttributeError: 'B' object has no attribute '__private'
+</code>
+</pre>
+            <p>Однако полностью это не защищает, так как атрибут всё равно остаётся доступным под именем
+                _ИмяКласса__ИмяАтрибута:</p>
+<pre>
+<code>
+>>> b._B__private()
+Это приватный метод!
+</code>
+</pre>
+            <h2>Наследование</h2>
+            <p>Наследование подразумевает то, что дочерний класс содержит все атрибуты родительского класса, при этом
+                некоторые из них могут быть переопределены или добавлены в дочернем. Например, мы можем создать свой
+                класс, похожий на <a href="#">словарь</a>:</p>
+<pre>
+<code>
+>>> class Mydict(dict):
+...     def get(self, key, default = 0):
+...         return dict.get(self, key, default)
+...
+>>> a = dict(a=1, b=2)
+>>> b = Mydict(a=1, b=2)
+</code>
+</pre>
+            <p>Класс Mydict ведёт себя точно так же, как и словарь, за исключением того, что метод get по умолчанию
+                возвращает не None, а 0.</p>
+<pre>
+<code>
+>>> b['c'] = 4
+>>> print(b)
+{'a': 1, 'c': 4, 'b': 2}
+>>> print(a.get('v'))
+None
+>>> print(b.get('v'))
+0
+</code>
+</pre>
+            <h2>Полиморфизм</h2>
+            <p>Полиморфизм - разное поведение одного и того же метода в разных классах. Например, мы можем сложить два
+                числа, и можем сложить две строки. При этом получим разный результат, так как числа и строки являются
+                разными классами.</p>
+<pre>
+<code>
+>>> 1 + 1
+2
+>>> "1" + "1"
+'11'
+</code>
+</pre>
+        </div>
+        <div class="info">
+            <ul>
+                <li><a href="#first">Скачать Python</a></li>
+                <li><a href="#second">Установка Python на Windows</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

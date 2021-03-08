@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="header_nav">
+            <ul class="header_nav_list">
+                <li class="header_nav_list_item"><a class="header_nav_list_item_link" href="#">Уроки</a></li>
+                <li class="header_nav_list_item"><a class="header_nav_list_item_link" href="#">Практические</a></li>
+                <li class="header_nav_list_item"><a class="header_nav_list_item_link" href="#">Лабораторные</a></li>
+                <li class="header_nav_list_item"><a class="header_nav_list_item_link" href="#">Тест</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="wrapper">
+        <div class="sidebar">
+            <ul>
+                <li><a href="#">Уроки</a></li>
+                <li><a href="#">Практические</a></li>
+                <li><a href="#">Лабораторные</a></li>
+                <li><a href="#">Тест</a></li>
+            </ul>
+        </div>
+        <div class="main_content">
+            <h1>Объектно-ориентированное программирование. Классы и объекты</h1>
+            <p>Сегодня мы поговорим об объектно-ориентированном программировании и о его применении в python</p>
+            <p>Объектно-ориентированное программирование (ООП) — парадигма программирования, в которой основными
+                концепциями являются понятия объектов и классов.</p>
+            <p>Класс — тип, описывающий устройство объектов. Объект — это экземпляр класса. Класс можно сравнить с
+                чертежом, по которому создаются объекты.</p>
+            <p>Python соответствует принципам объектно-ориентированного программирования. В python всё является
+                объектами - и строки, и списки, и словари, и всё остальное.</p>
+            <p>Но возможности ООП в python этим не ограничены. Программист может написать свой тип данных (класс),
+                определить в нём свои методы.</p>
+            <p>Это не является обязательным - мы можем пользоваться только встроенными объектами. Однако ООП полезно при
+                долгосрочной разработке программы несколькими людьми, так как упрощает понимание кода.</p>
+            <p>Приступим теперь собственно к написанию своих классов на python. Попробуем определить собственный класс:
+            </p>
+<pre>
+<code>
+>>> # Пример простейшего класса, который ничего не делает
+... class A:
+...     pass
+</code>
+</pre>
+            <p>Теперь мы можем создать несколько экземпляров этого класса:</p>
+<pre>
+<code>
+>>> a = A()
+>>> b = A()
+>>> a.arg = 1  # у экземпляра a появился атрибут arg, равный 1
+>>> b.arg = 2  # а у экземпляра b - атрибут arg, равный 2
+>>> print(a.arg)
+1
+>>> print(b.arg)
+2
+>>> c = A()
+>>> print(c.arg)  # а у этого экземпляра нет arg
+Traceback (most recent call last):
+File "<stdin>", line 1, in <module>
+AttributeError: 'A' object has no attribute 'arg'
+</code>
+</pre>
+            <p>Классу возможно задать собственные методы:</p>
+<pre>
+<code>
+>>> class A:
+...     def g(self): # self - обязательный аргумент, содержащий в себе экземпляр
+...                  # класса, передающийся при вызове метода,
+...                  # поэтому этот аргумент должен присутствовать
+...                  # во всех методах класса.
+...         return 'hello world'
+...
+>>> a = A()
+>>> a.g()
+'hello world'
+</code>
+</pre>
+            <p>И напоследок еще один пример:</p>
+<pre>
+<code>
+>>> class B:
+...     arg = 'Python' # Все экземпляры этого класса будут иметь атрибут arg,
+...                    # равный "Python"
+...                    # Но впоследствии мы его можем изменить
+...     def g(self):
+...         return self.arg
+...
+>>> b = B()
+>>> b.g()
+'Python'
+>>> B.g(b)
+'Python'
+>>> b.arg = 'spam'
+>>> b.g()
+'spam'
+</code>
+</pre>
+        </div>
+        <div class="info">
+            <ul>
+                <li><a href="#first">Скачать Python</a></li>
+                <li><a href="#second">Установка Python на Windows</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

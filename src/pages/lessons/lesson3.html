@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <header class="header">
+    <nav class="header_nav">
+      <ul class="header_nav_list">
+        <li class="header_nav_list_item"><a class="header_nav_list_item_link" href="#">Уроки</a></li>
+        <li class="header_nav_list_item"><a class="header_nav_list_item_link" href="#">Практические</a></li>
+        <li class="header_nav_list_item"><a class="header_nav_list_item_link" href="#">Лабораторные</a></li>
+        <li class="header_nav_list_item"><a class="header_nav_list_item_link" href="#">Тест</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="wrapper">
+    <div class="sidebar">
+      <ul>
+        <li><a href="#">Уроки</a></li>
+        <li><a href="#">Практические</a></li>
+        <li><a href="#">Лабораторные</a></li>
+        <li><a href="#">Тест</a></li>
+      </ul>
+    </div>
+    <div class="main_content">
+      <h1 id="first">Первая программа. Среда разработки IDLE</h1>
+      <p>Сегодня мы напишем свою первую программу в среде разработки IDLE.</p>
+      <p>После загрузки и установки python открываем IDLE (среда разработки на языке Python, поставляемая вместе с
+        дистрибутивом).</p>
+      <p>Здесь и далее буду приводить примеры под ОС Windows, так как именно она у меня сейчас под рукой.</p>
+      <img src="../img/lesson3/1.png" alt="">
+      <p>Запускаем IDLE (изначально запускается в интерактивном режиме), после чего уже можно начинать писать первую
+        программу. Традиционно, первой программой у нас будет "hello world".</p>
+      <p>Чтобы написать "hello world" на python, достаточно всего одной строки:</p>
+      <pre>
+<code>print("Hello world!")</code>
+</pre>
+      <p>Вводим этот код в IDLE и нажимаем Enter. Результат виден на картинке:</p>
+      <img src="../img/lesson3/2.png" alt="">
+      <p>Поздравляю! Вы написали свою первую программу на python! (если что-то не работает).</p>
+      <p>С интерактивным режимом мы немного познакомились, можете с ним ещё поиграться, например, написать</p>
+      <pre>
+<code>
+print(3 + 4)
+print(3 * 5)
+print(3 ** 2)
+</code>
+</pre>
+      <p>Но, всё-таки, интерактивный режим не будет являться основным. В основном, вы будете сохранять программный код в
+        файл и запускать уже файл.</p>
+      <p>Для того, чтобы создать новое окно, в интерактивном режиме IDLE выберите File → New File (или нажмите Ctrl +
+        N).</p>
+      <img src="../img/lesson3/3.png" alt="">
+      <p>В открывшемся окне введите следующий код:</p>
+      <pre>
+<code>
+name = input("Как Вас зовут? ")
+print("Привет,", name)
+</code>
+</pre>
+      <p>Первая строка печатает вопрос ("Как Вас зовут? "), ожидает, пока вы не напечатаете что-нибудь и не нажмёте
+        Enter и сохраняет введённое значение в переменной name.</p>
+      <p>Во второй строке мы используем функцию print для вывода текста на экран, в данном случае для вывода "Привет, "
+        и того, что хранится в переменной "name".</p>
+      <p>Теперь нажмём F5 (или выберем в меню IDLE Run → Run Module) и убедимся, что то, что мы написали, работает.
+        Перед запуском IDLE предложит нам сохранить файл. Сохраним туда, куда вам будет удобно, после чего программа
+        запустится.</p>
+      <p>Вы должны увидеть что-то наподобие этого (на скриншоте слева - файл с написанной вами программой, справа -
+        результат её работы):</p>
+      <img src="../img/lesson3/4.png" alt="">
+      <p>Поздравляю! Вы научились писать простейшие программы, а также познакомились со средой разработки IDLE. Теперь
+        можно немного отдохнуть, а потом начать изучать python дальше. Можете посмотреть синтаксис python, циклы или
+        условия. Желаю удачи!</p>
+    </div>
+    <div class="info">
+      <ul>
+        <li><a href="#first">Скачать Python</a></li>
+        <li><a href="#second">Установка Python на Windows</a></li>
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="header_nav">
+            <ul class="header_nav_list">
+                <li class="header_nav_list_item"><a class="header_nav_list_item_link" href="#">Уроки</a></li>
+                <li class="header_nav_list_item"><a class="header_nav_list_item_link" href="#">Практические</a></li>
+                <li class="header_nav_list_item"><a class="header_nav_list_item_link" href="#">Лабораторные</a></li>
+                <li class="header_nav_list_item"><a class="header_nav_list_item_link" href="#">Тест</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="wrapper">
+        <div class="sidebar">
+            <ul>
+                <li><a href="#">Уроки</a></li>
+                <li><a href="#">Практические</a></li>
+                <li><a href="#">Лабораторные</a></li>
+                <li><a href="#">Тест</a></li>
+            </ul>
+        </div>
+        <div class="main_content">
+            <h1>Условный оператор if</h1>
+            <p>Условная инструкция if-elif-else (её ещё иногда называют оператором ветвления) - основной инструмент
+                выбора в Python. Проще говоря, она выбирает, какое действие следует выполнить, в зависимости от значения
+                переменных в момент проверки условия.</p>
+            <h2>Синтаксис инструкции if</h2>
+            <p>Сначала записывается часть if с условным выражением, далее могут следовать одна или более необязательных
+                частей elif, и, наконец, необязательная часть else. Общая форма записи условной инструкции if выглядит
+                следующим образом:</p>
+            <pre>
+<code>
+span class="k">if test1:
+    state1
+elif test2:
+    state2
+else:
+    state3
+</code>
+</pre>
+            <p>Простой пример (напечатает 'true', так как 1 - истина):</p>
+            <pre>
+<code>
+>>> if 1:
+...     print('true')
+... else:
+...     print('false')
+...
+true
+</code>
+</pre>
+            <p>Чуть более сложный пример (его результат будет зависеть от того, что ввёл пользователь):</p>
+            <pre>
+<code>
+a = int(input())
+if a < -5:
+    print('Low')
+elif -5 <= a <= 5:
+    print('Mid')
+else:
+    print('High')
+</code>
+</pre>
+            <p>Конструкция с несколькими elif может также служить отличной заменой конструкции switch - case в других
+                языках программирования.</p>
+            <h2>Проверка истинности в Python</h2>
+            <ul>
+                <li>
+                    <p>Любое число, не равное 0, или непустой объект - истина.</p>
+                </li>
+                <li>
+                    <p>Числа, равные 0, пустые объекты и значение None - ложь</p>
+                </li>
+                <li>
+                    <p>Операции сравнения применяются к структурам данных рекурсивно</p>
+                </li>
+                <li>
+                    <p>Операции сравнения возвращают True или False</p>
+                </li>
+                <li>
+                    <p>Логические операторы and и or возвращают истинный или ложный объект-операнд</p>
+                </li>
+            </ul>
+            <p>Логические операторы:</p>
+<pre>
+<code>X and Y</code>
+</pre>
+            <p>Истина, если оба значения X и Y истинны.</p>
+<pre>
+<code>X or Y</code>
+</pre>
+            <p>Истина, если хотя бы одно из значений X или Y истинно.</p>
+            <pre>
+<code>not X</code>
+</pre>
+            <p>Истина, если X ложно.</p>
+            <h2>Трехместное выражение if/else</h2>
+            <p>Следующая инструкция:</p>
+<pre>
+<code>
+if X:
+    A = Y
+else:
+    A = Z
+</code>
+</pre>
+            <p>довольно короткая, но, тем не менее, занимает целых 4 строки. Специально для таких случаев и было
+                придумано выражение if/else:</p>
+<pre>
+<code>A = Y if X else Z</code>
+</pre>
+            <p>В данной инструкции интерпретатор выполнит выражение Y, если X истинно, в противном случае выполнится
+                выражение Z.</p>
+<pre>
+<code>
+>>> A = 't' if 'spam' else 'f'
+>>> A
+'t'
+</code>
+</pre>
+        </div>
+        <div class="info">
+            <ul>
+                <li><a href="#first">Скачать Python</a></li>
+                <li><a href="#second">Установка Python на Windows</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

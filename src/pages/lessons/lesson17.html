@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../css/style.css">
+   <title>Document</title>
+</head>
+
+<body>
+   <header class="header">
+      <nav class="header_nav">
+         <ul class="header_nav_list">
+            <li class="header_nav_list_item"><a class="header_nav_list_item_link" href="#">Уроки</a></li>
+            <li class="header_nav_list_item"><a class="header_nav_list_item_link" href="#">Практические</a></li>
+            <li class="header_nav_list_item"><a class="header_nav_list_item_link" href="#">Лабораторные</a></li>
+            <li class="header_nav_list_item"><a class="header_nav_list_item_link" href="#">Тест</a></li>
+         </ul>
+      </nav>
+   </header>
+
+   <div class="wrapper">
+      <div class="sidebar">
+         <ul>
+            <li><a href="#">Уроки</a></li>
+            <li><a href="#">Практические</a></li>
+            <li><a href="#">Лабораторные</a></li>
+            <li><a href="#">Тест</a></li>
+         </ul>
+      </div>
+      <div class="main_content">
+         <h1>Исключения в python. Конструкция try - except для обработки исключений</h1>
+         <p>Исключения (exceptions) - ещё один тип данных в python. Исключения необходимы для того, чтобы сообщать
+            программисту об ошибках.</p>
+         <p>Самый простейший пример исключения - деление на ноль:</p>
+         <pre>
+<code>
+>>> 100 / 0
+Traceback (most recent call last):
+File "", line 1, in
+   100 / 0
+ZeroDivisionError: division by zero
+</code>
+</pre>
+         <p>Разберём это сообщение подробнее: интерпретатор нам сообщает о том, что он поймал исключение и напечатал
+            информацию (Traceback (most recent call last)).</p>
+         <p>Далее имя файла (File ""). Имя пустое, потому что мы находимся в интерактивном режиме, строка в файле (line
+            1);</p>
+         <p>Выражение, в котором произошла ошибка (100 / 0).</p>
+         <p>Название исключения (ZeroDivisionError) и краткое описание исключения (division by zero).</p>
+         <p>Разумеется, возможны и другие исключения:</p>
+         <pre>
+<code>
+>>> 2 + '1'
+Traceback (most recent call last):
+File "", line 1, in
+   2 + '1'
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+
+>>> int('qwerty')
+Traceback (most recent call last):
+File "", line 1, in
+   int('qwerty')
+ValueError: invalid literal for int() with base 10: 'qwerty'
+</code>
+</pre>
+         <p>В этих двух примерах генерируются исключения TypeError и ValueError соответственно. Подсказки дают нам
+            полную информацию о том, где порождено исключение, и с чем оно связано.</p>
+         <p>Рассмотрим иерархию встроенных в python исключений, хотя иногда вам могут встретиться и другие, так как
+            программисты могут создавать собственные исключения. Данный список актуален для <a href="#">python 3.3</a>,
+            в более ранних версиях есть незначительные изменения.</p>
+         <ul>
+            <li>
+               <p>BaseException - базовое исключение, от которого берут начало все остальные.</p>
+               <ul>
+                  <li>
+                     <p>SystemExit - исключение, порождаемое функцией sys.exit при выходе из программы.</p>
+                  </li>
+                  <li>
+                     <p>KeyboardInterrupt - порождается при прерывании программы пользователем (обычно сочетанием клавиш
+                        Ctrl+C).</p>
+                  </li>
+                  <li>
+                     <p>GeneratorExit - порождается при вызове метода close объекта generator.</p>
+                  </li>
+                  <li>
+                     <p>Exception - а вот тут уже заканчиваются полностью системные исключения (которые лучше не
+                        трогать) и начинаются обыкновенные, с которыми можно работать.</p>
+                     <ul>
+                        <li>
+                           <p>StopIteration - порождается <a href="#">встроенной функцией</a> next, если в итераторе
+                              больше нет элементов.</p>
+                        </li>
+                        <li>
+                           <p>ArithmeticError - арифметическая ошибка.</p>
+                           <ul>
+                              <li>
+                                 <p>FloatingPointError - порождается при неудачном выполнении операции с плавающей
+                                    запятой. На практике встречается нечасто.</p>
+                              </li>
+                              <li>
+                                 <p>OverflowError - возникает, когда результат арифметической операции слишком велик для
+                                    представления. Не появляется при обычной работе с целыми числами (так как python
+                                    поддерживает длинные числа), но может возникать в некоторых других случаях.</p>
+                              </li>
+                              <li>
+                                 <p>ZeroDivisionError - деление на ноль.</p>
+                              </li>
+                           </ul>
+                        </li>
+                        <li>
+                           <p>AssertionError - выражение в функции assert ложно.</p>
+                        </li>
+                        <li>
+                           <p>AttributeError - объект не имеет данного атрибута (значения или метода).</p>
+                        </li>
+                        <li>
+                           <p>BufferError - операция, связанная с буфером, не может быть выполнена.</p>
+                        </li>
+                        <li>
+                           <p>EOFError - функция наткнулась на конец файла и не смогла прочитать то, что хотела.</p>
+                        </li>
+                        <li>
+                           <p>ImportError - не удалось импортирование модуля или его атрибута.</p>
+                        </li>
+                        <li>
+                           <p>LookupError - некорректный индекс или ключ.</p>
+                           <ul>
+                              <li>
+                                 <p>IndexError - индекс не входит в диапазон элементов.</p>
+                              </li>
+                              <li>
+                                 <p>KeyError - несуществующий ключ (в <a href="#">словаре</a>, <a href="#">множестве</a>
+                                    или другом объекте).</p>
+                              </li>
+                           </ul>
+                        </li>
+                        <li>
+                           <p>MemoryError - недостаточно памяти.</p>
+                        </li>
+                        <li>
+                           <p>NameError - не найдено переменной с таким именем.</p>
+                           <ul>
+                              <li>
+                                 <p>UnboundLocalError - сделана ссылка на локальную переменную в функции, но переменная
+                                    не определена ранее.</p>
+                              </li>
+                           </ul>
+                        </li>
+                        <li>
+                           <p>OSError - ошибка, связанная с системой.</p>
+                           <ul>
+                              <li>
+                                 <p>BlockingIOError</p>
+                              </li>
+                              <li>
+                                 <p>ChildProcessError - неудача при операции с дочерним процессом.</p>
+                              </li>
+                              <li>
+                                 <p>ConnectionError - базовый класс для исключений, связанных с подключениями.</p>
+                                 <ul>
+                                    <li>
+                                       <p>BrokenPipeError</p>
+                                    </li>
+                                    <li>
+                                       <p>ConnectionAbortedError</p>
+                                    </li>
+                                    <li>
+                                       <p>ConnectionRefusedError</p>
+                                    </li>
+                                    <li>
+                                       <p>ConnectionResetError</p>
+                                    </li>
+                                 </ul>
+                              </li>
+                              <li>
+                                 <p>FileExistsError - попытка создания <a href="#">файла</a> или директории, которая уже
+                                    существует.</p>
+                              </li>
+                              <li>
+                                 <p>FileNotFoundError - файл или директория не существует.</p>
+                              </li>
+                              <li>
+                                 <p>InterruptedError - системный вызов прерван входящим сигналом.</p>
+                              </li>
+                              <li>
+                                 <p>IsADirectoryError - ожидался файл, но это директория.</p>
+                              </li>
+                              <li>
+                                 <p>NotADirectoryError - ожидалась директория, но это файл.</p>
+                              </li>
+                              <li>
+                                 <p>PermissionError - не хватает прав доступа.</p>
+                              </li>
+                              <li>
+                                 <p>ProcessLookupError - указанного процесса не существует.</p>
+                              </li>
+                              <li>
+                                 <p>TimeoutError - закончилось время ожидания.</p>
+                              </li>
+                           </ul>
+                        </li>
+                        <li>
+                           <p>ReferenceError - попытка доступа к атрибуту со слабой ссылкой.</p>
+                        </li>
+                        <li>
+                           <p>RuntimeError - возникает, когда исключение не попадает ни под одну из других категорий.
+                           </p>
+                        </li>
+                        <li>
+                           <p>NotImplementedError - возникает, когда абстрактные методы класса требуют переопределения в
+                              дочерних классах.</p>
+                        </li>
+                        <li>
+                           <p>SyntaxError - синтаксическая ошибка.</p>
+                           <ul>
+                              <li>
+                                 <p>IndentationError - неправильные отступы.</p>
+                                 <ul>
+                                    <li>
+                                       <p>TabError - смешивание в отступах табуляции и пробелов.</p>
+                                    </li>
+                                 </ul>
+                              </li>
+                           </ul>
+                        </li>
+                        <li>
+                           <p>SystemError - внутренняя ошибка.</p>
+                        </li>
+                        <li>
+                           <p>TypeError - операция применена к объекту несоответствующего типа.</p>
+                        </li>
+                        <li>
+                           <p>ValueError - функция получает аргумент правильного типа, но некорректного значения.</p>
+                        </li>
+                        <li>
+                           <p>UnicodeError - ошибка, связанная с кодированием / раскодированием unicode в <a
+                                 href="#">строках</a>.</p>
+                           <ul>
+                              <li>
+                                 <p>UnicodeEncodeError - исключение, связанное с кодированием unicode.</p>
+                              </li>
+                              <li>
+                                 <p>UnicodeDecodeError - исключение, связанное с декодированием unicode.</p>
+                              </li>
+                              <li>
+                                 <p>UnicodeTranslateError - исключение, связанное с переводом unicode.</p>
+                              </li>
+                           </ul>
+                        </li>
+                        <li>
+                           <p>Warning - предупреждение.</p>
+                        </li>
+                     </ul>
+                  </li>
+               </ul>
+            </li>
+         </ul>
+         <p>Теперь, зная, когда и при каких обстоятельствах могут возникнуть исключения, мы можем их обрабатывать. Для
+            обработки исключений используется конструкция try - except.</p>
+         <p>Первый пример применения этой конструкции:</p>
+         <pre>
+<code>
+>>> try:
+...     k = 1 / 0
+... except ZeroDivisionError:
+...     k = 0
+...
+>>> print(k)
+0
+</code>
+</pre>
+         <p>В блоке try мы выполняем инструкцию, которая может породить исключение, а в блоке except мы перехватываем
+            их. При этом перехватываются как само исключение, так и его потомки. Например, перехватывая ArithmeticError,
+            мы также перехватываем FloatingPointError, OverflowError и ZeroDivisionError.</p>
+         <pre>
+<code>
+>>> try:
+...     k = 1 / 0
+... except ArithmeticError:
+...     k = 0
+...
+>>> print(k)
+0
+</code>
+</pre>
+         <p>Также возможна инструкция except без аргументов, которая перехватывает вообще всё (и прерывание с
+            клавиатуры, и системный выход и т. д.). Поэтому в такой форме инструкция except практически не используется,
+            а используется except Exception. Однако чаще всего перехватывают исключения по одному, для упрощения отладки
+            (вдруг вы ещё другую ошибку сделаете, а except её перехватит).</p>
+         <p>Ещё две инструкции, относящиеся к нашей проблеме, это finally и else. Finally выполняет блок инструкций в
+            любом случае, было ли исключение, или нет (применима, когда нужно непременно что-то сделать, к примеру,
+            закрыть файл). Инструкция else выполняется в том случае, если исключения не было.</p>
+         <pre>
+<code>
+>>> f = open('1.txt')
+>>> ints = []
+>>> try:
+...     for line in f:
+...         ints.append(int(line))
+... except ValueError:
+...     print('Это не число. Выходим.')
+... except Exception:
+...     print('Это что ещё такое?')
+... else:
+...     print('Всё хорошо.')
+... finally:
+...     f.close()
+...     print('Я закрыл файл.')
+...     # Именно в таком порядке: try, группа except, затем else, и только потом finally.
+...
+Это не число. Выходим.
+Я закрыл файл.
+</code>
+</pre>
+      </div>
+      <div class="info">
+         <ul>
+            <li><a href="#first">Скачать Python</a></li>
+            <li><a href="#second">Установка Python на Windows</a></li>
+         </ul>
+      </div>
+   </div>
+</body>
+
+</html>

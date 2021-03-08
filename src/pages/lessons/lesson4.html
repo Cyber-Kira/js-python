@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../css/style.css">
+   <title>Document</title>
+</head>
+
+<body>
+   <header class="header">
+      <nav class="header_nav">
+         <ul class="header_nav_list">
+            <li class="header_nav_list_item"><a class="header_nav_list_item_link" href="#">Уроки</a></li>
+            <li class="header_nav_list_item"><a class="header_nav_list_item_link" href="#">Практические</a></li>
+            <li class="header_nav_list_item"><a class="header_nav_list_item_link" href="#">Лабораторные</a></li>
+            <li class="header_nav_list_item"><a class="header_nav_list_item_link" href="#">Тест</a></li>
+         </ul>
+      </nav>
+   </header>
+
+   <div class="wrapper">
+      <div class="sidebar">
+         <ul>
+            <li><a href="#">Уроки</a></li>
+            <li><a href="#">Практические</a></li>
+            <li><a href="#">Лабораторные</a></li>
+            <li><a href="#">Тест</a></li>
+         </ul>
+      </div>
+      <div class="main_content">
+         <h1>Синтаксис языка Python</h1>
+         <p>Синтаксис языка Python, как и сам язык, очень прост.</p>
+
+         <h2>Синтаксис</h2>
+            <ul>
+               <li>
+                  <p>Конец строки является концом инструкции (точка с запятой не требуется).</p>
+               </li>
+               <li>
+                  <p>Вложенные инструкции объединяются в блоки по величине отступов. Отступ может быть
+                     любым,
+                     главное, чтобы в
+                     пределах одного вложенного блока отступ был одинаков. И про читаемость кода не забывайте. Отступ в
+                     1
+                     пробел,
+                     к примеру, не лучшее решение. Используйте 4 пробела (или знак табуляции, на худой конец).</p>
+               </li>
+               <li>
+                  <p>Вложенные инструкции в Python записываются в соответствии с одним и тем же
+                     шаблоном, когда
+                     основная
+                     инструкция завершается двоеточием, вслед за которым располагается вложенный блок кода, обычно с
+                     отступом под
+                     строкой основной инструкции.</p>
+                  <pre>
+<code>
+Основная инструкция:
+   Вложенный блок инструкций
+</code>
+</pre>
+               </li>
+            </ul>
+
+            <h2 id="section-3">Несколько специальных случаев</h2>
+            <ul>
+               <li>
+                  <p>Иногда возможно записать несколько инструкций в одной строке, разделяя их точкой
+                     с
+                     запятой:</p>
+                  <pre>
+<code>
+a = 1; b = 2; print(a, b)
+</code>
+</pre>
+                  <p>Но не делайте это слишком часто! Помните об удобочитаемости. А лучше вообще так
+                     не
+                     делайте.</p>
+               </li>
+               <li>
+                  <p>Допустимо записывать одну инструкцию в нескольких строках. Достаточно ее
+                     заключить в пару
+                     круглых,
+                     квадратных или фигурных скобок:</p>
+                  <pre>
+<code>
+if (a == 1 and b == 2 and
+   c == 3 and d == 4):  # Не забываем про двоеточие
+     print('spam' * 3)
+</code>
+</pre>
+               </li>
+               <li>
+                  <p>Тело составной инструкции может располагаться в той же строке, что и тело
+                     основной, если
+                     тело составной
+                     инструкции не содержит составных инструкций. Ну я думаю, вы поняли :). Давайте лучше пример
+                     приведу:
+                  </p>
+                  <pre>
+<code>
+if x > y: print(x)
+</code>
+</pre>
+               </li>
+            </ul>
+            <p>Полное понимание синтаксиса, конечно, приходит с опытом, поэтому я советую вам
+               заглянуть в
+               рубрику "Примеры
+               программ".</p>
+            <p>Также советую прочитать <a href="https://www.python.org/dev/peps/pep-0008/">PEP 8 —
+                  руководство
+                  по написанию кода
+                  на Python</a> и <a href="https://www.python.org/dev/peps/pep-0257/">Документирование кода в
+                  Python</a>.
+               PEP
+               257.</p>
+      </div>
+      <div class="info">
+         <ul>
+            <li><a href="#first">Скачать Python</a></li>
+            <li><a href="#second">Установка Python на Windows</a></li>
+         </ul>
+      </div>
+   </div>
+</body>
+
+</html>
