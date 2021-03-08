@@ -1,16 +1,12 @@
 .footer {
     margin-top: 4rem;
 
-    @media screen and (min-width: 625px) {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        
+    @media screen and (min-width: 625px) {        
         text-align: center;
     }
 
     &_text {
+        font-size: 1.1rem;
         color: $secondary;
         padding-bottom: 2rem;
     }
