@@ -1,4 +1,5 @@
 .main {
+    min-height: 45vh;
     &_wrapper {
         display: flex;
 
@@ -12,7 +13,6 @@
 
             @media screen and (min-width: 1440px) {
                 width: 300px;
-                display: inline-block;
             }
 
             @media screen and (min-width: 1700px) {
@@ -22,13 +22,17 @@
 
         @media screen and (min-width: 1024px) {
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-end;
             width: 80vw;
         }
     }
     &_hero {
         display: flex;
         flex-direction: column;
+
+        @media screen and (min-width: 1024px) {
+            margin-top: 8em;
+        }
         
         &_header {
             font-size: 2rem;
@@ -89,5 +93,9 @@
                 margin-bottom: 1rem;
             }
         }
+    }
+
+    @media screen and (min-width: 600px) {
+        min-height: 75vh;
     }
 }
