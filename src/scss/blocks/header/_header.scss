@@ -21,6 +21,11 @@
         &_item {
             position: relative;
             color: $dark;
+            padding: 0;
+
+            @media screen and (min-width: 1024px) {
+                margin-right: 2em;
+            }
             
             &_link {
                 display: inline-block;
@@ -45,7 +50,7 @@
                     left: 0; 
                   }
                   &:active {
-                      color: blueviolet;
+                      color: rgb(55, 112, 161);
                   }
                 }
             }
