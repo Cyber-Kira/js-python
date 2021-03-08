@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'PT Mono', sans-serif;
+    font-family: 'Anonymous Pro', sans-serif;
 }
 
 a {
@@ -10,8 +10,9 @@ a {
     color: $dark;
 }
 
-body {
-    background-color: $primary;
+html {
+    height: 100%;
+    background: #DAD0B6;
 }
 
 .container {
