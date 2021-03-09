@@ -2,93 +2,239 @@
 <html lang="ru">
 
 <head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="../css/style.css">
-   <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <link rel="stylesheet" href="../../css/style.css">
 </head>
 
 <body>
-   <header class="header">
-      <nav class="header_nav">
-         <ul class="header_nav_list">
-            <li class="header_nav_list_item"><a class="header_nav_list_item_link" href="#">Уроки</a></li>
-            <li class="header_nav_list_item"><a class="header_nav_list_item_link" href="#">Практические</a></li>
-            <li class="header_nav_list_item"><a class="header_nav_list_item_link" href="#">Лабораторные</a></li>
-            <li class="header_nav_list_item"><a class="header_nav_list_item_link" href="#">Тест</a></li>
-         </ul>
-      </nav>
-   </header>
+  <!--========== HEADER ==========-->
+  <header class="header">
+    <div class="header__container">
+      <img src="../../img/1024px-Python-logo-notext.svg.webp" alt="" class="header__img">
 
-   <div class="wrapper">
-      <div class="sidebar">
-         <ul>
-            <li><a href="#">Уроки</a></li>
-            <li><a href="#">Практические</a></li>
-            <li><a href="#">Лабораторные</a></li>
-            <li><a href="#">Тест</a></li>
-         </ul>
+      <a href="../../index.html" class="header__logo">Python World</a>
+
+      <div class="header__search">
+        <input type="search" placeholder="Поиск" class="header__input">
+        <i class='bx bx-search header__icon'></i>
       </div>
-      <div class="main_content">
-         <h1>Файлы. Работа с файлами.</h1>
-         <p>В данной статье мы рассмотрим встроенные средства python для работы с файлами: открытие / закрытие, чтение и
-            запись.</p>
-         <p>Итак, начнем. Прежде, чем работать с файлом, его надо открыть. С этим замечательно справится встроенная
-            функция open:</p>
-         <pre>
+
+      <div class="header__toggle">
+        <i class='bx bx-menu' id="header-toggle"></i>
+      </div>
+    </div>
+  </header>
+
+  <!--========== NAV ==========-->
+  <div class="nav" id="navbar">
+    <nav class="nav__container">
+      <div>
+        <a href="../../index.html" class="nav__link nav__logo">
+          <img src="../../img/1024px-Python-logo-notext.svg.webp" alt="" width="35" height="35">
+        </a>
+
+        <div class="nav__list">
+          <div class="nav__items">
+            <a href="../../index.html" class="nav__link active">
+              <i class='bx bx-home nav__icon'></i>
+              <span class="nav__name">Домой</span>
+            </a>
+            <h3 class="nav__subtitle">Учебник</h3>
+
+
+
+            <div class="nav__dropdown">
+              <a href="#" class="nav__link">
+                <i class='bx bxs-school nav__icon'></i>
+                <span class="nav__name">Уроки</span>
+                <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+              </a>
+
+              <div class="nav__dropdown-collapse">
+                <div class="nav__dropdown-content">
+                  <a href="./lesson1.html" class="nav__dropdown-item">Возможности языка python</a>
+                  <a href="./lesson2.html" class="nav__dropdown-item">Скачать Python</a>
+                  <a href="./lesson3.html" class="nav__dropdown-item">Первая программа</a>
+                  <a href="./lesson4.html" class="nav__dropdown-item">Синтаксис языка Python</a>
+                  <a href="./lesson5.html" class="nav__dropdown-item">Программа не работает</a>
+                  <a href="./lesson6.html" class="nav__dropdown-item">Условный оператор if</a>
+                  <a href="./lesson7.html" class="nav__dropdown-item">Циклы</a>
+                  <a href="./lesson8.html" class="nav__dropdown-item">Ключевые слова, модуль keyword</a>
+                  <a href="./lesson9.html" class="nav__dropdown-item">Числа: целые, вещественные, комплексные</a>
+                  <a href="./lesson10.html" class="nav__dropdown-item">Строки</a>
+                  <a href="./lesson11.html" class="nav__dropdown-item">Списки (list)</a>
+                  <a href="./lesson12.html" class="nav__dropdown-item">Индексы и срезы</a>
+                  <a href="./lesson13.html" class="nav__dropdown-item">Кортежи (tuple)</a>
+                  <a href="./lesson14.html" class="nav__dropdown-item">Словари (dict) и работа с ними</a>
+                  <a href="./lesson15.html" class="nav__dropdown-item">Множества (set и frozenset)</a>
+                  <a href="./lesson16.html" class="nav__dropdown-item">Функции и их аргументы</a>
+                  <a href="./lesson17.html" class="nav__dropdown-item">Исключения в python</a>
+                  <a href="./lesson18.html" class="nav__dropdown-item">Байты (bytes и bytearray)</a>
+                  <a href="./lesson19.html" class="nav__dropdown-item">Файлы. Работа с файлами</a>
+                  <a href="./lesson20.html" class="nav__dropdown-item">With ... as - менеджеры контекста</a>
+                  <a href="./lesson21.html" class="nav__dropdown-item">PEP 8</a>
+                  <a href="./lesson22.html" class="nav__dropdown-item">Документирование кода в Python</a>
+                  <a href="./lesson23.html" class="nav__dropdown-item">Работа с модулями</a>
+                  <a href="./lesson24.html" class="nav__dropdown-item">Объектно-ориентированное программирование</a>
+                  <a href="./lesson25.html" class="nav__dropdown-item">Инкапсуляция, наследование, полиморфизм</a>
+                  <a href="./lesson26.html" class="nav__dropdown-item">Перегрузка операторов</a>
+                  <a href="./lesson27.html" class="nav__dropdown-item">Декораторы</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="nav__dropdown">
+              <a href="#" class="nav__link">
+                <i class='bx bx-code-block nav__icon'></i>
+                <span class="nav__name">Практические</span>
+                <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+              </a>
+
+              <div class="nav__dropdown-collapse">
+                <div class="nav__dropdown-content">
+                  <a href="./pages/lessons/lesson1.html" class="nav__dropdown-item">Возможности языка python</a>
+                  <a href="./pages/lessons/lesson2.html" class="nav__dropdown-item">Скачать Python</a>
+                  <a href="./pages/lessons/lesson3.html" class="nav__dropdown-item">Первая программа</a>
+                  <a href="./pages/lessons/lesson4.html" class="nav__dropdown-item">Синтаксис языка Python</a>
+                  <a href="./pages/lessons/lesson5.html" class="nav__dropdown-item">Программа не работает</a>
+                  <a href="./pages/lessons/lesson6.html" class="nav__dropdown-item">Условный оператор if</a>
+                  <a href="./pages/lessons/lesson7.html" class="nav__dropdown-item">Циклы</a>
+                  <a href="./pages/lessons/lesson8.html" class="nav__dropdown-item">Ключевые слова, модуль keyword</a>
+                  <a href="./pages/lessons/lesson9.html" class="nav__dropdown-item">Числа: целые, вещественные,
+                    комплексные</a>
+                  <a href="./pages/lessons/lesson10.html" class="nav__dropdown-item">Строки</a>
+                  <a href="./pages/lessons/lesson11.html" class="nav__dropdown-item">Списки (list)</a>
+                  <a href="./pages/lessons/lesson12.html" class="nav__dropdown-item">Индексы и срезы</a>
+                  <a href="./pages/lessons/lesson13.html" class="nav__dropdown-item">Кортежи (tuple)</a>
+                  <a href="./pages/lessons/lesson14.html" class="nav__dropdown-item">Словари (dict) и работа с ними</a>
+                  <a href="./pages/lessons/lesson15.html" class="nav__dropdown-item">Множества (set и frozenset)</a>
+                  <a href="./pages/lessons/lesson16.html" class="nav__dropdown-item">Функции и их аргументы</a>
+                  <a href="./pages/lessons/lesson17.html" class="nav__dropdown-item">Исключения в python</a>
+                  <a href="./pages/lessons/lesson18.html" class="nav__dropdown-item">Байты (bytes и bytearray)</a>
+                  <a href="./pages/lessons/lesson19.html" class="nav__dropdown-item">Файлы. Работа с файлами</a>
+                  <a href="./pages/lessons/lesson20.html" class="nav__dropdown-item">With ... as - менеджеры
+                    контекста</a>
+                  <a href="./pages/lessons/lesson21.html" class="nav__dropdown-item">PEP 8</a>
+                  <a href="./pages/lessons/lesson22.html" class="nav__dropdown-item">Документирование кода в Python</a>
+                  <a href="./pages/lessons/lesson23.html" class="nav__dropdown-item">Работа с модулями</a>
+                  <a href="./pages/lessons/lesson24.html" class="nav__dropdown-item">Объектно-ориентированное
+                    программирование</a>
+                  <a href="./pages/lessons/lesson25.html" class="nav__dropdown-item">Инкапсуляция, наследование,
+                    полиморфизм</a>
+                  <a href="./pages/lessons/lesson26.html" class="nav__dropdown-item">Перегрузка операторов</a>
+                  <a href="./pages/lessons/lesson27.html" class="nav__dropdown-item">Декораторы</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="nav__items">
+            <h3 class="nav__subtitle">Практика</h3>
+
+            <div class="nav__dropdown">
+              <a href="#" class="nav__link">
+                <i class='bx bx-test-tube nav__icon'></i>
+                <span class="nav__name nav__icon">Лабораторные</span>
+                <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+              </a>
+
+              <div class="nav__dropdown-collapse">
+                <div class="nav__dropdown-content">
+                  <a href="#" class="nav__dropdown-item">Blocked</a>
+                  <a href="#" class="nav__dropdown-item">Silenced</a>
+                  <a href="#" class="nav__dropdown-item">Publish</a>
+                  <a href="#" class="nav__dropdown-item">Program</a>
+                  <a href="#" class="nav__dropdown-item">Blocked</a>
+                  <a href="#" class="nav__dropdown-item">Silenced</a>
+                  <a href="#" class="nav__dropdown-item">Publish</a>
+                  <a href="#" class="nav__dropdown-item">Program</a>
+                  <a href="#" class="nav__dropdown-item">Blocked</a>
+                  <a href="#" class="nav__dropdown-item">Silenced</a>
+                  <a href="#" class="nav__dropdown-item">Publish</a>
+                  <a href="#" class="nav__dropdown-item">Program</a>
+                </div>
+              </div>
+            </div>
+
+            <a href="#" class="nav__link">
+              <i class='bx bxl-python nav__icon'></i>
+              <span class="nav__name">Тест</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <a href="#" class="nav__link nav__logout">
+        <i class='bx bx-log-out nav__icon'></i>
+        <span class="nav__name">Log Out</span>
+      </a>
+    </nav>
+  </div>
+
+  <!--========== CONTENTS ==========-->
+  <main>
+    <section class="container">
+      <h1>Файлы. Работа с файлами.</h1>
+      <p>В данной статье мы рассмотрим встроенные средства python для работы с файлами: открытие / закрытие, чтение и
+         запись.</p>
+      <p>Итак, начнем. Прежде, чем работать с файлом, его надо открыть. С этим замечательно справится встроенная
+         функция open:</p>
+      <pre>
 <code>f = open('text.txt', 'r')</code>
 </pre>
-         <p>У функции open много параметров, они указаны в статье "<a href="#">Встроенные функции</a>", нам пока важны 3
-            аргумента: первый, это имя файла. Путь к файлу может быть относительным или абсолютным. Второй аргумент, это
-            режим, в котором мы будем открывать файл.</p>
-         <table border="1">
-            <tbody valign="top">
-               <tr>
-                  <td>Режим</td>
-                  <td>Обозначение</td>
-               </tr>
-               <tr>
-                  <td>'r'</td>
-                  <td>открытие на чтение (является значением по умолчанию).</td>
-               </tr>
-               <tr>
-                  <td>'w'</td>
-                  <td>открытие на запись, содержимое файла удаляется, если файла не существует, создается новый.</td>
-               </tr>
-               <tr>
-                  <td>'x'</td>
-                  <td>открытие на запись, если файла не существует, иначе исключение.</td>
-               </tr>
-               <tr>
-                  <td>'a'</td>
-                  <td>открытие на дозапись, информация добавляется в конец файла.</td>
-               </tr>
-               <tr>
-                  <td>'b'</td>
-                  <td>открытие в двоичном режиме.</td>
-               </tr>
-               <tr>
-                  <td>'t'</td>
-                  <td>открытие в текстовом режиме (является значением по умолчанию).</td>
-               </tr>
-               <tr>
-                  <td>'+'</td>
-                  <td>открытие на чтение и запись</td>
-               </tr>
-            </tbody>
-         </table>
-         <p>Режимы могут быть объединены, то есть, к примеру, 'rb' - чтение в двоичном режиме. По умолчанию режим равен
-            'rt'.</p>
-         <p>И последний аргумент, encoding, нужен только в текстовом режиме чтения файла. Этот аргумент задает
-            кодировку.</p>
+      <p>У функции open много параметров, они указаны в статье "<a href="#">Встроенные функции</a>", нам пока важны 3
+         аргумента: первый, это имя файла. Путь к файлу может быть относительным или абсолютным. Второй аргумент, это
+         режим, в котором мы будем открывать файл.</p>
+      <table border="1">
+         <tbody valign="top">
+            <tr>
+               <td>Режим</td>
+               <td>Обозначение</td>
+            </tr>
+            <tr>
+               <td>'r'</td>
+               <td>открытие на чтение (является значением по умолчанию).</td>
+            </tr>
+            <tr>
+               <td>'w'</td>
+               <td>открытие на запись, содержимое файла удаляется, если файла не существует, создается новый.</td>
+            </tr>
+            <tr>
+               <td>'x'</td>
+               <td>открытие на запись, если файла не существует, иначе исключение.</td>
+            </tr>
+            <tr>
+               <td>'a'</td>
+               <td>открытие на дозапись, информация добавляется в конец файла.</td>
+            </tr>
+            <tr>
+               <td>'b'</td>
+               <td>открытие в двоичном режиме.</td>
+            </tr>
+            <tr>
+               <td>'t'</td>
+               <td>открытие в текстовом режиме (является значением по умолчанию).</td>
+            </tr>
+            <tr>
+               <td>'+'</td>
+               <td>открытие на чтение и запись</td>
+            </tr>
+         </tbody>
+      </table>
+      <p>Режимы могут быть объединены, то есть, к примеру, 'rb' - чтение в двоичном режиме. По умолчанию режим равен
+         'rt'.</p>
+      <p>И последний аргумент, encoding, нужен только в текстовом режиме чтения файла. Этот аргумент задает
+         кодировку.</p>
 
-         <h2>Чтение из файла</h2>
-         <p>Открыли мы файл, а теперь мы хотим прочитать из него информацию. Для этого есть несколько способов, но
-            большого интереса заслуживают лишь два из них.</p>
-         <p>Первый - метод read, читающий весь файл целиком, если был вызван без аргументов, и n символов, если был
-            вызван с аргументом (целым числом n).</p>
-         <pre>
+      <h2>Чтение из файла</h2>
+      <p>Открыли мы файл, а теперь мы хотим прочитать из него информацию. Для этого есть несколько способов, но
+         большого интереса заслуживают лишь два из них.</p>
+      <p>Первый - метод read, читающий весь файл целиком, если был вызван без аргументов, и n символов, если был
+         вызван с аргументом (целым числом n).</p>
+      <pre>
 <code>
 >>> f = open('text.txt')
 >>> f.read(1)
@@ -97,8 +243,8 @@
 'ello world!\nThe end.\n\n'
 </code>
 </pre>
-         <p>Ещё один способ сделать это - прочитать файл построчно, воспользовавшись <a href="#">циклом for</a>:</p>
-         <pre>
+      <p>Ещё один способ сделать это - прочитать файл построчно, воспользовавшись <a href="#">циклом for</a>:</p>
+      <pre>
 <code>
 >>> f = open('text.txt')
 >>> for line in f:
@@ -111,21 +257,21 @@
 </code>
 </pre>
 
-         <h2>Запись в файл</h2>
-         <p>Теперь рассмотрим запись в файл. Попробуем записать в файл вот такой вот список:</p>
-         <pre>
+      <h2>Запись в файл</h2>
+      <p>Теперь рассмотрим запись в файл. Попробуем записать в файл вот такой вот список:</p>
+      <pre>
 <code>
 >>> l = [str(i)+str(i-1) for i in range(20)]
 >>> l
 ['0-1', '10', '21', '32', '43', '54', '65', '76', '87', '98', '109', '1110', '1211', '1312', '1413', '1514', '1615', '1716', '1817', '1918']
 </code>
 </pre>
-         <p>Откроем файл на запись:</p>
-         <pre>
+      <p>Откроем файл на запись:</p>
+      <pre>
 <code>>>> f = open('text.txt', 'w')</code>
 </pre>
-         <p>Запись в файл осуществляется с помощью метода write:</p>
-         <pre>
+      <p>Запись в файл осуществляется с помощью метода write:</p>
+      <pre>
 <code>
 >>> for index in l:
 ...     f.write(index + '\n')
@@ -137,14 +283,14 @@
 3
 </code>
 </pre>
-         <p>Для тех, кто не понял, что это за цифры, поясню: метод write возвращает число записанных символов.</p>
-         <p>После окончания работы с файлом его обязательно нужно закрыть с помощью метода close:</p>
-         <pre>
+      <p>Для тех, кто не понял, что это за цифры, поясню: метод write возвращает число записанных символов.</p>
+      <p>После окончания работы с файлом его обязательно нужно закрыть с помощью метода close:</p>
+      <pre>
 <code>>>> f.close()</code>
 </pre>
-         <p>Теперь попробуем воссоздать этот список из получившегося файла. Откроем файл на чтение (надеюсь, вы поняли,
-            как это сделать?), и прочитаем строки.</p>
-         <pre>
+      <p>Теперь попробуем воссоздать этот список из получившегося файла. Откроем файл на чтение (надеюсь, вы поняли,
+         как это сделать?), и прочитаем строки.</p>
+      <pre>
 <code>
 >>> f = open('text.txt', 'r')
 >>> l = [line.strip() for line in f]
@@ -153,17 +299,14 @@
 >>> f.close()
 </code>
 </pre>
-         <p>Мы получили тот же список, что и был. В более сложных случаях (словарях, вложенных кортежей и т. д.)
-            алгоритм записи придумать сложнее. Но это и не нужно. В python уже давно придумали средства, такие как <a
-               href="#">pickle</a> или <a href="#">json</a>, позволяющие сохранять в файле сложные структуры.</p>
-      </div>
-      <div class="info">
-         <ul>
-            <li><a href="#first">Скачать Python</a></li>
-            <li><a href="#second">Установка Python на Windows</a></li>
-         </ul>
-      </div>
-   </div>
+      <p>Мы получили тот же список, что и был. В более сложных случаях (словарях, вложенных кортежей и т. д.)
+         алгоритм записи придумать сложнее. Но это и не нужно. В python уже давно придумали средства, такие как <a
+            href="#">pickle</a> или <a href="#">json</a>, позволяющие сохранять в файле сложные структуры.</p>
+    </section>
+  </main>
+
+  <!--========== MAIN JS ==========-->
+  <script src="../../js/script.js"></script>
 </body>
 
 </html>

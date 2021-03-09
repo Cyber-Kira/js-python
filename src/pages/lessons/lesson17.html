@@ -2,266 +2,412 @@
 <html lang="ru">
 
 <head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="../css/style.css">
-   <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <link rel="stylesheet" href="../../css/style.css">
 </head>
 
 <body>
-   <header class="header">
-      <nav class="header_nav">
-         <ul class="header_nav_list">
-            <li class="header_nav_list_item"><a class="header_nav_list_item_link" href="#">Уроки</a></li>
-            <li class="header_nav_list_item"><a class="header_nav_list_item_link" href="#">Практические</a></li>
-            <li class="header_nav_list_item"><a class="header_nav_list_item_link" href="#">Лабораторные</a></li>
-            <li class="header_nav_list_item"><a class="header_nav_list_item_link" href="#">Тест</a></li>
-         </ul>
-      </nav>
-   </header>
+  <!--========== HEADER ==========-->
+  <header class="header">
+    <div class="header__container">
+      <img src="../../img/1024px-Python-logo-notext.svg.webp" alt="" class="header__img">
 
-   <div class="wrapper">
-      <div class="sidebar">
-         <ul>
-            <li><a href="#">Уроки</a></li>
-            <li><a href="#">Практические</a></li>
-            <li><a href="#">Лабораторные</a></li>
-            <li><a href="#">Тест</a></li>
-         </ul>
+      <a href="../../index.html" class="header__logo">Python World</a>
+
+      <div class="header__search">
+        <input type="search" placeholder="Поиск" class="header__input">
+        <i class='bx bx-search header__icon'></i>
       </div>
-      <div class="main_content">
-         <h1>Исключения в python. Конструкция try - except для обработки исключений</h1>
-         <p>Исключения (exceptions) - ещё один тип данных в python. Исключения необходимы для того, чтобы сообщать
-            программисту об ошибках.</p>
-         <p>Самый простейший пример исключения - деление на ноль:</p>
-         <pre>
+
+      <div class="header__toggle">
+        <i class='bx bx-menu' id="header-toggle"></i>
+      </div>
+    </div>
+  </header>
+
+  <!--========== NAV ==========-->
+  <div class="nav" id="navbar">
+    <nav class="nav__container">
+      <div>
+        <a href="../../index.html" class="nav__link nav__logo">
+          <img src="../../img/1024px-Python-logo-notext.svg.webp" alt="" width="35" height="35">
+        </a>
+
+        <div class="nav__list">
+          <div class="nav__items">
+            <a href="../../index.html" class="nav__link active">
+              <i class='bx bx-home nav__icon'></i>
+              <span class="nav__name">Домой</span>
+            </a>
+            <h3 class="nav__subtitle">Учебник</h3>
+
+
+
+            <div class="nav__dropdown">
+              <a href="#" class="nav__link">
+                <i class='bx bxs-school nav__icon'></i>
+                <span class="nav__name">Уроки</span>
+                <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+              </a>
+
+              <div class="nav__dropdown-collapse">
+                <div class="nav__dropdown-content">
+                  <a href="./lesson1.html" class="nav__dropdown-item">Возможности языка python</a>
+                  <a href="./lesson2.html" class="nav__dropdown-item">Скачать Python</a>
+                  <a href="./lesson3.html" class="nav__dropdown-item">Первая программа</a>
+                  <a href="./lesson4.html" class="nav__dropdown-item">Синтаксис языка Python</a>
+                  <a href="./lesson5.html" class="nav__dropdown-item">Программа не работает</a>
+                  <a href="./lesson6.html" class="nav__dropdown-item">Условный оператор if</a>
+                  <a href="./lesson7.html" class="nav__dropdown-item">Циклы</a>
+                  <a href="./lesson8.html" class="nav__dropdown-item">Ключевые слова, модуль keyword</a>
+                  <a href="./lesson9.html" class="nav__dropdown-item">Числа: целые, вещественные, комплексные</a>
+                  <a href="./lesson10.html" class="nav__dropdown-item">Строки</a>
+                  <a href="./lesson11.html" class="nav__dropdown-item">Списки (list)</a>
+                  <a href="./lesson12.html" class="nav__dropdown-item">Индексы и срезы</a>
+                  <a href="./lesson13.html" class="nav__dropdown-item">Кортежи (tuple)</a>
+                  <a href="./lesson14.html" class="nav__dropdown-item">Словари (dict) и работа с ними</a>
+                  <a href="./lesson15.html" class="nav__dropdown-item">Множества (set и frozenset)</a>
+                  <a href="./lesson16.html" class="nav__dropdown-item">Функции и их аргументы</a>
+                  <a href="./lesson17.html" class="nav__dropdown-item">Исключения в python</a>
+                  <a href="./lesson18.html" class="nav__dropdown-item">Байты (bytes и bytearray)</a>
+                  <a href="./lesson19.html" class="nav__dropdown-item">Файлы. Работа с файлами</a>
+                  <a href="./lesson20.html" class="nav__dropdown-item">With ... as - менеджеры контекста</a>
+                  <a href="./lesson21.html" class="nav__dropdown-item">PEP 8</a>
+                  <a href="./lesson22.html" class="nav__dropdown-item">Документирование кода в Python</a>
+                  <a href="./lesson23.html" class="nav__dropdown-item">Работа с модулями</a>
+                  <a href="./lesson24.html" class="nav__dropdown-item">Объектно-ориентированное программирование</a>
+                  <a href="./lesson25.html" class="nav__dropdown-item">Инкапсуляция, наследование, полиморфизм</a>
+                  <a href="./lesson26.html" class="nav__dropdown-item">Перегрузка операторов</a>
+                  <a href="./lesson27.html" class="nav__dropdown-item">Декораторы</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="nav__dropdown">
+              <a href="#" class="nav__link">
+                <i class='bx bx-code-block nav__icon'></i>
+                <span class="nav__name">Практические</span>
+                <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+              </a>
+
+              <div class="nav__dropdown-collapse">
+                <div class="nav__dropdown-content">
+                  <a href="./pages/lessons/lesson1.html" class="nav__dropdown-item">Возможности языка python</a>
+                  <a href="./pages/lessons/lesson2.html" class="nav__dropdown-item">Скачать Python</a>
+                  <a href="./pages/lessons/lesson3.html" class="nav__dropdown-item">Первая программа</a>
+                  <a href="./pages/lessons/lesson4.html" class="nav__dropdown-item">Синтаксис языка Python</a>
+                  <a href="./pages/lessons/lesson5.html" class="nav__dropdown-item">Программа не работает</a>
+                  <a href="./pages/lessons/lesson6.html" class="nav__dropdown-item">Условный оператор if</a>
+                  <a href="./pages/lessons/lesson7.html" class="nav__dropdown-item">Циклы</a>
+                  <a href="./pages/lessons/lesson8.html" class="nav__dropdown-item">Ключевые слова, модуль keyword</a>
+                  <a href="./pages/lessons/lesson9.html" class="nav__dropdown-item">Числа: целые, вещественные,
+                    комплексные</a>
+                  <a href="./pages/lessons/lesson10.html" class="nav__dropdown-item">Строки</a>
+                  <a href="./pages/lessons/lesson11.html" class="nav__dropdown-item">Списки (list)</a>
+                  <a href="./pages/lessons/lesson12.html" class="nav__dropdown-item">Индексы и срезы</a>
+                  <a href="./pages/lessons/lesson13.html" class="nav__dropdown-item">Кортежи (tuple)</a>
+                  <a href="./pages/lessons/lesson14.html" class="nav__dropdown-item">Словари (dict) и работа с ними</a>
+                  <a href="./pages/lessons/lesson15.html" class="nav__dropdown-item">Множества (set и frozenset)</a>
+                  <a href="./pages/lessons/lesson16.html" class="nav__dropdown-item">Функции и их аргументы</a>
+                  <a href="./pages/lessons/lesson17.html" class="nav__dropdown-item">Исключения в python</a>
+                  <a href="./pages/lessons/lesson18.html" class="nav__dropdown-item">Байты (bytes и bytearray)</a>
+                  <a href="./pages/lessons/lesson19.html" class="nav__dropdown-item">Файлы. Работа с файлами</a>
+                  <a href="./pages/lessons/lesson20.html" class="nav__dropdown-item">With ... as - менеджеры
+                    контекста</a>
+                  <a href="./pages/lessons/lesson21.html" class="nav__dropdown-item">PEP 8</a>
+                  <a href="./pages/lessons/lesson22.html" class="nav__dropdown-item">Документирование кода в Python</a>
+                  <a href="./pages/lessons/lesson23.html" class="nav__dropdown-item">Работа с модулями</a>
+                  <a href="./pages/lessons/lesson24.html" class="nav__dropdown-item">Объектно-ориентированное
+                    программирование</a>
+                  <a href="./pages/lessons/lesson25.html" class="nav__dropdown-item">Инкапсуляция, наследование,
+                    полиморфизм</a>
+                  <a href="./pages/lessons/lesson26.html" class="nav__dropdown-item">Перегрузка операторов</a>
+                  <a href="./pages/lessons/lesson27.html" class="nav__dropdown-item">Декораторы</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="nav__items">
+            <h3 class="nav__subtitle">Практика</h3>
+
+            <div class="nav__dropdown">
+              <a href="#" class="nav__link">
+                <i class='bx bx-test-tube nav__icon'></i>
+                <span class="nav__name nav__icon">Лабораторные</span>
+                <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+              </a>
+
+              <div class="nav__dropdown-collapse">
+                <div class="nav__dropdown-content">
+                  <a href="#" class="nav__dropdown-item">Blocked</a>
+                  <a href="#" class="nav__dropdown-item">Silenced</a>
+                  <a href="#" class="nav__dropdown-item">Publish</a>
+                  <a href="#" class="nav__dropdown-item">Program</a>
+                  <a href="#" class="nav__dropdown-item">Blocked</a>
+                  <a href="#" class="nav__dropdown-item">Silenced</a>
+                  <a href="#" class="nav__dropdown-item">Publish</a>
+                  <a href="#" class="nav__dropdown-item">Program</a>
+                  <a href="#" class="nav__dropdown-item">Blocked</a>
+                  <a href="#" class="nav__dropdown-item">Silenced</a>
+                  <a href="#" class="nav__dropdown-item">Publish</a>
+                  <a href="#" class="nav__dropdown-item">Program</a>
+                </div>
+              </div>
+            </div>
+
+            <a href="#" class="nav__link">
+              <i class='bx bxl-python nav__icon'></i>
+              <span class="nav__name">Тест</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <a href="#" class="nav__link nav__logout">
+        <i class='bx bx-log-out nav__icon'></i>
+        <span class="nav__name">Log Out</span>
+      </a>
+    </nav>
+  </div>
+
+  <!--========== CONTENTS ==========-->
+  <main>
+    <section class="container">
+      <h1>Исключения в python. Конструкция try - except для обработки исключений</h1>
+      <p>Исключения (exceptions) - ещё один тип данных в python. Исключения необходимы для того, чтобы сообщать
+         программисту об ошибках.</p>
+      <p>Самый простейший пример исключения - деление на ноль:</p>
+      <pre>
 <code>
 >>> 100 / 0
 Traceback (most recent call last):
 File "", line 1, in
-   100 / 0
+100 / 0
 ZeroDivisionError: division by zero
 </code>
 </pre>
-         <p>Разберём это сообщение подробнее: интерпретатор нам сообщает о том, что он поймал исключение и напечатал
-            информацию (Traceback (most recent call last)).</p>
-         <p>Далее имя файла (File ""). Имя пустое, потому что мы находимся в интерактивном режиме, строка в файле (line
-            1);</p>
-         <p>Выражение, в котором произошла ошибка (100 / 0).</p>
-         <p>Название исключения (ZeroDivisionError) и краткое описание исключения (division by zero).</p>
-         <p>Разумеется, возможны и другие исключения:</p>
-         <pre>
+      <p>Разберём это сообщение подробнее: интерпретатор нам сообщает о том, что он поймал исключение и напечатал
+         информацию (Traceback (most recent call last)).</p>
+      <p>Далее имя файла (File ""). Имя пустое, потому что мы находимся в интерактивном режиме, строка в файле (line
+         1);</p>
+      <p>Выражение, в котором произошла ошибка (100 / 0).</p>
+      <p>Название исключения (ZeroDivisionError) и краткое описание исключения (division by zero).</p>
+      <p>Разумеется, возможны и другие исключения:</p>
+      <pre>
 <code>
 >>> 2 + '1'
 Traceback (most recent call last):
 File "", line 1, in
-   2 + '1'
+2 + '1'
 TypeError: unsupported operand type(s) for +: 'int' and 'str'
 
 >>> int('qwerty')
 Traceback (most recent call last):
 File "", line 1, in
-   int('qwerty')
+int('qwerty')
 ValueError: invalid literal for int() with base 10: 'qwerty'
 </code>
 </pre>
-         <p>В этих двух примерах генерируются исключения TypeError и ValueError соответственно. Подсказки дают нам
-            полную информацию о том, где порождено исключение, и с чем оно связано.</p>
-         <p>Рассмотрим иерархию встроенных в python исключений, хотя иногда вам могут встретиться и другие, так как
-            программисты могут создавать собственные исключения. Данный список актуален для <a href="#">python 3.3</a>,
-            в более ранних версиях есть незначительные изменения.</p>
-         <ul>
-            <li>
-               <p>BaseException - базовое исключение, от которого берут начало все остальные.</p>
-               <ul>
-                  <li>
-                     <p>SystemExit - исключение, порождаемое функцией sys.exit при выходе из программы.</p>
-                  </li>
-                  <li>
-                     <p>KeyboardInterrupt - порождается при прерывании программы пользователем (обычно сочетанием клавиш
-                        Ctrl+C).</p>
-                  </li>
-                  <li>
-                     <p>GeneratorExit - порождается при вызове метода close объекта generator.</p>
-                  </li>
-                  <li>
-                     <p>Exception - а вот тут уже заканчиваются полностью системные исключения (которые лучше не
-                        трогать) и начинаются обыкновенные, с которыми можно работать.</p>
-                     <ul>
-                        <li>
-                           <p>StopIteration - порождается <a href="#">встроенной функцией</a> next, если в итераторе
-                              больше нет элементов.</p>
-                        </li>
-                        <li>
-                           <p>ArithmeticError - арифметическая ошибка.</p>
-                           <ul>
-                              <li>
-                                 <p>FloatingPointError - порождается при неудачном выполнении операции с плавающей
-                                    запятой. На практике встречается нечасто.</p>
-                              </li>
-                              <li>
-                                 <p>OverflowError - возникает, когда результат арифметической операции слишком велик для
-                                    представления. Не появляется при обычной работе с целыми числами (так как python
-                                    поддерживает длинные числа), но может возникать в некоторых других случаях.</p>
-                              </li>
-                              <li>
-                                 <p>ZeroDivisionError - деление на ноль.</p>
-                              </li>
-                           </ul>
-                        </li>
-                        <li>
-                           <p>AssertionError - выражение в функции assert ложно.</p>
-                        </li>
-                        <li>
-                           <p>AttributeError - объект не имеет данного атрибута (значения или метода).</p>
-                        </li>
-                        <li>
-                           <p>BufferError - операция, связанная с буфером, не может быть выполнена.</p>
-                        </li>
-                        <li>
-                           <p>EOFError - функция наткнулась на конец файла и не смогла прочитать то, что хотела.</p>
-                        </li>
-                        <li>
-                           <p>ImportError - не удалось импортирование модуля или его атрибута.</p>
-                        </li>
-                        <li>
-                           <p>LookupError - некорректный индекс или ключ.</p>
-                           <ul>
-                              <li>
-                                 <p>IndexError - индекс не входит в диапазон элементов.</p>
-                              </li>
-                              <li>
-                                 <p>KeyError - несуществующий ключ (в <a href="#">словаре</a>, <a href="#">множестве</a>
-                                    или другом объекте).</p>
-                              </li>
-                           </ul>
-                        </li>
-                        <li>
-                           <p>MemoryError - недостаточно памяти.</p>
-                        </li>
-                        <li>
-                           <p>NameError - не найдено переменной с таким именем.</p>
-                           <ul>
-                              <li>
-                                 <p>UnboundLocalError - сделана ссылка на локальную переменную в функции, но переменная
-                                    не определена ранее.</p>
-                              </li>
-                           </ul>
-                        </li>
-                        <li>
-                           <p>OSError - ошибка, связанная с системой.</p>
-                           <ul>
-                              <li>
-                                 <p>BlockingIOError</p>
-                              </li>
-                              <li>
-                                 <p>ChildProcessError - неудача при операции с дочерним процессом.</p>
-                              </li>
-                              <li>
-                                 <p>ConnectionError - базовый класс для исключений, связанных с подключениями.</p>
-                                 <ul>
-                                    <li>
-                                       <p>BrokenPipeError</p>
-                                    </li>
-                                    <li>
-                                       <p>ConnectionAbortedError</p>
-                                    </li>
-                                    <li>
-                                       <p>ConnectionRefusedError</p>
-                                    </li>
-                                    <li>
-                                       <p>ConnectionResetError</p>
-                                    </li>
-                                 </ul>
-                              </li>
-                              <li>
-                                 <p>FileExistsError - попытка создания <a href="#">файла</a> или директории, которая уже
-                                    существует.</p>
-                              </li>
-                              <li>
-                                 <p>FileNotFoundError - файл или директория не существует.</p>
-                              </li>
-                              <li>
-                                 <p>InterruptedError - системный вызов прерван входящим сигналом.</p>
-                              </li>
-                              <li>
-                                 <p>IsADirectoryError - ожидался файл, но это директория.</p>
-                              </li>
-                              <li>
-                                 <p>NotADirectoryError - ожидалась директория, но это файл.</p>
-                              </li>
-                              <li>
-                                 <p>PermissionError - не хватает прав доступа.</p>
-                              </li>
-                              <li>
-                                 <p>ProcessLookupError - указанного процесса не существует.</p>
-                              </li>
-                              <li>
-                                 <p>TimeoutError - закончилось время ожидания.</p>
-                              </li>
-                           </ul>
-                        </li>
-                        <li>
-                           <p>ReferenceError - попытка доступа к атрибуту со слабой ссылкой.</p>
-                        </li>
-                        <li>
-                           <p>RuntimeError - возникает, когда исключение не попадает ни под одну из других категорий.
-                           </p>
-                        </li>
-                        <li>
-                           <p>NotImplementedError - возникает, когда абстрактные методы класса требуют переопределения в
-                              дочерних классах.</p>
-                        </li>
-                        <li>
-                           <p>SyntaxError - синтаксическая ошибка.</p>
-                           <ul>
-                              <li>
-                                 <p>IndentationError - неправильные отступы.</p>
-                                 <ul>
-                                    <li>
-                                       <p>TabError - смешивание в отступах табуляции и пробелов.</p>
-                                    </li>
-                                 </ul>
-                              </li>
-                           </ul>
-                        </li>
-                        <li>
-                           <p>SystemError - внутренняя ошибка.</p>
-                        </li>
-                        <li>
-                           <p>TypeError - операция применена к объекту несоответствующего типа.</p>
-                        </li>
-                        <li>
-                           <p>ValueError - функция получает аргумент правильного типа, но некорректного значения.</p>
-                        </li>
-                        <li>
-                           <p>UnicodeError - ошибка, связанная с кодированием / раскодированием unicode в <a
-                                 href="#">строках</a>.</p>
-                           <ul>
-                              <li>
-                                 <p>UnicodeEncodeError - исключение, связанное с кодированием unicode.</p>
-                              </li>
-                              <li>
-                                 <p>UnicodeDecodeError - исключение, связанное с декодированием unicode.</p>
-                              </li>
-                              <li>
-                                 <p>UnicodeTranslateError - исключение, связанное с переводом unicode.</p>
-                              </li>
-                           </ul>
-                        </li>
-                        <li>
-                           <p>Warning - предупреждение.</p>
-                        </li>
-                     </ul>
-                  </li>
-               </ul>
-            </li>
-         </ul>
-         <p>Теперь, зная, когда и при каких обстоятельствах могут возникнуть исключения, мы можем их обрабатывать. Для
-            обработки исключений используется конструкция try - except.</p>
-         <p>Первый пример применения этой конструкции:</p>
-         <pre>
+      <p>В этих двух примерах генерируются исключения TypeError и ValueError соответственно. Подсказки дают нам
+         полную информацию о том, где порождено исключение, и с чем оно связано.</p>
+      <p>Рассмотрим иерархию встроенных в python исключений, хотя иногда вам могут встретиться и другие, так как
+         программисты могут создавать собственные исключения. Данный список актуален для <a href="#">python 3.3</a>,
+         в более ранних версиях есть незначительные изменения.</p>
+      <ul>
+         <li>
+            <p>BaseException - базовое исключение, от которого берут начало все остальные.</p>
+            <ul>
+               <li>
+                  <p>SystemExit - исключение, порождаемое функцией sys.exit при выходе из программы.</p>
+               </li>
+               <li>
+                  <p>KeyboardInterrupt - порождается при прерывании программы пользователем (обычно сочетанием клавиш
+                     Ctrl+C).</p>
+               </li>
+               <li>
+                  <p>GeneratorExit - порождается при вызове метода close объекта generator.</p>
+               </li>
+               <li>
+                  <p>Exception - а вот тут уже заканчиваются полностью системные исключения (которые лучше не
+                     трогать) и начинаются обыкновенные, с которыми можно работать.</p>
+                  <ul>
+                     <li>
+                        <p>StopIteration - порождается <a href="#">встроенной функцией</a> next, если в итераторе
+                           больше нет элементов.</p>
+                     </li>
+                     <li>
+                        <p>ArithmeticError - арифметическая ошибка.</p>
+                        <ul>
+                           <li>
+                              <p>FloatingPointError - порождается при неудачном выполнении операции с плавающей
+                                 запятой. На практике встречается нечасто.</p>
+                           </li>
+                           <li>
+                              <p>OverflowError - возникает, когда результат арифметической операции слишком велик для
+                                 представления. Не появляется при обычной работе с целыми числами (так как python
+                                 поддерживает длинные числа), но может возникать в некоторых других случаях.</p>
+                           </li>
+                           <li>
+                              <p>ZeroDivisionError - деление на ноль.</p>
+                           </li>
+                        </ul>
+                     </li>
+                     <li>
+                        <p>AssertionError - выражение в функции assert ложно.</p>
+                     </li>
+                     <li>
+                        <p>AttributeError - объект не имеет данного атрибута (значения или метода).</p>
+                     </li>
+                     <li>
+                        <p>BufferError - операция, связанная с буфером, не может быть выполнена.</p>
+                     </li>
+                     <li>
+                        <p>EOFError - функция наткнулась на конец файла и не смогла прочитать то, что хотела.</p>
+                     </li>
+                     <li>
+                        <p>ImportError - не удалось импортирование модуля или его атрибута.</p>
+                     </li>
+                     <li>
+                        <p>LookupError - некорректный индекс или ключ.</p>
+                        <ul>
+                           <li>
+                              <p>IndexError - индекс не входит в диапазон элементов.</p>
+                           </li>
+                           <li>
+                              <p>KeyError - несуществующий ключ (в <a href="#">словаре</a>, <a href="#">множестве</a>
+                                 или другом объекте).</p>
+                           </li>
+                        </ul>
+                     </li>
+                     <li>
+                        <p>MemoryError - недостаточно памяти.</p>
+                     </li>
+                     <li>
+                        <p>NameError - не найдено переменной с таким именем.</p>
+                        <ul>
+                           <li>
+                              <p>UnboundLocalError - сделана ссылка на локальную переменную в функции, но переменная
+                                 не определена ранее.</p>
+                           </li>
+                        </ul>
+                     </li>
+                     <li>
+                        <p>OSError - ошибка, связанная с системой.</p>
+                        <ul>
+                           <li>
+                              <p>BlockingIOError</p>
+                           </li>
+                           <li>
+                              <p>ChildProcessError - неудача при операции с дочерним процессом.</p>
+                           </li>
+                           <li>
+                              <p>ConnectionError - базовый класс для исключений, связанных с подключениями.</p>
+                              <ul>
+                                 <li>
+                                    <p>BrokenPipeError</p>
+                                 </li>
+                                 <li>
+                                    <p>ConnectionAbortedError</p>
+                                 </li>
+                                 <li>
+                                    <p>ConnectionRefusedError</p>
+                                 </li>
+                                 <li>
+                                    <p>ConnectionResetError</p>
+                                 </li>
+                              </ul>
+                           </li>
+                           <li>
+                              <p>FileExistsError - попытка создания <a href="#">файла</a> или директории, которая уже
+                                 существует.</p>
+                           </li>
+                           <li>
+                              <p>FileNotFoundError - файл или директория не существует.</p>
+                           </li>
+                           <li>
+                              <p>InterruptedError - системный вызов прерван входящим сигналом.</p>
+                           </li>
+                           <li>
+                              <p>IsADirectoryError - ожидался файл, но это директория.</p>
+                           </li>
+                           <li>
+                              <p>NotADirectoryError - ожидалась директория, но это файл.</p>
+                           </li>
+                           <li>
+                              <p>PermissionError - не хватает прав доступа.</p>
+                           </li>
+                           <li>
+                              <p>ProcessLookupError - указанного процесса не существует.</p>
+                           </li>
+                           <li>
+                              <p>TimeoutError - закончилось время ожидания.</p>
+                           </li>
+                        </ul>
+                     </li>
+                     <li>
+                        <p>ReferenceError - попытка доступа к атрибуту со слабой ссылкой.</p>
+                     </li>
+                     <li>
+                        <p>RuntimeError - возникает, когда исключение не попадает ни под одну из других категорий.
+                        </p>
+                     </li>
+                     <li>
+                        <p>NotImplementedError - возникает, когда абстрактные методы класса требуют переопределения в
+                           дочерних классах.</p>
+                     </li>
+                     <li>
+                        <p>SyntaxError - синтаксическая ошибка.</p>
+                        <ul>
+                           <li>
+                              <p>IndentationError - неправильные отступы.</p>
+                              <ul>
+                                 <li>
+                                    <p>TabError - смешивание в отступах табуляции и пробелов.</p>
+                                 </li>
+                              </ul>
+                           </li>
+                        </ul>
+                     </li>
+                     <li>
+                        <p>SystemError - внутренняя ошибка.</p>
+                     </li>
+                     <li>
+                        <p>TypeError - операция применена к объекту несоответствующего типа.</p>
+                     </li>
+                     <li>
+                        <p>ValueError - функция получает аргумент правильного типа, но некорректного значения.</p>
+                     </li>
+                     <li>
+                        <p>UnicodeError - ошибка, связанная с кодированием / раскодированием unicode в <a
+                              href="#">строках</a>.</p>
+                        <ul>
+                           <li>
+                              <p>UnicodeEncodeError - исключение, связанное с кодированием unicode.</p>
+                           </li>
+                           <li>
+                              <p>UnicodeDecodeError - исключение, связанное с декодированием unicode.</p>
+                           </li>
+                           <li>
+                              <p>UnicodeTranslateError - исключение, связанное с переводом unicode.</p>
+                           </li>
+                        </ul>
+                     </li>
+                     <li>
+                        <p>Warning - предупреждение.</p>
+                     </li>
+                  </ul>
+               </li>
+            </ul>
+         </li>
+      </ul>
+      <p>Теперь, зная, когда и при каких обстоятельствах могут возникнуть исключения, мы можем их обрабатывать. Для
+         обработки исключений используется конструкция try - except.</p>
+      <p>Первый пример применения этой конструкции:</p>
+      <pre>
 <code>
 >>> try:
 ...     k = 1 / 0
@@ -272,10 +418,10 @@ ValueError: invalid literal for int() with base 10: 'qwerty'
 0
 </code>
 </pre>
-         <p>В блоке try мы выполняем инструкцию, которая может породить исключение, а в блоке except мы перехватываем
-            их. При этом перехватываются как само исключение, так и его потомки. Например, перехватывая ArithmeticError,
-            мы также перехватываем FloatingPointError, OverflowError и ZeroDivisionError.</p>
-         <pre>
+      <p>В блоке try мы выполняем инструкцию, которая может породить исключение, а в блоке except мы перехватываем
+         их. При этом перехватываются как само исключение, так и его потомки. Например, перехватывая ArithmeticError,
+         мы также перехватываем FloatingPointError, OverflowError и ZeroDivisionError.</p>
+      <pre>
 <code>
 >>> try:
 ...     k = 1 / 0
@@ -286,14 +432,14 @@ ValueError: invalid literal for int() with base 10: 'qwerty'
 0
 </code>
 </pre>
-         <p>Также возможна инструкция except без аргументов, которая перехватывает вообще всё (и прерывание с
-            клавиатуры, и системный выход и т. д.). Поэтому в такой форме инструкция except практически не используется,
-            а используется except Exception. Однако чаще всего перехватывают исключения по одному, для упрощения отладки
-            (вдруг вы ещё другую ошибку сделаете, а except её перехватит).</p>
-         <p>Ещё две инструкции, относящиеся к нашей проблеме, это finally и else. Finally выполняет блок инструкций в
-            любом случае, было ли исключение, или нет (применима, когда нужно непременно что-то сделать, к примеру,
-            закрыть файл). Инструкция else выполняется в том случае, если исключения не было.</p>
-         <pre>
+      <p>Также возможна инструкция except без аргументов, которая перехватывает вообще всё (и прерывание с
+         клавиатуры, и системный выход и т. д.). Поэтому в такой форме инструкция except практически не используется,
+         а используется except Exception. Однако чаще всего перехватывают исключения по одному, для упрощения отладки
+         (вдруг вы ещё другую ошибку сделаете, а except её перехватит).</p>
+      <p>Ещё две инструкции, относящиеся к нашей проблеме, это finally и else. Finally выполняет блок инструкций в
+         любом случае, было ли исключение, или нет (применима, когда нужно непременно что-то сделать, к примеру,
+         закрыть файл). Инструкция else выполняется в том случае, если исключения не было.</p>
+      <pre>
 <code>
 >>> f = open('1.txt')
 >>> ints = []
@@ -315,14 +461,11 @@ ValueError: invalid literal for int() with base 10: 'qwerty'
 Я закрыл файл.
 </code>
 </pre>
-      </div>
-      <div class="info">
-         <ul>
-            <li><a href="#first">Скачать Python</a></li>
-            <li><a href="#second">Установка Python на Windows</a></li>
-         </ul>
-      </div>
-   </div>
+    </section>
+  </main>
+
+  <!--========== MAIN JS ==========-->
+  <script src="../../js/script.js"></script>
 </body>
 
 </html>

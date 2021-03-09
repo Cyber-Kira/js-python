@@ -2,51 +2,197 @@
 <html lang="ru">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <link rel="stylesheet" href="../../css/style.css">
 </head>
 
 <body>
-    <header class="header">
-        <nav class="header_nav">
-            <ul class="header_nav_list">
-                <li class="header_nav_list_item"><a class="header_nav_list_item_link" href="#">Уроки</a></li>
-                <li class="header_nav_list_item"><a class="header_nav_list_item_link" href="#">Практические</a></li>
-                <li class="header_nav_list_item"><a class="header_nav_list_item_link" href="#">Лабораторные</a></li>
-                <li class="header_nav_list_item"><a class="header_nav_list_item_link" href="#">Тест</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!--========== HEADER ==========-->
+  <header class="header">
+    <div class="header__container">
+      <img src="../../img/1024px-Python-logo-notext.svg.webp" alt="" class="header__img">
 
-    <div class="wrapper">
-        <div class="sidebar">
-            <ul>
-                <li><a href="#">Уроки</a></li>
-                <li><a href="#">Практические</a></li>
-                <li><a href="#">Лабораторные</a></li>
-                <li><a href="#">Тест</a></li>
-            </ul>
+      <a href="../../index.html" class="header__logo">Python World</a>
+
+      <div class="header__search">
+        <input type="search" placeholder="Поиск" class="header__input">
+        <i class='bx bx-search header__icon'></i>
+      </div>
+
+      <div class="header__toggle">
+        <i class='bx bx-menu' id="header-toggle"></i>
+      </div>
+    </div>
+  </header>
+
+  <!--========== NAV ==========-->
+  <div class="nav" id="navbar">
+    <nav class="nav__container">
+      <div>
+        <a href="../../index.html" class="nav__link nav__logo">
+          <img src="../../img/1024px-Python-logo-notext.svg.webp" alt="" width="35" height="35">
+        </a>
+
+        <div class="nav__list">
+          <div class="nav__items">
+            <a href="../../index.html" class="nav__link active">
+              <i class='bx bx-home nav__icon'></i>
+              <span class="nav__name">Домой</span>
+            </a>
+            <h3 class="nav__subtitle">Учебник</h3>
+
+
+
+            <div class="nav__dropdown">
+              <a href="#" class="nav__link">
+                <i class='bx bxs-school nav__icon'></i>
+                <span class="nav__name">Уроки</span>
+                <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+              </a>
+
+              <div class="nav__dropdown-collapse">
+                <div class="nav__dropdown-content">
+                  <a href="./lesson1.html" class="nav__dropdown-item">Возможности языка python</a>
+                  <a href="./lesson2.html" class="nav__dropdown-item">Скачать Python</a>
+                  <a href="./lesson3.html" class="nav__dropdown-item">Первая программа</a>
+                  <a href="./lesson4.html" class="nav__dropdown-item">Синтаксис языка Python</a>
+                  <a href="./lesson5.html" class="nav__dropdown-item">Программа не работает</a>
+                  <a href="./lesson6.html" class="nav__dropdown-item">Условный оператор if</a>
+                  <a href="./lesson7.html" class="nav__dropdown-item">Циклы</a>
+                  <a href="./lesson8.html" class="nav__dropdown-item">Ключевые слова, модуль keyword</a>
+                  <a href="./lesson9.html" class="nav__dropdown-item">Числа: целые, вещественные, комплексные</a>
+                  <a href="./lesson10.html" class="nav__dropdown-item">Строки</a>
+                  <a href="./lesson11.html" class="nav__dropdown-item">Списки (list)</a>
+                  <a href="./lesson12.html" class="nav__dropdown-item">Индексы и срезы</a>
+                  <a href="./lesson13.html" class="nav__dropdown-item">Кортежи (tuple)</a>
+                  <a href="./lesson14.html" class="nav__dropdown-item">Словари (dict) и работа с ними</a>
+                  <a href="./lesson15.html" class="nav__dropdown-item">Множества (set и frozenset)</a>
+                  <a href="./lesson16.html" class="nav__dropdown-item">Функции и их аргументы</a>
+                  <a href="./lesson17.html" class="nav__dropdown-item">Исключения в python</a>
+                  <a href="./lesson18.html" class="nav__dropdown-item">Байты (bytes и bytearray)</a>
+                  <a href="./lesson19.html" class="nav__dropdown-item">Файлы. Работа с файлами</a>
+                  <a href="./lesson20.html" class="nav__dropdown-item">With ... as - менеджеры контекста</a>
+                  <a href="./lesson21.html" class="nav__dropdown-item">PEP 8</a>
+                  <a href="./lesson22.html" class="nav__dropdown-item">Документирование кода в Python</a>
+                  <a href="./lesson23.html" class="nav__dropdown-item">Работа с модулями</a>
+                  <a href="./lesson24.html" class="nav__dropdown-item">Объектно-ориентированное программирование</a>
+                  <a href="./lesson25.html" class="nav__dropdown-item">Инкапсуляция, наследование, полиморфизм</a>
+                  <a href="./lesson26.html" class="nav__dropdown-item">Перегрузка операторов</a>
+                  <a href="./lesson27.html" class="nav__dropdown-item">Декораторы</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="nav__dropdown">
+              <a href="#" class="nav__link">
+                <i class='bx bx-code-block nav__icon'></i>
+                <span class="nav__name">Практические</span>
+                <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+              </a>
+
+              <div class="nav__dropdown-collapse">
+                <div class="nav__dropdown-content">
+                  <a href="./pages/lessons/lesson1.html" class="nav__dropdown-item">Возможности языка python</a>
+                  <a href="./pages/lessons/lesson2.html" class="nav__dropdown-item">Скачать Python</a>
+                  <a href="./pages/lessons/lesson3.html" class="nav__dropdown-item">Первая программа</a>
+                  <a href="./pages/lessons/lesson4.html" class="nav__dropdown-item">Синтаксис языка Python</a>
+                  <a href="./pages/lessons/lesson5.html" class="nav__dropdown-item">Программа не работает</a>
+                  <a href="./pages/lessons/lesson6.html" class="nav__dropdown-item">Условный оператор if</a>
+                  <a href="./pages/lessons/lesson7.html" class="nav__dropdown-item">Циклы</a>
+                  <a href="./pages/lessons/lesson8.html" class="nav__dropdown-item">Ключевые слова, модуль keyword</a>
+                  <a href="./pages/lessons/lesson9.html" class="nav__dropdown-item">Числа: целые, вещественные,
+                    комплексные</a>
+                  <a href="./pages/lessons/lesson10.html" class="nav__dropdown-item">Строки</a>
+                  <a href="./pages/lessons/lesson11.html" class="nav__dropdown-item">Списки (list)</a>
+                  <a href="./pages/lessons/lesson12.html" class="nav__dropdown-item">Индексы и срезы</a>
+                  <a href="./pages/lessons/lesson13.html" class="nav__dropdown-item">Кортежи (tuple)</a>
+                  <a href="./pages/lessons/lesson14.html" class="nav__dropdown-item">Словари (dict) и работа с ними</a>
+                  <a href="./pages/lessons/lesson15.html" class="nav__dropdown-item">Множества (set и frozenset)</a>
+                  <a href="./pages/lessons/lesson16.html" class="nav__dropdown-item">Функции и их аргументы</a>
+                  <a href="./pages/lessons/lesson17.html" class="nav__dropdown-item">Исключения в python</a>
+                  <a href="./pages/lessons/lesson18.html" class="nav__dropdown-item">Байты (bytes и bytearray)</a>
+                  <a href="./pages/lessons/lesson19.html" class="nav__dropdown-item">Файлы. Работа с файлами</a>
+                  <a href="./pages/lessons/lesson20.html" class="nav__dropdown-item">With ... as - менеджеры
+                    контекста</a>
+                  <a href="./pages/lessons/lesson21.html" class="nav__dropdown-item">PEP 8</a>
+                  <a href="./pages/lessons/lesson22.html" class="nav__dropdown-item">Документирование кода в Python</a>
+                  <a href="./pages/lessons/lesson23.html" class="nav__dropdown-item">Работа с модулями</a>
+                  <a href="./pages/lessons/lesson24.html" class="nav__dropdown-item">Объектно-ориентированное
+                    программирование</a>
+                  <a href="./pages/lessons/lesson25.html" class="nav__dropdown-item">Инкапсуляция, наследование,
+                    полиморфизм</a>
+                  <a href="./pages/lessons/lesson26.html" class="nav__dropdown-item">Перегрузка операторов</a>
+                  <a href="./pages/lessons/lesson27.html" class="nav__dropdown-item">Декораторы</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="nav__items">
+            <h3 class="nav__subtitle">Практика</h3>
+
+            <div class="nav__dropdown">
+              <a href="#" class="nav__link">
+                <i class='bx bx-test-tube nav__icon'></i>
+                <span class="nav__name nav__icon">Лабораторные</span>
+                <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+              </a>
+
+              <div class="nav__dropdown-collapse">
+                <div class="nav__dropdown-content">
+                  <a href="#" class="nav__dropdown-item">Blocked</a>
+                  <a href="#" class="nav__dropdown-item">Silenced</a>
+                  <a href="#" class="nav__dropdown-item">Publish</a>
+                  <a href="#" class="nav__dropdown-item">Program</a>
+                  <a href="#" class="nav__dropdown-item">Blocked</a>
+                  <a href="#" class="nav__dropdown-item">Silenced</a>
+                  <a href="#" class="nav__dropdown-item">Publish</a>
+                  <a href="#" class="nav__dropdown-item">Program</a>
+                  <a href="#" class="nav__dropdown-item">Blocked</a>
+                  <a href="#" class="nav__dropdown-item">Silenced</a>
+                  <a href="#" class="nav__dropdown-item">Publish</a>
+                  <a href="#" class="nav__dropdown-item">Program</a>
+                </div>
+              </div>
+            </div>
+
+            <a href="#" class="nav__link">
+              <i class='bx bxl-python nav__icon'></i>
+              <span class="nav__name">Тест</span>
+            </a>
+          </div>
         </div>
-        <div class="main_content">
-            <h1>Функции и их аргументы</h1>
-            <p>В этой статье я планирую рассказать о функциях, именных и анонимных, инструкциях def, return и lambda,
-                обязательных и необязательных аргументах функции, функциях с произвольным числом аргументов.</p>
+      </div>
 
-            <h2>Именные функции, инструкция def</h2>
-            <p>Функция в python - объект, принимающий аргументы и возвращающий значение. Обычно функция определяется с
-                помощью инструкции def.</p>
-            <p>Определим простейшую функцию:</p>
+      <a href="#" class="nav__link nav__logout">
+        <i class='bx bx-log-out nav__icon'></i>
+        <span class="nav__name">Log Out</span>
+      </a>
+    </nav>
+  </div>
+
+  <!--========== CONTENTS ==========-->
+  <main>
+    <section class="container">
+        <h1>Функции и их аргументы</h1>
+        <p>В этой статье я планирую рассказать о функциях, именных и анонимных, инструкциях def, return и lambda,
+            обязательных и необязательных аргументах функции, функциях с произвольным числом аргументов.</p>
+
+        <h2>Именные функции, инструкция def</h2>
+        <p>Функция в python - объект, принимающий аргументы и возвращающий значение. Обычно функция определяется с
+            помощью инструкции def.</p>
+        <p>Определим простейшую функцию:</p>
 <pre>
 <code>
 def add(x, y):
 return x + y
 </code>
 </pre>
-            <p>Инструкция return говорит, что нужно вернуть значение. В нашем случае функция возвращает сумму x и y.</p>
-            <p>Теперь мы ее можем вызвать:</p>
+        <p>Инструкция return говорит, что нужно вернуть значение. В нашем случае функция возвращает сумму x и y.</p>
+        <p>Теперь мы ее можем вызвать:</p>
 <pre>
 <code>
 >>> add(1, 10)
@@ -55,7 +201,7 @@ return x + y
 'abcdef'
 </code>
 </pre>
-            <p>Функция может быть любой сложности и возвращать любые объекты (списки, кортежи, и даже функции!):</p>
+        <p>Функция может быть любой сложности и возвращать любые объекты (списки, кортежи, и даже функции!):</p>
 <pre>
 <code>
 >>> def newfunc(n):
@@ -68,8 +214,8 @@ return x + y
 300
 </code>
 </pre>
-            <p>Функция может и не заканчиваться инструкцией return, при этом функция вернет значение <a
-                    href="#">None</a>:</p>
+        <p>Функция может и не заканчиваться инструкцией return, при этом функция вернет значение <a
+                href="#">None</a>:</p>
 <pre>
 <code>
 >>> def func():
@@ -80,10 +226,10 @@ None
 </code>
 </pre>
 
-            <h2>Аргументы функции</h2>
-            <p>Функция может принимать произвольное количество аргументов или не принимать их вовсе. Также
-                распространены функции с произвольным числом аргументов, функции с позиционными и именованными
-                аргументами, обязательными и необязательными.</p>
+        <h2>Аргументы функции</h2>
+        <p>Функция может принимать произвольное количество аргументов или не принимать их вовсе. Также
+            распространены функции с произвольным числом аргументов, функции с позиционными и именованными
+            аргументами, обязательными и необязательными.</p>
 <pre>
 <code>
 >>> def func(a, b, c=2): # c - необязательный аргумент
@@ -102,8 +248,8 @@ func(a=3, c=6)
 TypeError: func() takes at least 2 arguments (2 given)
 </code>
 </pre>
-            <p>Функция также может принимать переменное количество позиционных аргументов, тогда перед именем ставится
-                *:</p>
+        <p>Функция также может принимать переменное количество позиционных аргументов, тогда перед именем ставится
+            *:</p>
 <pre>
 <code>
 >>> def func(*args):
@@ -117,9 +263,9 @@ TypeError: func() takes at least 2 arguments (2 given)
 (1,)
 </code>
 </pre>
-            <p>Как видно из примера, args - это <a href="#">кортеж</a> из всех переданных аргументов функции, и с
-                переменной можно работать также, как и с кортежем.</p>
-            <p>Функция может принимать и произвольное число именованных аргументов, тогда перед именем ставится **:</p>
+        <p>Как видно из примера, args - это <a href="#">кортеж</a> из всех переданных аргументов функции, и с
+            переменной можно работать также, как и с кортежем.</p>
+        <p>Функция может принимать и произвольное число именованных аргументов, тогда перед именем ставится **:</p>
 <pre>
 <code>
 >>> def func(**kwargs):
@@ -133,13 +279,13 @@ TypeError: func() takes at least 2 arguments (2 given)
 {'a': 'python'}
 </code>
 </pre>
-            <p>В переменной kwargs у нас хранится <a href="#">словарь</a>, с которым мы, опять-таки, можем делать все,
-                что нам заблагорассудится.</p>
+        <p>В переменной kwargs у нас хранится <a href="#">словарь</a>, с которым мы, опять-таки, можем делать все,
+            что нам заблагорассудится.</p>
 
-            <h2>Анонимные функции, инструкция lambda</h2>
-            <p>Анонимные функции могут содержать лишь одно выражение, но и выполняются они быстрее. Анонимные функции
-                создаются с помощью инструкции lambda. Кроме этого, их не обязательно присваивать переменной, как делали
-                мы инструкцией def func():</p>
+        <h2>Анонимные функции, инструкция lambda</h2>
+        <p>Анонимные функции могут содержать лишь одно выражение, но и выполняются они быстрее. Анонимные функции
+            создаются с помощью инструкции lambda. Кроме этого, их не обязательно присваивать переменной, как делали
+            мы инструкцией def func():</p>
 <pre>
 <code>
 >>> func = lambda x, y: x + y
@@ -153,8 +299,8 @@ TypeError: func() takes at least 2 arguments (2 given)
 'ab'
 </code>
 </pre>
-            <p>lambda функции, в отличие от обычной, не требуется инструкция return, а в остальном, ведет себя точно так
-                же:</p>
+        <p>lambda функции, в отличие от обычной, не требуется инструкция return, а в остальном, ведет себя точно так
+            же:</p>
 <pre>
 <code>
 >>> func = lambda *args: args
@@ -162,14 +308,11 @@ TypeError: func() takes at least 2 arguments (2 given)
 (1, 2, 3, 4)
 </code>
 </pre>
-        </div>
-        <div class="info">
-            <ul>
-                <li><a href="#first">Скачать Python</a></li>
-                <li><a href="#second">Установка Python на Windows</a></li>
-            </ul>
-        </div>
-    </div>
+    </section>
+  </main>
+
+  <!--========== MAIN JS ==========-->
+  <script src="../../js/script.js"></script>
 </body>
 
 </html>
