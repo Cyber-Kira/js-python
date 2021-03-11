@@ -301,11 +301,11 @@ table td {
 }
 
 /* show collapse  */
-.nav__dropdown:hover {
+.show {
     max-height: 100rem;
 }
 
-.nav__dropdown:hover .nav__dropdown-icon {
+.show .nav__dropdown-icon {
     transform: rotate(180deg);
 }
 
