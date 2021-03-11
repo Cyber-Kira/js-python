@@ -4,13 +4,30 @@ const showMenu = (headerToggle, navbarId) =>{
     
     if(headerToggle && navbarId){
         toggleBtn.addEventListener('click', ()=>{
-            nav.classList.toggle('show-menu')
+            nav.classList.toggle('show-menu');
 
-            toggleBtn.classList.toggle('bx-x')
+            toggleBtn.classList.toggle('bx-x');
         });
-    }
+    };
+};
+showMenu('header-toggle', 'navbar');
+
+const toggleItems = document.querySelectorAll('.nav__dropdown');
+const navigation = document.querySelector('.nav');
+
+navigation.addEventListener("mouseleave", function( event ) {
+    toggleItems.forEach(item => {
+        item.classList.remove('show');
+    });
+});
+
+function showCollapse() {
+    this.classList.toggle('show');
 }
-showMenu('header-toggle','navbar');
+
+toggleItems.forEach(item => {
+    item.addEventListener('click', showCollapse);
+});
 
 const linkColor = document.querySelectorAll('.nav__link');
 
