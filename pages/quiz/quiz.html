@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python</title>
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+    <!--========== HEADER ==========-->
+    <header class="header">
+        <div class="header__container">
+            <img src="../../img/1024px-Python-logo-notext.svg.webp" alt="" class="header__img">
+
+            <a href="../../index.html" class="header__logo">Python World</a>
+
+            <div class="header__search">
+                <input type="search" placeholder="Поиск" class="header__input">
+                <i class='bx bx-search header__icon'></i>
+            </div>
+
+            <div class="header__toggle">
+                <i class='bx bx-menu' id="header-toggle"></i>
+            </div>
+        </div>
+    </header>
+
+    <!--========== NAV ==========-->
+    <div class="nav" id="navbar">
+        <nav class="nav__container">
+            <div>
+                <a href="../../index.html" class="nav__link nav__logo">
+                    <img src="../../img/1024px-Python-logo-notext.svg.webp" alt="" width="35" height="35">
+                </a>
+
+                <div class="nav__list">
+                    <div class="nav__items">
+                        <a href="../../index.html" class="nav__link active">
+                            <i class='bx bx-home nav__icon' ></i>
+                            <span class="nav__name">Домой</span>
+                        </a>
+                        <h3 class="nav__subtitle">Учебник</h3>
+
+                        
+                        
+                        <div class="nav__dropdown">
+                            <a href="#" class="nav__link">
+                                <i class='bx bxs-school nav__icon'></i>
+                                <span class="nav__name">Уроки</span>
+                                <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                            </a>
+
+                            <div class="nav__dropdown-collapse">
+                                <div class="nav__dropdown-content">
+                                    <a href="../lessons/lesson1.html" class="nav__dropdown-item">Возможности языка python</a>
+                                    <a href="../lessons/lesson2.html" class="nav__dropdown-item">Скачать Python</a>
+                                    <a href="../lessons/lesson3.html" class="nav__dropdown-item">Первая программа</a>
+                                    <a href="../lessons/lesson4.html" class="nav__dropdown-item">Синтаксис языка Python</a>
+                                    <a href="../lessons/lesson5.html" class="nav__dropdown-item">Программа не работает</a>
+                                    <a href="../lessons/lesson6.html" class="nav__dropdown-item">Условный оператор if</a>
+                                    <a href="../lessons/lesson7.html" class="nav__dropdown-item">Циклы</a>
+                                    <a href="../lessons/lesson8.html" class="nav__dropdown-item">Ключевые слова, модуль keyword</a>
+                                    <a href="../lessons/lesson9.html" class="nav__dropdown-item">Числа: целые, вещественные, комплексные</a>
+                                    <a href="../lessons/lesson10.html" class="nav__dropdown-item">Строки</a>
+                                    <a href="../lessons/lesson11.html" class="nav__dropdown-item">Списки (list)</a>
+                                    <a href="../lessons/lesson12.html" class="nav__dropdown-item">Индексы и срезы</a>
+                                    <a href="../lessons/lesson13.html" class="nav__dropdown-item">Кортежи (tuple)</a>
+                                    <a href="../lessons/lesson14.html" class="nav__dropdown-item">Словари (dict) и работа с ними</a>
+                                    <a href="../lessons/lesson15.html" class="nav__dropdown-item">Множества (set и frozenset)</a>
+                                    <a href="../lessons/lesson16.html" class="nav__dropdown-item">Функции и их аргументы</a>
+                                    <a href="../lessons/lesson17.html" class="nav__dropdown-item">Исключения в python</a>
+                                    <a href="../lessons/lesson18.html" class="nav__dropdown-item">Байты (bytes и bytearray)</a>
+                                    <a href="../lessons/lesson19.html" class="nav__dropdown-item">Файлы. Работа с файлами</a>
+                                    <a href="../lessons/lesson20.html" class="nav__dropdown-item">With ... as - менеджеры контекста</a>
+                                    <a href="../lessons/lesson21.html" class="nav__dropdown-item">PEP 8</a>
+                                    <a href="../lessons/lesson22.html" class="nav__dropdown-item">Документирование кода в Python</a>
+                                    <a href="../lessons/lesson23.html" class="nav__dropdown-item">Работа с модулями</a>
+                                    <a href="../lessons/lesson24.html" class="nav__dropdown-item">Объектно-ориентированное программирование</a>
+                                    <a href="../lessons/lesson25.html" class="nav__dropdown-item">Инкапсуляция, наследование, полиморфизм</a>
+                                    <a href="../lessons/lesson26.html" class="nav__dropdown-item">Перегрузка операторов</a>
+                                    <a href="../lessons/lesson27.html" class="nav__dropdown-item">Декораторы</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="nav__dropdown">
+                            <a href="#" class="nav__link">
+                                <i class='bx bx-code-block nav__icon'></i>
+                                <span class="nav__name">Практические</span>
+                                <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                            </a>
+
+                            <div class="nav__dropdown-collapse">
+                                <div class="nav__dropdown-content">
+                                    <a href="./practice/pract1.html" class="nav__dropdown-item">Практическая №1</a>
+                                    <a href="./practice/pract2.html" class="nav__dropdown-item">Практическая №2</a>
+                                    <a href="./practice/pract3.html" class="nav__dropdown-item">Практическая №3</a>
+                                    <a href="./practice/pract4.html" class="nav__dropdown-item">Практическая №4</a>
+                                    <a href="./practice/pract5.html" class="nav__dropdown-item">Практическая №5</a>
+                                    <a href="./practice/pract6.html" class="nav__dropdown-item">Практическая №6</a>
+                                    <a href="./practice/pract7.html" class="nav__dropdown-item">Практическая №7</a>
+                                    <a href="./practice/pract8.html" class="nav__dropdown-item">Практическая №8</a>
+                                    <a href="./practice/pract9.html" class="nav__dropdown-item">Практическая №9</a>
+                                    <a href="./practice/pract10.html" class="nav__dropdown-item">Практическая №10</a>
+                                    <a href="./practice/pract11.html" class="nav__dropdown-item">Практическая №11</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav__items">
+                        <h3 class="nav__subtitle">Практика</h3>
+
+                        <div class="nav__dropdown">
+                            <a href="#" class="nav__link">
+                                <i class='bx bx-test-tube nav__icon' ></i>
+                                <span class="nav__name">Лабораторные</span>
+                                <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                            </a>
+
+                            <div class="nav__dropdown-collapse">
+                                <div class="nav__dropdown-content">
+                                    <a href="../labs/lab1.html" class="nav__dropdown-item">Лабораторная #1</a>
+                                    <a href="../labs/lab2.html" class="nav__dropdown-item">Лабораторная #2</a>
+                                    <a href="../labs/lab3.html" class="nav__dropdown-item">Лабораторная #3</a>
+                                    <a href="../labs/lab4.html" class="nav__dropdown-item">Лабораторная #4</a>
+                                    <a href="../labs/lab5.html" class="nav__dropdown-item">Лабораторная #5</a>
+                                    <a href="../labs/lab6.html" class="nav__dropdown-item">Лабораторная #6</a>
+                                    <a href="../labs/lab7.html" class="nav__dropdown-item">Лабораторная #7</a>
+                                    <a href="../labs/lab8.html" class="nav__dropdown-item">Лабораторная #8</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#" class="nav__link">
+                            <i class='bx bxl-python nav__icon'></i>
+                            <span class="nav__name">Тест</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+        </nav>
+    </div>
+
+    <!--========== CONTENTS ==========-->
+    <main>
+        <section class="container">
+            <div class="wrapper">
+                <h1 class="quiz__h1">Javascript Quiz</h1>
+                <div class="progress">
+                        <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="25" aria-valuemin-"0" aria-valuemax="100" style="width: 25%;">
+                                <span class="sr-only span__quin">25% Complete</span>
+                        </div>
+                </div>
+                <div class="quiz">
+                        <p></p>
+                        <p>
+                                <span class="choices span__quin" id="one"></span>
+                                <span class="choices span__quin" id="two"></span>
+                                <span class="choices span__quin" id="three"></span>
+                                <span class="choices span__quin" id="four"></span>
+                        </p>
+                </div>
+                <div class="buttons">
+                        <button class="prev">Prev</button>
+                        <button class="reset hide">Reset</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--========== MAIN JS ==========-->
+    <script src="../../js/script.js"></script>
+</body>
+</html>

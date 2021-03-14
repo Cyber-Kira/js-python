@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python</title>
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">  
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+    <!--========== HEADER ==========-->
+    <header class="header">
+        <div class="header__container">
+            <img src="../../img/1024px-Python-logo-notext.svg.webp" alt="" class="header__img">
+
+            <a href="../../index.html" class="header__logo">Python World</a>
+
+            <div class="header__search">
+                <input type="search" placeholder="Поиск" class="header__input">
+                <i class='bx bx-search header__icon'></i>
+            </div>
+
+            <div class="header__toggle">
+                <i class='bx bx-menu' id="header-toggle"></i>
+            </div>
+        </div>
+    </header>
+
+    <!--========== NAV ==========-->
+    <div class="nav" id="navbar">
+        <nav class="nav__container">
+            <div>
+                <a href="../../index.html" class="nav__link nav__logo">
+                    <img src="../../img/1024px-Python-logo-notext.svg.webp" alt="" width="35" height="35">
+                </a>
+
+                <div class="nav__list">
+                    <div class="nav__items">
+                        <a href="../../index.html" class="nav__link active">
+                            <i class='bx bx-home nav__icon' ></i>
+                            <span class="nav__name">Домой</span>
+                        </a>
+                        <h3 class="nav__subtitle">Учебник</h3>
+
+                        
+                        
+                        <div class="nav__dropdown">
+                            <a href="#" class="nav__link">
+                                <i class='bx bxs-school nav__icon'></i>
+                                <span class="nav__name">Уроки</span>
+                                <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                            </a>
+
+                            <div class="nav__dropdown-collapse">
+                                <div class="nav__dropdown-content">
+                                    <a href="../lessons/lesson1.html" class="nav__dropdown-item">Возможности языка python</a>
+                                    <a href="../lessons/lesson2.html" class="nav__dropdown-item">Скачать Python</a>
+                                    <a href="../lessons/lesson3.html" class="nav__dropdown-item">Первая программа</a>
+                                    <a href="../lessons/lesson4.html" class="nav__dropdown-item">Синтаксис языка Python</a>
+                                    <a href="../lessons/lesson5.html" class="nav__dropdown-item">Программа не работает</a>
+                                    <a href="../lessons/lesson6.html" class="nav__dropdown-item">Условный оператор if</a>
+                                    <a href="../lessons/lesson7.html" class="nav__dropdown-item">Циклы</a>
+                                    <a href="../lessons/lesson8.html" class="nav__dropdown-item">Ключевые слова, модуль keyword</a>
+                                    <a href="../lessons/lesson9.html" class="nav__dropdown-item">Числа: целые, вещественные, комплексные</a>
+                                    <a href="../lessons/lesson10.html" class="nav__dropdown-item">Строки</a>
+                                    <a href="../lessons/lesson11.html" class="nav__dropdown-item">Списки (list)</a>
+                                    <a href="../lessons/lesson12.html" class="nav__dropdown-item">Индексы и срезы</a>
+                                    <a href="../lessons/lesson13.html" class="nav__dropdown-item">Кортежи (tuple)</a>
+                                    <a href="../lessons/lesson14.html" class="nav__dropdown-item">Словари (dict) и работа с ними</a>
+                                    <a href="../lessons/lesson15.html" class="nav__dropdown-item">Множества (set и frozenset)</a>
+                                    <a href="../lessons/lesson16.html" class="nav__dropdown-item">Функции и их аргументы</a>
+                                    <a href="../lessons/lesson17.html" class="nav__dropdown-item">Исключения в python</a>
+                                    <a href="../lessons/lesson18.html" class="nav__dropdown-item">Байты (bytes и bytearray)</a>
+                                    <a href="../lessons/lesson19.html" class="nav__dropdown-item">Файлы. Работа с файлами</a>
+                                    <a href="../lessons/lesson20.html" class="nav__dropdown-item">With ... as - менеджеры контекста</a>
+                                    <a href="../lessons/lesson21.html" class="nav__dropdown-item">PEP 8</a>
+                                    <a href="../lessons/lesson22.html" class="nav__dropdown-item">Документирование кода в Python</a>
+                                    <a href="../lessons/lesson23.html" class="nav__dropdown-item">Работа с модулями</a>
+                                    <a href="../lessons/lesson24.html" class="nav__dropdown-item">Объектно-ориентированное программирование</a>
+                                    <a href="../lessons/lesson25.html" class="nav__dropdown-item">Инкапсуляция, наследование, полиморфизм</a>
+                                    <a href="../lessons/lesson26.html" class="nav__dropdown-item">Перегрузка операторов</a>
+                                    <a href="../lessons/lesson27.html" class="nav__dropdown-item">Декораторы</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="nav__dropdown">
+                            <a href="#" class="nav__link">
+                                <i class='bx bx-code-block nav__icon'></i>
+                                <span class="nav__name">Практические</span>
+                                <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                            </a>
+
+                            <div class="nav__dropdown-collapse">
+                                <div class="nav__dropdown-content">
+                                    <a href="../practice/pract1.html" class="nav__dropdown-item">Практическая №1</a>
+                                    <a href="../practice/pract2.html" class="nav__dropdown-item">Практическая №2</a>
+                                    <a href="../practice/pract3.html" class="nav__dropdown-item">Практическая №3</a>
+                                    <a href="../practice/pract4.html" class="nav__dropdown-item">Практическая №4</a>
+                                    <a href="../practice/pract5.html" class="nav__dropdown-item">Практическая №5</a>
+                                    <a href="../practice/pract6.html" class="nav__dropdown-item">Практическая №6</a>
+                                    <a href="../practice/pract7.html" class="nav__dropdown-item">Практическая №7</a>
+                                    <a href="../practice/pract8.html" class="nav__dropdown-item">Практическая №8</a>
+                                    <a href="../practice/pract9.html" class="nav__dropdown-item">Практическая №9</a>
+                                    <a href="../practice/pract10.html" class="nav__dropdown-item">Практическая №10</a>
+                                    <a href="../practice/pract11.html" class="nav__dropdown-item">Практическая №11</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav__items">
+                        <h3 class="nav__subtitle">Практика</h3>
+
+                        <div class="nav__dropdown">
+                            <a href="#" class="nav__link">
+                                <i class='bx bx-test-tube nav__icon' ></i>
+                                <span class="nav__name">Лабораторные</span>
+                                <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                            </a>
+
+                            <div class="nav__dropdown-collapse">
+                                <div class="nav__dropdown-content">
+                                    <a href="./lab1.html" class="nav__dropdown-item">Лабораторная #1</a>
+                                    <a href="./lab2.html" class="nav__dropdown-item">Лабораторная #2</a>
+                                    <a href="./lab3.html" class="nav__dropdown-item">Лабораторная #3</a>
+                                    <a href="./lab4.html" class="nav__dropdown-item">Лабораторная #4</a>
+                                    <a href="./lab5.html" class="nav__dropdown-item">Лабораторная #5</a>
+                                    <a href="./lab6.html" class="nav__dropdown-item">Лабораторная #6</a>
+                                    <a href="./lab7.html" class="nav__dropdown-item">Лабораторная #7</a>
+                                    <a href="./lab8.html" class="nav__dropdown-item">Лабораторная #8</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#" class="nav__link">
+                            <i class='bx bxl-python nav__icon'></i>
+                            <span class="nav__name">Тест</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+        </nav>
+    </div>
+
+    <!--========== CONTENTS ==========-->
+    <main>
+        <section class="container">
+            <h1>Лабораторная работа №1</h1>
+            <h2>ПЛАН</h2>
+            <p>По дисциплине: Язык программирования Python</p>
+            <p>Тема занятия: Вывод данных</p>
+            <p>Цель занятия: Изучить возможности вывода различных данных</p>
+            <p>Количество часов: 2</p>
+            <h2>Содержание работы (Задание, Задачи):</h2>
+            <p>Составить программу выводящую строку «Hello world»</p>
+            <h2>Методические указания по выполнению:</h2>
+<pre>
+<code>
+>>> 2+2
+4
+>>> # Это комментарий
+... 2+2
+>>> 2+2 #Комментрай в той же стрроке что и код
+4
+>>> (50-5*6)/4
+5
+>>> # При целочисленном делении результат округляется
+    # в меньшую сторону:
+... 7/3
+2
+>>> 7/-3
+-3
+>>> width = 20
+>>> height = 5*9
+>>> width * height
+900
+</code>
+</pre>
+<p>Значение можно присвоить одновременно нескольким переменным:</p>
+<pre>
+<code>
+>>> x = y = z = 0 # Переменным x, y, z присваивается одно значение 0
+>>> x
+0
+>>> y
+0
+>>> z
+0
+>>> 'spam eggs'
+"spam eggs"
+>>> 'doesn\'t'
+"doesn't"
+>>> ’"Yes," he said.’
+’"Yes," he said.’
+>>> "\"Yes,\" he said."
+’"Yes," he said.’
+>>> ’"Isn\’t," she said.’
+’"Isn\’t," she said.’
+hello = "Это длинное строковое выражение, содержащее \n\
+несколько строк текста, как Вы бы это сделали в С.\n\
+    Обратите внимание, что пробелы в\
+начале строки \nимеют значение.\n"
+print hello
+Это длинное строковое выражение, содержащее
+несколько строк текста, как Вы бы это сделали в С.
+    Обратите внимание, что пробелы в начале строки
+имеют значение.
+>>> word = ’Help’ + ’A’
+>>> word
+’HelpA’
+>>> ’<’ + word*5 + ’>’
+’<HelpAHelpAHelpAHelpAHelpA>’
+
+>>> word[4]
+'A'
+>>> word[0:2]
+'He'
+>>> word[2:4]
+’lp’
+
+>>> word[:2] # Первые два символа
+'He'
+>>> word[2:] # Вся строка, кроме первых двух символов
+’lpA’
+
+>>> word[1:100]
+’elpA’
+>>> word[10:]
+''
+>>> word[2:1]
+''
+>>> s = ’supercalifragilisticexpialidocious’
+>>> len(s)
+34
+>>> a = [’spam’, ’eggs’, 100, 1234]
+>>> a
+[’spam’, ’eggs’, 100, 1234]
+>>> a[0]
+’spam’
+>>> a[3]
+1234
+>>> a[-2]
+100
+>>> a[1:-1]
+[’eggs’, 100]
+>>> a[:2] + [’bacon’, 2*2]
+[’spam’, ’eggs’, ’bacon’, 4]
+>>> 3*a[:3] + [’Boe!’]
+[’spam’, ’eggs’, 100, ’spam’, ’eggs’, 100, ’spam’,
+’eggs’, 100, ’Boe!’]
+>>> a
+[’spam’, ’eggs’, 100, 1234]
+>>> a[2] = a[2] + 23
+>>> a
+[’spam’, ’eggs’, 123, 1234]
+>>> # заменить несколько элементов:
+... a[0:2] = [1, 12]
+>>> a
+[1, 12, 123, 1234]
+>>> # удалить:
+... a[0:2] = []
+>>> a
+[123, 1234]
+>>> # вставить:
+... a[1:1] = [’bletch’, ’xyzzy’]
+>>> a
+[123, ’bletch’, ’xyzzy’, 1234]
+>>> # вставить копию самого себя в начало:
+>>> a[:0] = a
+>>> a
+[123, ’bletch’, ’xyzzy’, 1234, 123, ’bletch’, ’xyzzy’, 1234]
+>>> # Ряд Фибоначчи:
+... # сумма двух предыдущих элементов определяет
+... # следующий
+... a, b = 0, 1
+>>> while b < 10:
+... print b
+... a, b = b, a+b
+
+1
+1
+2
+3
+5
+8
+>>> a, b = 0, 1
+>>> while b < 1000:
+... print b,
+... a, b = b, a+b
+1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987
+</code>
+</pre>
+<h2>Вопросы для защиты лабораторной работы:</h2>
+<p>Параметры, которые принимает функция Print</p>
+        </section>
+    </main>
+
+    <!--========== MAIN JS ==========-->
+    <script src="../../js/script.js"></script>
+</body>
+</html>

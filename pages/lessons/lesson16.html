@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+  <!--========== HEADER ==========-->
+  <header class="header">
+    <div class="header__container">
+      <img src="../../img/1024px-Python-logo-notext.svg.webp" alt="" class="header__img">
+
+      <a href="../../index.html" class="header__logo">Python World</a>
+
+      <div class="header__search">
+        <input type="search" placeholder="Поиск" class="header__input">
+        <i class='bx bx-search header__icon'></i>
+      </div>
+
+      <div class="header__toggle">
+        <i class='bx bx-menu' id="header-toggle"></i>
+      </div>
+    </div>
+  </header>
+
+  <!--========== NAV ==========-->
+  <div class="nav" id="navbar">
+    <nav class="nav__container">
+      <div>
+        <a href="../../index.html" class="nav__link nav__logo">
+          <img src="../../img/1024px-Python-logo-notext.svg.webp" alt="" width="35" height="35">
+        </a>
+
+        <div class="nav__list">
+          <div class="nav__items">
+            <a href="../../index.html" class="nav__link active">
+              <i class='bx bx-home nav__icon'></i>
+              <span class="nav__name">Домой</span>
+            </a>
+            <h3 class="nav__subtitle">Учебник</h3>
+
+
+
+            <div class="nav__dropdown">
+              <a href="#" class="nav__link">
+                <i class='bx bxs-school nav__icon'></i>
+                <span class="nav__name">Уроки</span>
+                <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+              </a>
+
+              <div class="nav__dropdown-collapse">
+                <div class="nav__dropdown-content">
+                  <a href="./lesson1.html" class="nav__dropdown-item">Возможности языка python</a>
+                  <a href="./lesson2.html" class="nav__dropdown-item">Скачать Python</a>
+                  <a href="./lesson3.html" class="nav__dropdown-item">Первая программа</a>
+                  <a href="./lesson4.html" class="nav__dropdown-item">Синтаксис языка Python</a>
+                  <a href="./lesson5.html" class="nav__dropdown-item">Программа не работает</a>
+                  <a href="./lesson6.html" class="nav__dropdown-item">Условный оператор if</a>
+                  <a href="./lesson7.html" class="nav__dropdown-item">Циклы</a>
+                  <a href="./lesson8.html" class="nav__dropdown-item">Ключевые слова, модуль keyword</a>
+                  <a href="./lesson9.html" class="nav__dropdown-item">Числа: целые, вещественные, комплексные</a>
+                  <a href="./lesson10.html" class="nav__dropdown-item">Строки</a>
+                  <a href="./lesson11.html" class="nav__dropdown-item">Списки (list)</a>
+                  <a href="./lesson12.html" class="nav__dropdown-item">Индексы и срезы</a>
+                  <a href="./lesson13.html" class="nav__dropdown-item">Кортежи (tuple)</a>
+                  <a href="./lesson14.html" class="nav__dropdown-item">Словари (dict) и работа с ними</a>
+                  <a href="./lesson15.html" class="nav__dropdown-item">Множества (set и frozenset)</a>
+                  <a href="./lesson16.html" class="nav__dropdown-item">Функции и их аргументы</a>
+                  <a href="./lesson17.html" class="nav__dropdown-item">Исключения в python</a>
+                  <a href="./lesson18.html" class="nav__dropdown-item">Байты (bytes и bytearray)</a>
+                  <a href="./lesson19.html" class="nav__dropdown-item">Файлы. Работа с файлами</a>
+                  <a href="./lesson20.html" class="nav__dropdown-item">With ... as - менеджеры контекста</a>
+                  <a href="./lesson21.html" class="nav__dropdown-item">PEP 8</a>
+                  <a href="./lesson22.html" class="nav__dropdown-item">Документирование кода в Python</a>
+                  <a href="./lesson23.html" class="nav__dropdown-item">Работа с модулями</a>
+                  <a href="./lesson24.html" class="nav__dropdown-item">Объектно-ориентированное программирование</a>
+                  <a href="./lesson25.html" class="nav__dropdown-item">Инкапсуляция, наследование, полиморфизм</a>
+                  <a href="./lesson26.html" class="nav__dropdown-item">Перегрузка операторов</a>
+                  <a href="./lesson27.html" class="nav__dropdown-item">Декораторы</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="nav__dropdown">
+              <a href="#" class="nav__link">
+                <i class='bx bx-code-block nav__icon'></i>
+                <span class="nav__name">Практические</span>
+                <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+              </a>
+
+              <div class="nav__dropdown-collapse">
+                <div class="nav__dropdown-content">
+                  <a href="../practice/pract1.html" class="nav__dropdown-item">Практическая №1</a>
+                  <a href="../practice/pract2.html" class="nav__dropdown-item">Практическая №2</a>
+                  <a href="../practice/pract3.html" class="nav__dropdown-item">Практическая №3</a>
+                  <a href="../practice/pract4.html" class="nav__dropdown-item">Практическая №4</a>
+                  <a href="../practice/pract5.html" class="nav__dropdown-item">Практическая №5</a>
+                  <a href="../practice/pract6.html" class="nav__dropdown-item">Практическая №6</a>
+                  <a href="../practice/pract7.html" class="nav__dropdown-item">Практическая №7</a>
+                  <a href="../practice/pract8.html" class="nav__dropdown-item">Практическая №8</a>
+                  <a href="../practice/pract9.html" class="nav__dropdown-item">Практическая №9</a>
+                  <a href="../practice/pract10.html" class="nav__dropdown-item">Практическая №10</a>
+                  <a href="../practice/pract11.html" class="nav__dropdown-item">Практическая №11</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="nav__items">
+            <h3 class="nav__subtitle">Практика</h3>
+
+            <div class="nav__dropdown">
+              <a href="#" class="nav__link">
+                <i class='bx bx-test-tube nav__icon'></i>
+                <span class="nav__name">Лабораторные</span>
+                <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+              </a>
+
+              <div class="nav__dropdown-collapse">
+                <div class="nav__dropdown-content">
+                  <a href="../labs/lab1.html" class="nav__dropdown-item">Лабораторная №1</a>
+                  <a href="../labs/lab2.html" class="nav__dropdown-item">Лабораторная №2</a>
+                  <a href="../labs/lab3.html" class="nav__dropdown-item">Лабораторная №3</a>
+                  <a href="../labs/lab4.html" class="nav__dropdown-item">Лабораторная №4</a>
+                  <a href="../labs/lab5.html" class="nav__dropdown-item">Лабораторная №5</a>
+                  <a href="../labs/lab6.html" class="nav__dropdown-item">Лабораторная №6</a>
+                  <a href="../labs/lab7.html" class="nav__dropdown-item">Лабораторная №7</a>
+                  <a href="../labs/lab8.html" class="nav__dropdown-item">Лабораторная №8</a>
+                </div>
+              </div>
+            </div>
+
+            <a href="#" class="nav__link">
+              <i class='bx bxl-python nav__icon'></i>
+              <span class="nav__name">Тест</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <a href="#" class="nav__link nav__logout">
+        <i class='bx bx-log-out nav__icon'></i>
+        <span class="nav__name">Log Out</span>
+      </a>
+    </nav>
+  </div>
+
+  <!--========== CONTENTS ==========-->
+  <main>
+    <section class="container">
+        <h1>Функции и их аргументы</h1>
+        <p>В этой статье я планирую рассказать о функциях, именных и анонимных, инструкциях def, return и lambda,
+            обязательных и необязательных аргументах функции, функциях с произвольным числом аргументов.</p>
+
+        <h2>Именные функции, инструкция def</h2>
+        <p>Функция в python - объект, принимающий аргументы и возвращающий значение. Обычно функция определяется с
+            помощью инструкции def.</p>
+        <p>Определим простейшую функцию:</p>
+<pre>
+<code>
+def add(x, y):
+return x + y
+</code>
+</pre>
+        <p>Инструкция return говорит, что нужно вернуть значение. В нашем случае функция возвращает сумму x и y.</p>
+        <p>Теперь мы ее можем вызвать:</p>
+<pre>
+<code>
+>>> add(1, 10)
+11
+>>> add('abc', 'def')
+'abcdef'
+</code>
+</pre>
+        <p>Функция может быть любой сложности и возвращать любые объекты (списки, кортежи, и даже функции!):</p>
+<pre>
+<code>
+>>> def newfunc(n):
+...     def myfunc(x):
+...         return x + n
+...     return myfunc
+...
+>>> new = newfunc(100)  # new - это функция
+>>> new(200)
+300
+</code>
+</pre>
+        <p>Функция может и не заканчиваться инструкцией return, при этом функция вернет значение <a
+                href="#">None</a>:</p>
+<pre>
+<code>
+>>> def func():
+...     pass
+...
+>>> print(func())
+None
+</code>
+</pre>
+
+        <h2>Аргументы функции</h2>
+        <p>Функция может принимать произвольное количество аргументов или не принимать их вовсе. Также
+            распространены функции с произвольным числом аргументов, функции с позиционными и именованными
+            аргументами, обязательными и необязательными.</p>
+<pre>
+<code>
+>>> def func(a, b, c=2): # c - необязательный аргумент
+...     return a + b + c
+...
+>>> func(1, 2)  # a = 1, b = 2, c = 2 (по умолчанию)
+5
+>>> func(1, 2, 3)  # a = 1, b = 2, c = 3
+6
+>>> func(a=1, b=3)  # a = 1, b = 3, c = 2
+6
+>>> func(a=3, c=6)  # a = 3, c = 6, b не определен
+Traceback (most recent call last):
+File "", line 1, in
+func(a=3, c=6)
+TypeError: func() takes at least 2 arguments (2 given)
+</code>
+</pre>
+        <p>Функция также может принимать переменное количество позиционных аргументов, тогда перед именем ставится
+            *:</p>
+<pre>
+<code>
+>>> def func(*args):
+...     return args
+...
+>>> func(1, 2, 3, 'abc')
+(1, 2, 3, 'abc')
+>>> func()
+()
+>>> func(1)
+(1,)
+</code>
+</pre>
+        <p>Как видно из примера, args - это <a href="#">кортеж</a> из всех переданных аргументов функции, и с
+            переменной можно работать также, как и с кортежем.</p>
+        <p>Функция может принимать и произвольное число именованных аргументов, тогда перед именем ставится **:</p>
+<pre>
+<code>
+>>> def func(**kwargs):
+...     return kwargs
+...
+>>> func(a=1, b=2, c=3)
+{'a': 1, 'c': 3, 'b': 2}
+>>> func()
+{}
+>>> func(a='python')
+{'a': 'python'}
+</code>
+</pre>
+        <p>В переменной kwargs у нас хранится <a href="#">словарь</a>, с которым мы, опять-таки, можем делать все,
+            что нам заблагорассудится.</p>
+
+        <h2>Анонимные функции, инструкция lambda</h2>
+        <p>Анонимные функции могут содержать лишь одно выражение, но и выполняются они быстрее. Анонимные функции
+            создаются с помощью инструкции lambda. Кроме этого, их не обязательно присваивать переменной, как делали
+            мы инструкцией def func():</p>
+<pre>
+<code>
+>>> func = lambda x, y: x + y
+>>> func(1, 2)
+3
+>>> func('a', 'b')
+'ab'
+>>> (lambda x, y: x + y)(1, 2)
+3
+>>> (lambda x, y: x + y)('a', 'b')
+'ab'
+</code>
+</pre>
+        <p>lambda функции, в отличие от обычной, не требуется инструкция return, а в остальном, ведет себя точно так
+            же:</p>
+<pre>
+<code>
+>>> func = lambda *args: args
+>>> func(1, 2, 3, 4)
+(1, 2, 3, 4)
+</code>
+</pre>
+    </section>
+  </main>
+
+  <!--========== MAIN JS ==========-->
+  <script src="../../js/script.js"></script>
+</body>
+
+</html>

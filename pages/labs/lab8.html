@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+    <!--========== HEADER ==========-->
+    <header class="header">
+        <div class="header__container">
+            <img src="../../img/1024px-Python-logo-notext.svg.webp" alt="" class="header__img">
+
+            <a href="../../index.html" class="header__logo">Python World</a>
+
+            <div class="header__search">
+                <input type="search" placeholder="Поиск" class="header__input">
+                <i class='bx bx-search header__icon'></i>
+            </div>
+
+            <div class="header__toggle">
+                <i class='bx bx-menu' id="header-toggle"></i>
+            </div>
+        </div>
+    </header>
+
+    <!--========== NAV ==========-->
+    <div class="nav" id="navbar">
+        <nav class="nav__container">
+            <div>
+                <a href="../../index.html" class="nav__link nav__logo">
+                    <img src="../../img/1024px-Python-logo-notext.svg.webp" alt="" width="35" height="35">
+                </a>
+
+                <div class="nav__list">
+                    <div class="nav__items">
+                        <a href="../../index.html" class="nav__link active">
+                            <i class='bx bx-home nav__icon'></i>
+                            <span class="nav__name">Домой</span>
+                        </a>
+                        <h3 class="nav__subtitle">Учебник</h3>
+
+
+
+                        <div class="nav__dropdown">
+                            <a href="#" class="nav__link">
+                                <i class='bx bxs-school nav__icon'></i>
+                                <span class="nav__name">Уроки</span>
+                                <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                            </a>
+
+                            <div class="nav__dropdown-collapse">
+                                <div class="nav__dropdown-content">
+                                    <a href="../lessons/lesson1.html" class="nav__dropdown-item">Возможности языка python</a>
+                                    <a href="../lessons/lesson2.html" class="nav__dropdown-item">Скачать Python</a>
+                                    <a href="../lessons/lesson3.html" class="nav__dropdown-item">Первая программа</a>
+                                    <a href="../lessons/lesson4.html" class="nav__dropdown-item">Синтаксис языка Python</a>
+                                    <a href="../lessons/lesson5.html" class="nav__dropdown-item">Программа не работает</a>
+                                    <a href="../lessons/lesson6.html" class="nav__dropdown-item">Условный оператор if</a>
+                                    <a href="../lessons/lesson7.html" class="nav__dropdown-item">Циклы</a>
+                                    <a href="../lessons/lesson8.html" class="nav__dropdown-item">Ключевые слова, модуль
+                                        keyword</a>
+                                    <a href="../lessons/lesson9.html" class="nav__dropdown-item">Числа: целые, вещественные,
+                                        комплексные</a>
+                                    <a href="../lessons/lesson10.html" class="nav__dropdown-item">Строки</a>
+                                    <a href="../lessons/lesson11.html" class="nav__dropdown-item">Списки (list)</a>
+                                    <a href="../lessons/lesson12.html" class="nav__dropdown-item">Индексы и срезы</a>
+                                    <a href="../lessons/lesson13.html" class="nav__dropdown-item">Кортежи (tuple)</a>
+                                    <a href="../lessons/lesson14.html" class="nav__dropdown-item">Словари (dict) и работа с
+                                        ними</a>
+                                    <a href="../lessons/lesson15.html" class="nav__dropdown-item">Множества (set и frozenset)</a>
+                                    <a href="../lessons/lesson16.html" class="nav__dropdown-item">Функции и их аргументы</a>
+                                    <a href="../lessons/lesson17.html" class="nav__dropdown-item">Исключения в python</a>
+                                    <a href="../lessons/lesson18.html" class="nav__dropdown-item">Байты (bytes и bytearray)</a>
+                                    <a href="../lessons/lesson19.html" class="nav__dropdown-item">Файлы. Работа с файлами</a>
+                                    <a href="../lessons/lesson20.html" class="nav__dropdown-item">With ... as - менеджеры
+                                        контекста</a>
+                                    <a href="../lessons/lesson21.html" class="nav__dropdown-item">PEP 8</a>
+                                    <a href="../lessons/lesson22.html" class="nav__dropdown-item">Документирование кода в
+                                        Python</a>
+                                    <a href="../lessons/lesson23.html" class="nav__dropdown-item">Работа с модулями</a>
+                                    <a href="../lessons/lesson24.html" class="nav__dropdown-item">Объектно-ориентированное
+                                        программирование</a>
+                                    <a href="../lessons/lesson25.html" class="nav__dropdown-item">Инкапсуляция, наследование,
+                                        полиморфизм</a>
+                                    <a href="../lessons/lesson26.html" class="nav__dropdown-item">Перегрузка операторов</a>
+                                    <a href="../lessons/lesson27.html" class="nav__dropdown-item">Декораторы</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="nav__dropdown">
+                            <a href="#" class="nav__link">
+                                <i class='bx bx-code-block nav__icon'></i>
+                                <span class="nav__name">Практические</span>
+                                <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                            </a>
+
+                            <div class="nav__dropdown-collapse">
+                                <div class="nav__dropdown-content">
+                                    <a href="./pages/lessons/lesson1.html" class="nav__dropdown-item">Возможности языка
+                                        python</a>
+                                    <a href="./pages/lessons/lesson2.html" class="nav__dropdown-item">Скачать Python</a>
+                                    <a href="./pages/lessons/lesson3.html" class="nav__dropdown-item">Первая
+                                        программа</a>
+                                    <a href="./pages/lessons/lesson4.html" class="nav__dropdown-item">Синтаксис языка
+                                        Python</a>
+                                    <a href="./pages/lessons/lesson5.html" class="nav__dropdown-item">Программа не
+                                        работает</a>
+                                    <a href="./pages/lessons/lesson6.html" class="nav__dropdown-item">Условный оператор
+                                        if</a>
+                                    <a href="./pages/lessons/lesson7.html" class="nav__dropdown-item">Циклы</a>
+                                    <a href="./pages/lessons/lesson8.html" class="nav__dropdown-item">Ключевые слова,
+                                        модуль keyword</a>
+                                    <a href="./pages/lessons/lesson9.html" class="nav__dropdown-item">Числа: целые,
+                                        вещественные, комплексные</a>
+                                    <a href="./pages/lessons/lesson10.html" class="nav__dropdown-item">Строки</a>
+                                    <a href="./pages/lessons/lesson11.html" class="nav__dropdown-item">Списки (list)</a>
+                                    <a href="./pages/lessons/lesson12.html" class="nav__dropdown-item">Индексы и
+                                        срезы</a>
+                                    <a href="./pages/lessons/lesson13.html" class="nav__dropdown-item">Кортежи
+                                        (tuple)</a>
+                                    <a href="./pages/lessons/lesson14.html" class="nav__dropdown-item">Словари (dict) и
+                                        работа с ними</a>
+                                    <a href="./pages/lessons/lesson15.html" class="nav__dropdown-item">Множества (set и
+                                        frozenset)</a>
+                                    <a href="./pages/lessons/lesson16.html" class="nav__dropdown-item">Функции и их
+                                        аргументы</a>
+                                    <a href="./pages/lessons/lesson17.html" class="nav__dropdown-item">Исключения в
+                                        python</a>
+                                    <a href="./pages/lessons/lesson18.html" class="nav__dropdown-item">Байты (bytes и
+                                        bytearray)</a>
+                                    <a href="./pages/lessons/lesson19.html" class="nav__dropdown-item">Файлы. Работа с
+                                        файлами</a>
+                                    <a href="./pages/lessons/lesson20.html" class="nav__dropdown-item">With ... as -
+                                        менеджеры контекста</a>
+                                    <a href="./pages/lessons/lesson21.html" class="nav__dropdown-item">PEP 8</a>
+                                    <a href="./pages/lessons/lesson22.html" class="nav__dropdown-item">Документирование
+                                        кода в Python</a>
+                                    <a href="./pages/lessons/lesson23.html" class="nav__dropdown-item">Работа с
+                                        модулями</a>
+                                    <a href="./pages/lessons/lesson24.html"
+                                        class="nav__dropdown-item">Объектно-ориентированное программирование</a>
+                                    <a href="./pages/lessons/lesson25.html" class="nav__dropdown-item">Инкапсуляция,
+                                        наследование, полиморфизм</a>
+                                    <a href="./pages/lessons/lesson26.html" class="nav__dropdown-item">Перегрузка
+                                        операторов</a>
+                                    <a href="./pages/lessons/lesson27.html" class="nav__dropdown-item">Декораторы</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav__items">
+                        <h3 class="nav__subtitle">Практика</h3>
+
+                        <div class="nav__dropdown">
+                            <a href="#" class="nav__link">
+                                <i class='bx bx-test-tube nav__icon'></i>
+                                <span class="nav__name">Лабораторные</span>
+                                <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                            </a>
+
+                            <div class="nav__dropdown-collapse">
+                                <div class="nav__dropdown-content">
+                                    <a href="./lab1.html" class="nav__dropdown-item">Лабораторная #1</a>
+                                    <a href="./lab2.html" class="nav__dropdown-item">Лабораторная #2</a>
+                                    <a href="./lab3.html" class="nav__dropdown-item">Лабораторная #3</a>
+                                    <a href="./lab4.html" class="nav__dropdown-item">Лабораторная #4</a>
+                                    <a href="./lab5.html" class="nav__dropdown-item">Лабораторная #5</a>
+                                    <a href="./lab6.html" class="nav__dropdown-item">Лабораторная #6</a>
+                                    <a href="./lab7.html" class="nav__dropdown-item">Лабораторная #7</a>
+                                    <a href="./lab8.html" class="nav__dropdown-item">Лабораторная #8</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#" class="nav__link">
+                            <i class='bx bxl-python nav__icon'></i>
+                            <span class="nav__name">Тест</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#" class="nav__link nav__logout">
+                <i class='bx bx-log-out nav__icon'></i>
+                <span class="nav__name">Log Out</span>
+            </a>
+        </nav>
+    </div>
+
+    <!--========== CONTENTS ==========-->
+    <main>
+        <section class="container">
+            <h1>Лабораторная работа №8</h1>
+            <h2>ПЛАН</h2>
+            <p>По дисциплине: Язык программирования Python</p>
+            <p>Тема занятия: Работа со списком</p>
+            <p>Цель занятия: Изучить методы работы с элементами списка</p>
+            <p>Количество часов: 4</p>
+            <h2>Содержание работы (Задание, Задачи):</h2>
+            <p><strong>Задание</strong>: Задан список из n элементов. Пользователь может выбрать любую операциюиз предложенных: добавление элемента в конец списка, добавление элемента на определен-ную позицию, удаление элемента по индексу и по ключу, размер списка, сортировка по убы-ванию и возрастанию, вывод на экран элементов списка, выход.</p>
+            <h2>Методические указания по выполнению:</h2>
+            <table class="customTable">
+                <thead>
+                  <tr>
+                    <th>Синтаксис</th>
+                    <th>Семантика</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>len(s)</td>
+                    <td>Длина последовательности s</td>
+                  </tr>
+                  <tr>
+                    <td>x in s</td>
+                    <td>Проверка принадлежности элемента последовательности. В новых версияхPython можно проверять принадлежность подстроки строке. ВозвращаетTrue или False</td>
+                  </tr>
+                  <tr>
+                    <td>x not in s</td>
+                    <td>= not x in s</td>
+                  </tr>
+                  <tr>
+                    <td>s + s1</td>
+                    <td>Конкатенация последовательностей</td>
+                  </tr>
+                  <tr>
+                    <td>s[i]</td>
+                    <td>Возвращает i-й элемент s или len(s)+i-й, если i < 0</td>
+                  </tr>
+                  <tr>
+                    <td>s[i:j:d]</td>
+                    <td>Срез из последовательности s от i до j с шагом d будет рассматриваться ни-же</td>
+                  </tr>
+                  <tr>
+                    <td>min(s)</td>
+                    <td>Наименьший элемент s</td>
+                  </tr>
+                  <tr>
+                    <td>max(s)</td>
+                    <td>Наибольший элемент s</td>
+                  </tr>
+                  <tr>
+                    <td>s[i] = x1</td>
+                    <td>i-й элемент списка s заменяется на x</td>
+                  </tr>
+                  <tr>
+                    <td>s[i:j:d] = t</td>
+                    <td>Срез от i до j (с шагом d) заменяется на (список) t</td>
+                  </tr>
+                  <tr>
+                    <td>del s[i:j:d]</td>
+                    <td>Удаление элементов среза из последовательности</td>
+                  </tr>
+                  <tr>
+                    <td>append(x)</td>
+                    <td>Добавляет элемент в конец последовательности</td>
+                  </tr>
+                  <tr>
+                    <td>count(x)</td>
+                    <td>Считает количество элементов, равных x</td>
+                  </tr>
+                  <tr>
+                    <td>extend(s)</td>
+                    <td>Добавляет к концу последовательности последовательность s</td>
+                  </tr>
+                  <tr>
+                    <td>index(x)</td>
+                    <td>Возвращает наименьшее i, такое, что s[i] == x. Возбуждает исключениеValueError, если x не найден в s</td>
+                  </tr>
+                  <tr>
+                    <td>insert(i, x)</td>
+                    <td>Вставляет элемент x в i-й промежуток</td>
+                  </tr>
+                  <tr>
+                    <td>pop([i])</td>
+                    <td>Возвращает i-й элемент, удаляя его из последовательности</td>
+                  </tr>
+                  <tr>
+                    <td>reverse()</td>
+                    <td>Меняет порядок элементов s на обратный</td>
+                  </tr>
+                  <tr>
+                    <td>sort([cmpfunc])</td>
+                    <td>Сортирует элементы s. Может быть указана своя функция сравненияcmpfunc</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h2>Вопросы для защиты лабораторной работы:</h2>
+              <ol>
+                  <li>Вопросы по листингу программы</li>
+              </ol>
+        </section>
+    </main>
+
+    <!--========== MAIN JS ==========-->
+    <script src="../../js/script.js"></script>
+</body>
+
+</html>

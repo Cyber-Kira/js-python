@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python</title>
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">  
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+    <!--========== HEADER ==========-->
+    <header class="header">
+        <div class="header__container">
+            <img src="../../img/1024px-Python-logo-notext.svg.webp" alt="" class="header__img">
+
+            <a href="../../index.html" class="header__logo">Python World</a>
+
+            <div class="header__search">
+                <input type="search" placeholder="Поиск" class="header__input">
+                <i class='bx bx-search header__icon'></i>
+            </div>
+
+            <div class="header__toggle">
+                <i class='bx bx-menu' id="header-toggle"></i>
+            </div>
+        </div>
+    </header>
+
+    <!--========== NAV ==========-->
+    <div class="nav" id="navbar">
+        <nav class="nav__container">
+            <div>
+                <a href="../../index.html" class="nav__link nav__logo">
+                    <img src="../../img/1024px-Python-logo-notext.svg.webp" alt="" width="35" height="35">
+                </a>
+
+                <div class="nav__list">
+                    <div class="nav__items">
+                        <a href="../../index.html" class="nav__link active">
+                            <i class='bx bx-home nav__icon' ></i>
+                            <span class="nav__name">Домой</span>
+                        </a>
+                        <h3 class="nav__subtitle">Учебник</h3>
+
+                        
+                        
+                        <div class="nav__dropdown">
+                            <a href="#" class="nav__link">
+                                <i class='bx bxs-school nav__icon'></i>
+                                <span class="nav__name">Уроки</span>
+                                <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                            </a>
+
+                            <div class="nav__dropdown-collapse">
+                                <div class="nav__dropdown-content">
+                                    <a href="./lesson1.html" class="nav__dropdown-item">Возможности языка python</a>
+                                    <a href="./lesson2.html" class="nav__dropdown-item">Скачать Python</a>
+                                    <a href="./lesson3.html" class="nav__dropdown-item">Первая программа</a>
+                                    <a href="./lesson4.html" class="nav__dropdown-item">Синтаксис языка Python</a>
+                                    <a href="./lesson5.html" class="nav__dropdown-item">Программа не работает</a>
+                                    <a href="./lesson6.html" class="nav__dropdown-item">Условный оператор if</a>
+                                    <a href="./lesson7.html" class="nav__dropdown-item">Циклы</a>
+                                    <a href="./lesson8.html" class="nav__dropdown-item">Ключевые слова, модуль keyword</a>
+                                    <a href="./lesson9.html" class="nav__dropdown-item">Числа: целые, вещественные, комплексные</a>
+                                    <a href="./lesson10.html" class="nav__dropdown-item">Строки</a>
+                                    <a href="./lesson11.html" class="nav__dropdown-item">Списки (list)</a>
+                                    <a href="./lesson12.html" class="nav__dropdown-item">Индексы и срезы</a>
+                                    <a href="./lesson13.html" class="nav__dropdown-item">Кортежи (tuple)</a>
+                                    <a href="./lesson14.html" class="nav__dropdown-item">Словари (dict) и работа с ними</a>
+                                    <a href="./lesson15.html" class="nav__dropdown-item">Множества (set и frozenset)</a>
+                                    <a href="./lesson16.html" class="nav__dropdown-item">Функции и их аргументы</a>
+                                    <a href="./lesson17.html" class="nav__dropdown-item">Исключения в python</a>
+                                    <a href="./lesson18.html" class="nav__dropdown-item">Байты (bytes и bytearray)</a>
+                                    <a href="./lesson19.html" class="nav__dropdown-item">Файлы. Работа с файлами</a>
+                                    <a href="./lesson20.html" class="nav__dropdown-item">With ... as - менеджеры контекста</a>
+                                    <a href="./lesson21.html" class="nav__dropdown-item">PEP 8</a>
+                                    <a href="./lesson22.html" class="nav__dropdown-item">Документирование кода в Python</a>
+                                    <a href="./lesson23.html" class="nav__dropdown-item">Работа с модулями</a>
+                                    <a href="./lesson24.html" class="nav__dropdown-item">Объектно-ориентированное программирование</a>
+                                    <a href="./lesson25.html" class="nav__dropdown-item">Инкапсуляция, наследование, полиморфизм</a>
+                                    <a href="./lesson26.html" class="nav__dropdown-item">Перегрузка операторов</a>
+                                    <a href="./lesson27.html" class="nav__dropdown-item">Декораторы</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="nav__dropdown">
+                            <a href="#" class="nav__link">
+                                <i class='bx bx-code-block nav__icon'></i>
+                                <span class="nav__name">Практические</span>
+                                <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                            </a>
+
+                            <div class="nav__dropdown-collapse">
+                                <div class="nav__dropdown-content">
+                                    <a href="../practice/pract1.html" class="nav__dropdown-item">Практическая №1</a>
+                                    <a href="../practice/pract2.html" class="nav__dropdown-item">Практическая №2</a>
+                                    <a href="../practice/pract3.html" class="nav__dropdown-item">Практическая №3</a>
+                                    <a href="../practice/pract4.html" class="nav__dropdown-item">Практическая №4</a>
+                                    <a href="../practice/pract5.html" class="nav__dropdown-item">Практическая №5</a>
+                                    <a href="../practice/pract6.html" class="nav__dropdown-item">Практическая №6</a>
+                                    <a href="../practice/pract7.html" class="nav__dropdown-item">Практическая №7</a>
+                                    <a href="../practice/pract8.html" class="nav__dropdown-item">Практическая №8</a>
+                                    <a href="../practice/pract9.html" class="nav__dropdown-item">Практическая №9</a>
+                                    <a href="../practice/pract10.html" class="nav__dropdown-item">Практическая №10</a>
+                                    <a href="../practice/pract11.html" class="nav__dropdown-item">Практическая №11</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav__items">
+                        <h3 class="nav__subtitle">Практика</h3>
+
+                        <div class="nav__dropdown">
+                            <a href="#" class="nav__link">
+                                <i class='bx bx-test-tube nav__icon' ></i>
+                                <span class="nav__name">Лабораторные</span>
+                                <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                            </a>
+
+                            <div class="nav__dropdown-collapse">
+                                <div class="nav__dropdown-content">
+                                    <a href="../labs/lab1.html" class="nav__dropdown-item">Лабораторная #1</a>
+                                    <a href="../labs/lab2.html" class="nav__dropdown-item">Лабораторная #2</a>
+                                    <a href="../labs/lab3.html" class="nav__dropdown-item">Лабораторная #3</a>
+                                    <a href="../labs/lab4.html" class="nav__dropdown-item">Лабораторная #4</a>
+                                    <a href="../labs/lab5.html" class="nav__dropdown-item">Лабораторная #5</a>
+                                    <a href="../labs/lab6.html" class="nav__dropdown-item">Лабораторная #6</a>
+                                    <a href="../labs/lab7.html" class="nav__dropdown-item">Лабораторная #7</a>
+                                    <a href="../labs/lab8.html" class="nav__dropdown-item">Лабораторная #8</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#" class="nav__link">
+                            <i class='bx bxl-python nav__icon'></i>
+                            <span class="nav__name">Тест</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+        </nav>
+    </div>
+
+    <!--========== CONTENTS ==========-->
+    <main>
+        <section class="container">
+         <h1>Списки (list). Функции и методы списков</h1>
+         <p>Сегодня я расскажу о таком типе данных, как списки, операциях над ними и методах, о генераторах списков и о
+            применении списков.</p>
+
+         <h2>Что такое списки?</h2>
+         <p>Списки в Python - упорядоченные изменяемые коллекции объектов произвольных типов (почти как массив, но типы
+            могут отличаться).</p>
+         <p>Чтобы использовать списки, их нужно создать. Создать список можно несколькими способами. Например, можно
+            обработать любой итерируемый объект (например, <a href="#">строку</a>) встроенной функцией list:</p>
+         <pre>
+<code>
+>>> list('список')
+['с', 'п', 'и', 'с', 'о', 'к']
+</code>
+</pre>
+         <p>Список можно создать и при помощи литерала:</p>
+         <pre>
+<code>
+>>> s = []  # Пустой список
+>>> l = ['s', 'p', ['isok'], 2]
+>>> s
+[]
+>>> l
+['s', 'p', ['isok'], 2]
+</code>
+</pre>
+         <p>Как видно из примера, список может содержать любое количество любых объектов (в том числе и вложенные
+            списки), или не содержать ничего.</p>
+         <p>И еще один способ создать список - это генераторы списков. Генератор списков - способ построить новый
+            список, применяя выражение к каждому элементу последовательности. Генераторы списков очень похожи на цикл <a
+               href="#">for</a>.</p>
+         <pre>
+<code>
+>>> c = [c * 3 for c in 'list']
+>>> c
+['lll', 'iii', 'sss', 'ttt']
+</code>
+</pre>
+         <p>Возможна и более сложная конструкция генератора списков:</p>
+         <pre>
+<code>
+>>> c = [c * 3 for c in 'list' if c != 'i']
+>>> c
+['lll', 'sss', 'ttt']
+>>> c = [c + d for c in 'list' if c != 'i' for d in 'spam' if d != 'a']
+>>> c
+['ls', 'lp', 'lm', 'ss', 'sp', 'sm', 'ts', 'tp', 'tm']
+</code>
+</pre>
+         <p>Но в сложных случаях лучше пользоваться обычным циклом for для генерации списков.</p>
+
+         <h2>Функции и методы списков</h2>
+         <p>Создать создали, теперь нужно со списком что-то делать. Для списков доступны основные <a href="#">встроенные
+               функции</a>, а также методы списков.</p>
+         <h2>Таблица "методы списков"</h2>
+         <table border="1" class="docutils">
+            <thead valign="bottom">
+               <tr>
+                  <th class="head">Метод</th>
+                  <th class="head">Что делает</th>
+               </tr>
+            </thead>
+            <tbody valign="top">
+               <tr>
+                  <td><b>list.append</b>(x)</td>
+                  <td>Добавляет элемент в конец списка</td>
+               </tr>
+               <tr>
+                  <td><b>list.extend</b>(L)</td>
+                  <td>Расширяет список list, добавляя в конец все элементы списка L</td>
+               </tr>
+               <tr>
+                  <td><b>list.insert</b>(i, x)</td>
+                  <td>Вставляет на i-ый элемент значение x</td>
+               </tr>
+               <tr>
+                  <td><b>list.remove</b>(x)</td>
+                  <td>Удаляет первый элемент в списке, имеющий значение x. ValueError, если такого элемента не
+                     существует</td>
+               </tr>
+               <tr>
+                  <td><b>list.pop</b>([i])</td>
+                  <td>Удаляет i-ый элемент и возвращает его. Если индекс не указан, удаляется последний элемент</td>
+               </tr>
+               <tr>
+                  <td><b>list.index</b>(x, [start [, end]])</td>
+                  <td>Возвращает положение первого элемента со значением x (при этом поиск ведется от start до end)</td>
+               </tr>
+               <tr>
+                  <td><b>list.count</b>(x)</td>
+                  <td>Возвращает количество элементов со значением x</td>
+               </tr>
+               <tr>
+                  <td><b>list.sort</b>([key=функция])</td>
+                  <td>Сортирует список на основе функции</td>
+               </tr>
+               <tr>
+                  <td><b>list.reverse</b>()</td>
+                  <td>Разворачивает список</td>
+               </tr>
+               <tr>
+                  <td><b>list.copy</b>()</td>
+                  <td>Поверхностная копия списка</td>
+               </tr>
+               <tr>
+                  <td><b>list.clear</b>()</td>
+                  <td>Очищает список</td>
+               </tr>
+            </tbody>
+         </table>
+         <p>Нужно отметить, что методы списков, в отличие от <a href="#">строковых методов</a>, изменяют сам список, а
+            потому результат выполнения не нужно записывать в эту переменную.</p>
+         <pre>
+<code>
+>>> l = [1, 2, 3, 5, 7]
+>>> l.sort()
+>>> l
+[1, 2, 3, 5, 7]
+>>> l = l.sort()
+>>> print(l)
+None
+</code>
+</pre>
+         <p>И, напоследок, примеры работы со списками:</p>
+         <pre>
+<code>
+>>> a = [66.25, 333, 333, 1, 1234.5]
+>>> print(a.count(333), a.count(66.25), a.count('x'))
+2 1 0
+>>> a.insert(2, -1)
+>>> a.append(333)
+>>> a
+[66.25, 333, -1, 333, 1, 1234.5, 333]
+>>> a.index(333)
+1
+>>> a.remove(333)
+>>> a
+[66.25, -1, 333, 1, 1234.5, 333]
+>>> a.reverse()
+>>> a
+[333, 1234.5, 1, 333, -1, 66.25]
+>>> a.sort()
+>>> a
+[-1, 1, 66.25, 333, 333, 1234.5]
+</code>
+</pre>
+         <p>Изредка, для увеличения производительности, списки заменяют гораздо менее гибкими <a href="#">массивами</a>
+            (хотя в таких случаях обычно используют сторонние библиотеки, например <a href="#">NumPy</a>).</p>
+        </section>
+    </main>
+
+    <!--========== MAIN JS ==========-->
+    <script src="../../js/script.js"></script>
+</body>
+</html>
