@@ -561,3 +561,8 @@ footer {
         bottom: -20%;
     }
 }
+
+.container p:last-child {
+    display: inline-block;
+    margin-bottom: 5rem;
+}
