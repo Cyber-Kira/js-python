@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@100;200;300;400;500;600;700&display=swap");
 
 :root {
     --header-height: 3.5rem;
@@ -14,7 +14,7 @@
     --container-color: #ffffff;
 
     /* Fonts and typography */
-    --body-font: 'Anonymous Pro', monospace;
+    --body-font: 'IBM Plex Serif', serif;
     --normal-font-size: 1.2rem;
     --small-font-size: 1.15rem;
     --smaller-font-size: .75rem;
@@ -54,7 +54,7 @@
     }
 
     .hero__wrapper > h1 {
-        font-size: 5rem;
+        font-size: 4rem;
         margin: 0;
     }
 
@@ -253,11 +253,11 @@ li {
 }
 
 .nav__list {
-    row-gap: 2.5rem;
+    row-gap: 2rem;
 }
 
 .nav__items {
-    row-gap: 1.5rem;
+    row-gap: 2rem;
 }
 
 .nav__subtitle {
@@ -338,10 +338,7 @@ li {
 }
 
 footer {
-    position: fixed;
-    bottom: 2rem;
-    left: 0;
-    margin-left: 1rem;
+    padding-top: 2rem;
 }
 
 /* show menu  */
@@ -362,6 +359,11 @@ footer {
     color: var(--text-color);
 }
 
+
+main {
+    height: calc(100vh - 400px);
+}
+
 /* media  */
 @media screen and (max-width: 380px) {
     .header__search {
@@ -378,7 +380,7 @@ footer {
         padding: 1rem 3rem 0 6rem;
     }
     main {
-        height: 100vh;
+        height: calc(100vh - 231px);
     }
 
     .main_hero_info {
@@ -459,7 +461,7 @@ footer {
     }
 
     footer {
-        position: fixed;
+        position: absolute;
         bottom: 0;
         left: 0;
         margin-left: 80px;
