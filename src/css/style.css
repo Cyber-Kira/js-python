@@ -338,7 +338,8 @@ li {
 }
 
 footer {
-    padding-top: 2rem;
+    width: 95%;
+    margin-top: 2rem;
 }
 
 /* show menu  */
@@ -359,13 +360,8 @@ footer {
     color: var(--text-color);
 }
 
-
-main {
-    height: calc(100vh - 400px);
-}
-
 /* media  */
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 1024px) {
     .header__search {
         width: 70%;
     }
@@ -461,11 +457,7 @@ main {
     }
 
     footer {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        margin-left: 80px;
-        margin-bottom: 20px;
+        margin-left: 50px;
         text-align: center;
     }
 }
