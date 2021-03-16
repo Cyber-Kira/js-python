@@ -1,12 +1,24 @@
 const showMenu = (headerToggle, navbarId) => {
   const toggleBtn = document.getElementById(headerToggle),
-    nav = document.getElementById(navbarId);
+    nav = document.getElementById(navbarId),
+    background = document.getElementById("background");
 
   if (headerToggle && navbarId) {
     toggleBtn.addEventListener("click", () => {
       nav.classList.toggle("show-menu");
+      background.classList.toggle("background");
 
       toggleBtn.classList.toggle("bx-x");
+    });
+
+    background.addEventListener("click", (e) => {
+      if (e.target !== nav) {
+        console.log(e.target);
+        nav.classList.toggle("show-menu");
+        background.classList.toggle("background");
+
+        toggleBtn.classList.toggle("bx-x");
+      }
     });
   }
 };
