@@ -201,6 +201,11 @@ li {
     background-color: var(--first-color-light);
 }
 
+.header__submit {
+    all: unset;
+    display: inline;
+}
+
 .header__input::placeholder {
     font-family: var(--body-font);
     color: var(--text-color);

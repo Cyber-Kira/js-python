@@ -17,10 +17,11 @@
 
             <a href="../../index.html" class="header__logo">Python World</a>
 
-            <div class="header__search">
+            <form class="header__search" action="http://google.com/search" target="_blank">
                 <input type="search" placeholder="Поиск" class="header__input">
-                <i class='bx bx-search header__icon'></i>
-            </div>
+                <input type="hidden" name="as_sitesearch" value="pythonworld.ru">
+                <button class='bx bx-search header__icon header__submit'></button>
+            </form>
 
             <div class="header__toggle">
                 <i class='bx bx-menu' id="header-toggle"></i>
@@ -42,7 +43,7 @@
                             <i class='bx bx-home nav__icon'></i>
                             <span class="nav__name">Главная</span>
                         </a>
-                        <h3 class="nav__subtitle">Методическое пособие</h3>
+                        
 
 
 
@@ -172,7 +173,7 @@
                     </div>
 
                     <div class="nav__items">
-                        <h3 class="nav__subtitle">Практика</h3>
+                        
 
                         <div class="nav__dropdown">
                             <a href="#" class="nav__link">
