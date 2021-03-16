@@ -17,6 +17,7 @@ const navigation = document.querySelector(".nav");
 
 navigation.addEventListener("mouseleave", function (event) {
   toggleItems.forEach((item) => {
+    console.log("1");
     item.classList.remove("show");
   });
 });
