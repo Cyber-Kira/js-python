@@ -17,10 +17,15 @@
 
             <a href="#" class="header__logo">Python World</a>
 
-            <div class="header__search">
+            <!-- <form class="header__search" action="http://google.com/search" target="_blank">
                 <input type="search" placeholder="Поиск" class="header__input">
                 <i class='bx bx-search header__icon'></i>
-            </div>
+            </form> -->
+            <form action="http://google.com/search" target="_blank">
+                <input type="search" name="q" placeholder="Поиск" class="header__input">
+                <input type="hidden" name="as_sitesearch" value="pythonworld.ru">
+                <input type="submit" value="Найти">
+            </form>
 
             <div class="header__toggle">
                 <i class='bx bx-menu' id="header-toggle"></i>
@@ -48,7 +53,7 @@
                         <div class="nav__dropdown">
                             <a href="#" class="nav__link">
                                 <i class='bx bxs-school nav__icon'></i>
-                                <span class="nav__name">Уроки</span>
+                                <span class="nav__name">Лекции</span>
                                 <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
                             </a>
 
@@ -109,7 +114,7 @@
                         <div class="nav__dropdown">
                             <a href="#" class="nav__link">
                                 <i class='bx bx-code-block nav__icon'></i>
-                                <span class="nav__name">Практические</span>
+                                <span class="nav__name">Практические работы</span>
                                 <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
                             </a>
 
@@ -147,7 +152,7 @@
                         <div class="nav__dropdown">
                             <a href="#" class="nav__link">
                                 <i class='bx bx-test-tube nav__icon'></i>
-                                <span class="nav__name">Лабораторные</span>
+                                <span class="nav__name">Лабораторные работы</span>
                                 <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
                             </a>
 
@@ -171,7 +176,6 @@
                         </a>
                     </div>
                 </div>
-            </div>
         </nav>
     </div>
 
@@ -180,7 +184,7 @@
         <section class="hero">
             <div class="hero__wrapper">
                 <h1>Дипломный проект</h1>
-                <p>Разработка электронного методического пособия
+                <p class="hero__desctiption">Разработка электронного методического пособия
                     для дополнительного образования учащихся 5-8
                     классов на базе ГПОУ ТО “ДКИТ” по программе
                     “Изучение языка высокого уровня - Python”</p>
