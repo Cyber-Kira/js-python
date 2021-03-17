@@ -17,11 +17,11 @@
 
       <a href="../../index.html" class="header__logo">Python World</a>
 
-            <form class="header__search" action="http://google.com/search" target="_blank">
-                <input type="search" placeholder="Поиск" class="header__input">
-                <input type="hidden" name="as_sitesearch" value="pythonworld.ru">
-                <button class='bx bx-search header__icon header__submit'></button>
-            </form>
+      <form class="header__search" action="http://google.com/search" target="_blank">
+        <input type="search" placeholder="Поиск" class="header__input">
+        <input type="hidden" name="as_sitesearch" value="pythonworld.ru">
+        <button class='bx bx-search header__icon header__submit'></button>
+      </form>
 
       <div class="header__toggle">
         <i class='bx bx-menu' id="header-toggle"></i>
@@ -43,7 +43,7 @@
               <i class='bx bx-home nav__icon'></i>
               <span class="nav__name">Главная</span>
             </a>
-            
+
 
 
 
@@ -113,7 +113,7 @@
           </div>
 
           <div class="nav__items">
-            
+
 
             <div class="nav__dropdown">
               <a href="#" class="nav__link">
@@ -154,29 +154,29 @@
   <!--========== CONTENTS ==========-->
   <main>
     <section class="container">
-        <h1>Объектно-ориентированное программирование. Классы и объекты</h1>
-        <p>Сегодня мы поговорим об объектно-ориентированном программировании и о его применении в python</p>
-        <p>Объектно-ориентированное программирование (ООП) — парадигма программирования, в которой основными
-            концепциями являются понятия объектов и классов.</p>
-        <p>Класс — тип, описывающий устройство объектов. Объект — это экземпляр класса. Класс можно сравнить с
-            чертежом, по которому создаются объекты.</p>
-        <p>Python соответствует принципам объектно-ориентированного программирования. В python всё является
-            объектами - и строки, и списки, и словари, и всё остальное.</p>
-        <p>Но возможности ООП в python этим не ограничены. Программист может написать свой тип данных (класс),
-            определить в нём свои методы.</p>
-        <p>Это не является обязательным - мы можем пользоваться только встроенными объектами. Однако ООП полезно при
-            долгосрочной разработке программы несколькими людьми, так как упрощает понимание кода.</p>
-        <p>Приступим теперь собственно к написанию своих классов на python. Попробуем определить собственный класс:
-        </p>
-<pre>
+      <h1>Объектно-ориентированное программирование. Классы и объекты</h1>
+      <p>Сегодня мы поговорим об объектно-ориентированном программировании и о его применении в python</p>
+      <p>Объектно-ориентированное программирование (ООП) — парадигма программирования, в которой основными
+        концепциями являются понятия объектов и классов.</p>
+      <p>Класс — тип, описывающий устройство объектов. Объект — это экземпляр класса. Класс можно сравнить с
+        чертежом, по которому создаются объекты.</p>
+      <p>Python соответствует принципам объектно-ориентированного программирования. В python всё является
+        объектами - и строки, и списки, и словари, и всё остальное.</p>
+      <p>Но возможности ООП в python этим не ограничены. Программист может написать свой тип данных (класс),
+        определить в нём свои методы.</p>
+      <p>Это не является обязательным - мы можем пользоваться только встроенными объектами. Однако ООП полезно при
+        долгосрочной разработке программы несколькими людьми, так как упрощает понимание кода.</p>
+      <p>Приступим теперь собственно к написанию своих классов на python. Попробуем определить собственный класс:
+      </p>
+      <pre>
 <code>
 >>> # Пример простейшего класса, который ничего не делает
 ... class A:
 ...     pass
 </code>
 </pre>
-        <p>Теперь мы можем создать несколько экземпляров этого класса:</p>
-<pre>
+      <p>Теперь мы можем создать несколько экземпляров этого класса:</p>
+      <pre>
 <code>
 >>> a = A()
 >>> b = A()
@@ -193,8 +193,8 @@ File "<stdin>", line 1, in <module>
 AttributeError: 'A' object has no attribute 'arg'
 </code>
 </pre>
-        <p>Классу возможно задать собственные методы:</p>
-<pre>
+      <p>Классу возможно задать собственные методы:</p>
+      <pre>
 <code>
 >>> class A:
 ...     def g(self): # self - обязательный аргумент, содержащий в себе экземпляр
@@ -208,8 +208,8 @@ AttributeError: 'A' object has no attribute 'arg'
 'hello world'
 </code>
 </pre>
-        <p>И напоследок еще один пример:</p>
-<pre>
+      <p>И напоследок еще один пример:</p>
+      <pre>
 <code>
 >>> class B:
 ...     arg = 'Python' # Все экземпляры этого класса будут иметь атрибут arg,
@@ -228,11 +228,21 @@ AttributeError: 'A' object has no attribute 'arg'
 'spam'
 </code>
 </pre>
+
+      <div class="main__pagination">
+        <div class="paginator previous"><a href="./lesson23.html">
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAABRklEQVRoQ+2X4W3CMBCFv0xQRmADugHdpIzQEWCCsgFsUDoBdIOO0BW6AXoSlixInDNtKl91lvIrl/jLy7tnu8Ph6BwyE9B/9ddC6VC6oEDYI+wR9rB5YAY8AQdbeV3VFI04B96Ad2Bdh2Or/m3oR+AISOmNB+gV8HoBlmTNQ79cgPP/2zT0HnjucWOT0PKtGk4p0Teag04JocYbGk1B5wlRyqhmoK8TogQtr+uyjG/g01Kompqc7ksI6zxjdR+F3rh51gothXdjM//g/iTQ4nGndBJRim+BB4OqUu9kqFPJV4X/qzyd5ld6CGYMvJn0SODKaW07F15yOnFqRRT40suKmHO62nvk4O52eUPJ0lwjDvVfnixuoPUxKVnUpC7OiHmyuDqNGxfB+8usG6b7Z5jgyYCeQNTeV4bSoXRBgbBH2OO/2eMMUaUwLofhnv8AAAAASUVORK5CYII=" />
+            Работа с модулями</a></div>
+        <div class="paginator next"><a href="./lesson25.html">Инкапсуляция, наследование, полиморфизм<img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAABUUlEQVRoQ+2X0U3EMBBE31VAC5RAB0AFQAfQAVRwlAAdQCfQAXRACdABGnT5JN6xFfssraV83Tr3Mpkdb3ZMuHYTMpPQvd5aKp1KryiQ9kh7pD3iHrgG3oDv+JZY5ZaN+AhcATfAVwwnVrU19P6g9CXwEUMqV/WAFoUs8gC8lJHKFb2gF5J74LmMtV7RG1o0UvuuBXwEtHiVKmrQqmQZBS1wNWZVsoyEXhrUThYX+gw4CfrxFtBVWnayuNDy4nmJovL3cLIcE7SeValSzPJjgtbh8xR5Sy60PHoauTFwEbTSDyBrFBVe/teFDvL+lWlg0uyxtgSsh7PmkpHQn4DGV3sCHAX9fgCe5kR8Deb3v7bqrXQ4IdYaoRe0nRCjoasSYiS00qEqIUZBT/k17hxEVu2WjWiBOMUJ7ajVUptKt6jn7E2lHbVaalPpFvWcvVMq/QsQrjouZKOwvQAAAABJRU5ErkJggg==" /></a>
+        </div>
+      </div>
     </section>
   </main>
 
-    <div id="background"></div>
-    <!--========== MAIN JS ==========-->
+  <div id="background"></div>
+  <!--========== MAIN JS ==========-->
   <script src="../../js/script.js"></script>
 </body>
 

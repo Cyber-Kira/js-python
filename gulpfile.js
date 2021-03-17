@@ -8,6 +8,13 @@ const browsersync = require("browser-sync");
 
 const dist = "./dist";
 
+gulp.task("copy-sitemap", () => {
+  return gulp
+    .src("./src/sitemap.xml")
+    .pipe(gulp.dest(dist))
+    .pipe(browsersync.stream());
+});
+
 gulp.task("copy-html", () => {
   return gulp
     .src("./src/index.html")
@@ -128,6 +135,7 @@ gulp.task(
 
 gulp.task("prod", () => {
   gulp.src("./src/index.html").pipe(gulp.dest(dist));
+  gulp.src("./src/sitemap.xml").pipe(gulp.dest(dist));
   gulp.src("./src/img/**/*.*").pipe(gulp.dest(dist + "/img"));
   gulp.src("./src/icons/**/*.*").pipe(gulp.dest(dist + "/icons"));
 

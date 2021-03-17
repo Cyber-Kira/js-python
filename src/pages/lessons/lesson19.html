@@ -17,11 +17,11 @@
 
       <a href="../../index.html" class="header__logo">Python World</a>
 
-            <form class="header__search" action="http://google.com/search" target="_blank">
-                <input type="search" placeholder="Поиск" class="header__input">
-                <input type="hidden" name="as_sitesearch" value="pythonworld.ru">
-                <button class='bx bx-search header__icon header__submit'></button>
-            </form>
+      <form class="header__search" action="http://google.com/search" target="_blank">
+        <input type="search" placeholder="Поиск" class="header__input">
+        <input type="hidden" name="as_sitesearch" value="pythonworld.ru">
+        <button class='bx bx-search header__icon header__submit'></button>
+      </form>
 
       <div class="header__toggle">
         <i class='bx bx-menu' id="header-toggle"></i>
@@ -43,7 +43,7 @@
               <i class='bx bx-home nav__icon'></i>
               <span class="nav__name">Главная</span>
             </a>
-            
+
 
 
 
@@ -113,7 +113,7 @@
           </div>
 
           <div class="nav__items">
-            
+
 
             <div class="nav__dropdown">
               <a href="#" class="nav__link">
@@ -156,61 +156,61 @@
     <section class="container">
       <h1>Файлы. Работа с файлами.</h1>
       <p>В данной статье мы рассмотрим встроенные средства python для работы с файлами: открытие / закрытие, чтение и
-         запись.</p>
+        запись.</p>
       <p>Итак, начнем. Прежде, чем работать с файлом, его надо открыть. С этим замечательно справится встроенная
-         функция open:</p>
+        функция open:</p>
       <pre>
 <code>f = open('text.txt', 'r')</code>
 </pre>
       <p>У функции open много параметров, они указаны в статье "<a href="#">Встроенные функции</a>", нам пока важны 3
-         аргумента: первый, это имя файла. Путь к файлу может быть относительным или абсолютным. Второй аргумент, это
-         режим, в котором мы будем открывать файл.</p>
+        аргумента: первый, это имя файла. Путь к файлу может быть относительным или абсолютным. Второй аргумент, это
+        режим, в котором мы будем открывать файл.</p>
       <table border="1">
-         <tbody valign="top">
-            <tr>
-               <td>Режим</td>
-               <td>Обозначение</td>
-            </tr>
-            <tr>
-               <td>'r'</td>
-               <td>открытие на чтение (является значением по умолчанию).</td>
-            </tr>
-            <tr>
-               <td>'w'</td>
-               <td>открытие на запись, содержимое файла удаляется, если файла не существует, создается новый.</td>
-            </tr>
-            <tr>
-               <td>'x'</td>
-               <td>открытие на запись, если файла не существует, иначе исключение.</td>
-            </tr>
-            <tr>
-               <td>'a'</td>
-               <td>открытие на дозапись, информация добавляется в конец файла.</td>
-            </tr>
-            <tr>
-               <td>'b'</td>
-               <td>открытие в двоичном режиме.</td>
-            </tr>
-            <tr>
-               <td>'t'</td>
-               <td>открытие в текстовом режиме (является значением по умолчанию).</td>
-            </tr>
-            <tr>
-               <td>'+'</td>
-               <td>открытие на чтение и запись</td>
-            </tr>
-         </tbody>
+        <tbody valign="top">
+          <tr>
+            <td>Режим</td>
+            <td>Обозначение</td>
+          </tr>
+          <tr>
+            <td>'r'</td>
+            <td>открытие на чтение (является значением по умолчанию).</td>
+          </tr>
+          <tr>
+            <td>'w'</td>
+            <td>открытие на запись, содержимое файла удаляется, если файла не существует, создается новый.</td>
+          </tr>
+          <tr>
+            <td>'x'</td>
+            <td>открытие на запись, если файла не существует, иначе исключение.</td>
+          </tr>
+          <tr>
+            <td>'a'</td>
+            <td>открытие на дозапись, информация добавляется в конец файла.</td>
+          </tr>
+          <tr>
+            <td>'b'</td>
+            <td>открытие в двоичном режиме.</td>
+          </tr>
+          <tr>
+            <td>'t'</td>
+            <td>открытие в текстовом режиме (является значением по умолчанию).</td>
+          </tr>
+          <tr>
+            <td>'+'</td>
+            <td>открытие на чтение и запись</td>
+          </tr>
+        </tbody>
       </table>
       <p>Режимы могут быть объединены, то есть, к примеру, 'rb' - чтение в двоичном режиме. По умолчанию режим равен
-         'rt'.</p>
+        'rt'.</p>
       <p>И последний аргумент, encoding, нужен только в текстовом режиме чтения файла. Этот аргумент задает
-         кодировку.</p>
+        кодировку.</p>
 
       <h2>Чтение из файла</h2>
       <p>Открыли мы файл, а теперь мы хотим прочитать из него информацию. Для этого есть несколько способов, но
-         большого интереса заслуживают лишь два из них.</p>
+        большого интереса заслуживают лишь два из них.</p>
       <p>Первый - метод read, читающий весь файл целиком, если был вызван без аргументов, и n символов, если был
-         вызван с аргументом (целым числом n).</p>
+        вызван с аргументом (целым числом n).</p>
       <pre>
 <code>
 >>> f = open('text.txt')
@@ -266,7 +266,7 @@
 <code>>>> f.close()</code>
 </pre>
       <p>Теперь попробуем воссоздать этот список из получившегося файла. Откроем файл на чтение (надеюсь, вы поняли,
-         как это сделать?), и прочитаем строки.</p>
+        как это сделать?), и прочитаем строки.</p>
       <pre>
 <code>
 >>> f = open('text.txt', 'r')
@@ -277,13 +277,23 @@
 </code>
 </pre>
       <p>Мы получили тот же список, что и был. В более сложных случаях (словарях, вложенных кортежей и т. д.)
-         алгоритм записи придумать сложнее. Но это и не нужно. В python уже давно придумали средства, такие как <a
-            href="#">pickle</a> или <a href="#">json</a>, позволяющие сохранять в файле сложные структуры.</p>
+        алгоритм записи придумать сложнее. Но это и не нужно. В python уже давно придумали средства, такие как <a
+          href="#">pickle</a> или <a href="#">json</a>, позволяющие сохранять в файле сложные структуры.</p>
+
+      <div class="main__pagination">
+        <div class="paginator previous"><a href="./lesson18.html">
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAABRklEQVRoQ+2X4W3CMBCFv0xQRmADugHdpIzQEWCCsgFsUDoBdIOO0BW6AXoSlixInDNtKl91lvIrl/jLy7tnu8Ph6BwyE9B/9ddC6VC6oEDYI+wR9rB5YAY8AQdbeV3VFI04B96Ad2Bdh2Or/m3oR+AISOmNB+gV8HoBlmTNQ79cgPP/2zT0HnjucWOT0PKtGk4p0Teag04JocYbGk1B5wlRyqhmoK8TogQtr+uyjG/g01Kompqc7ksI6zxjdR+F3rh51gothXdjM//g/iTQ4nGndBJRim+BB4OqUu9kqFPJV4X/qzyd5ld6CGYMvJn0SODKaW07F15yOnFqRRT40suKmHO62nvk4O52eUPJ0lwjDvVfnixuoPUxKVnUpC7OiHmyuDqNGxfB+8usG6b7Z5jgyYCeQNTeV4bSoXRBgbBH2OO/2eMMUaUwLofhnv8AAAAASUVORK5CYII=" />
+            Байты (bytes и bytearray)</a></div>
+        <div class="paginator next"><a href="./lesson20.html">With ... as - менеджеры контекста<img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAABUUlEQVRoQ+2X0U3EMBBE31VAC5RAB0AFQAfQAVRwlAAdQCfQAXRACdABGnT5JN6xFfssraV83Tr3Mpkdb3ZMuHYTMpPQvd5aKp1KryiQ9kh7pD3iHrgG3oDv+JZY5ZaN+AhcATfAVwwnVrU19P6g9CXwEUMqV/WAFoUs8gC8lJHKFb2gF5J74LmMtV7RG1o0UvuuBXwEtHiVKmrQqmQZBS1wNWZVsoyEXhrUThYX+gw4CfrxFtBVWnayuNDy4nmJovL3cLIcE7SeValSzPJjgtbh8xR5Sy60PHoauTFwEbTSDyBrFBVe/teFDvL+lWlg0uyxtgSsh7PmkpHQn4DGV3sCHAX9fgCe5kR8Deb3v7bqrXQ4IdYaoRe0nRCjoasSYiS00qEqIUZBT/k17hxEVu2WjWiBOMUJ7ajVUptKt6jn7E2lHbVaalPpFvWcvVMq/QsQrjouZKOwvQAAAABJRU5ErkJggg==" /></a>
+        </div>
+      </div>
     </section>
   </main>
 
-    <div id="background"></div>
-    <!--========== MAIN JS ==========-->
+  <div id="background"></div>
+  <!--========== MAIN JS ==========-->
   <script src="../../js/script.js"></script>
 </body>
 

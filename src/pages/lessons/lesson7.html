@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Python</title>
-    <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="../../css/style.css">
 </head>
+
 <body>
     <!--========== HEADER ==========-->
     <header class="header">
@@ -39,13 +40,13 @@
                 <div class="nav__list">
                     <div class="nav__items">
                         <a href="../../index.html" class="nav__link active">
-                            <i class='bx bx-home nav__icon' ></i>
+                            <i class='bx bx-home nav__icon'></i>
                             <span class="nav__name">Главная</span>
                         </a>
-                        
 
-                        
-                        
+
+
+
                         <div class="nav__dropdown">
                             <a href="#" class="nav__link">
                                 <i class='bx bxs-school nav__icon'></i>
@@ -62,24 +63,31 @@
                                     <a href="./lesson5.html" class="nav__dropdown-item">Программа не работает</a>
                                     <a href="./lesson6.html" class="nav__dropdown-item">Условный оператор if</a>
                                     <a href="./lesson7.html" class="nav__dropdown-item">Циклы</a>
-                                    <a href="./lesson8.html" class="nav__dropdown-item">Ключевые слова, модуль keyword</a>
-                                    <a href="./lesson9.html" class="nav__dropdown-item">Числа: целые, вещественные, комплексные</a>
+                                    <a href="./lesson8.html" class="nav__dropdown-item">Ключевые слова, модуль
+                                        keyword</a>
+                                    <a href="./lesson9.html" class="nav__dropdown-item">Числа: целые, вещественные,
+                                        комплексные</a>
                                     <a href="./lesson10.html" class="nav__dropdown-item">Строки</a>
                                     <a href="./lesson11.html" class="nav__dropdown-item">Списки (list)</a>
                                     <a href="./lesson12.html" class="nav__dropdown-item">Индексы и срезы</a>
                                     <a href="./lesson13.html" class="nav__dropdown-item">Кортежи (tuple)</a>
-                                    <a href="./lesson14.html" class="nav__dropdown-item">Словари (dict) и работа с ними</a>
+                                    <a href="./lesson14.html" class="nav__dropdown-item">Словари (dict) и работа с
+                                        ними</a>
                                     <a href="./lesson15.html" class="nav__dropdown-item">Множества (set и frozenset)</a>
                                     <a href="./lesson16.html" class="nav__dropdown-item">Функции и их аргументы</a>
                                     <a href="./lesson17.html" class="nav__dropdown-item">Исключения в python</a>
                                     <a href="./lesson18.html" class="nav__dropdown-item">Байты (bytes и bytearray)</a>
                                     <a href="./lesson19.html" class="nav__dropdown-item">Файлы. Работа с файлами</a>
-                                    <a href="./lesson20.html" class="nav__dropdown-item">With ... as - менеджеры контекста</a>
+                                    <a href="./lesson20.html" class="nav__dropdown-item">With ... as - менеджеры
+                                        контекста</a>
                                     <a href="./lesson21.html" class="nav__dropdown-item">PEP 8</a>
-                                    <a href="./lesson22.html" class="nav__dropdown-item">Документирование кода в Python</a>
+                                    <a href="./lesson22.html" class="nav__dropdown-item">Документирование кода в
+                                        Python</a>
                                     <a href="./lesson23.html" class="nav__dropdown-item">Работа с модулями</a>
-                                    <a href="./lesson24.html" class="nav__dropdown-item">Объектно-ориентированное программирование</a>
-                                    <a href="./lesson25.html" class="nav__dropdown-item">Инкапсуляция, наследование, полиморфизм</a>
+                                    <a href="./lesson24.html" class="nav__dropdown-item">Объектно-ориентированное
+                                        программирование</a>
+                                    <a href="./lesson25.html" class="nav__dropdown-item">Инкапсуляция, наследование,
+                                        полиморфизм</a>
                                     <a href="./lesson26.html" class="nav__dropdown-item">Перегрузка операторов</a>
                                     <a href="./lesson27.html" class="nav__dropdown-item">Декораторы</a>
                                 </div>
@@ -112,11 +120,11 @@
                     </div>
 
                     <div class="nav__items">
-                        
+
 
                         <div class="nav__dropdown">
                             <a href="#" class="nav__link">
-                                <i class='bx bx-test-tube nav__icon' ></i>
+                                <i class='bx bx-test-tube nav__icon'></i>
                                 <span class="nav__name">Лабораторные работы</span>
                                 <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
                             </a>
@@ -156,7 +164,7 @@
             <h2>Цикл while</h2>
             <p>While - один из самых универсальных циклов в Python, поэтому довольно медленный. Выполняет тело цикла до
                 тех пор, пока условие цикла истинно.</p>
-<pre>
+            <pre>
 <code>
 >>> i = 5
 >>> while i < 15:
@@ -174,7 +182,7 @@
             <p>Цикл for уже чуточку сложнее, чуть менее универсальный, но выполняется гораздо быстрее цикла while. Этот
                 цикл проходится по любому итерируемому объекту (например строке или списку), и во время каждого прохода
                 выполняет тело цикла.</p>
-<pre>
+            <pre>
 <code>
 >>> for i in 'hello world':
 ...     print(i * 2, end='')
@@ -183,7 +191,7 @@ hheelllloo  wwoorrlldd
 </code>
 </pre>
             <h2>Оператор continue</h2>
-<pre>
+            <pre>
 <code>
 >>> for i in 'hello world':
 ...     if i == 'o':
@@ -195,7 +203,7 @@ hheellll  wwrrlldd
 </pre>
             <h2>Оператор break</h2>
             <p>Оператор break досрочно прерывает цикл.</p>
-<pre>
+            <pre>
 <code>
 >>> for i in 'hello world':
 ...     if i == 'o':
@@ -209,7 +217,7 @@ hheellll
             <p>Слово else, примененное в цикле for или while, проверяет, был ли произведен выход из цикла инструкцией
                 break, или же "естественным" образом. Блок инструкций внутри else выполнится только в том случае, если
                 выход из цикла произошел без помощи break.</p>
-<pre>
+            <pre>
 <code>
 >>> for i in 'hello world':
 ...     if i == 'a':
@@ -220,6 +228,16 @@ hheellll
 Буквы a в строке нет
 </code>
 </pre>
+
+            <div class="main__pagination">
+                <div class="paginator previous"><a href="./lesson6.html">
+                        <img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAABRklEQVRoQ+2X4W3CMBCFv0xQRmADugHdpIzQEWCCsgFsUDoBdIOO0BW6AXoSlixInDNtKl91lvIrl/jLy7tnu8Ph6BwyE9B/9ddC6VC6oEDYI+wR9rB5YAY8AQdbeV3VFI04B96Ad2Bdh2Or/m3oR+AISOmNB+gV8HoBlmTNQ79cgPP/2zT0HnjucWOT0PKtGk4p0Teag04JocYbGk1B5wlRyqhmoK8TogQtr+uyjG/g01Kompqc7ksI6zxjdR+F3rh51gothXdjM//g/iTQ4nGndBJRim+BB4OqUu9kqFPJV4X/qzyd5ld6CGYMvJn0SODKaW07F15yOnFqRRT40suKmHO62nvk4O52eUPJ0lwjDvVfnixuoPUxKVnUpC7OiHmyuDqNGxfB+8usG6b7Z5jgyYCeQNTeV4bSoXRBgbBH2OO/2eMMUaUwLofhnv8AAAAASUVORK5CYII=" />
+                        Условный оператор if</a></div>
+                <div class="paginator next"><a href="./lesson8.html">Ключевые слова, keyword<img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAABUUlEQVRoQ+2X0U3EMBBE31VAC5RAB0AFQAfQAVRwlAAdQCfQAXRACdABGnT5JN6xFfssraV83Tr3Mpkdb3ZMuHYTMpPQvd5aKp1KryiQ9kh7pD3iHrgG3oDv+JZY5ZaN+AhcATfAVwwnVrU19P6g9CXwEUMqV/WAFoUs8gC8lJHKFb2gF5J74LmMtV7RG1o0UvuuBXwEtHiVKmrQqmQZBS1wNWZVsoyEXhrUThYX+gw4CfrxFtBVWnayuNDy4nmJovL3cLIcE7SeValSzPJjgtbh8xR5Sy60PHoauTFwEbTSDyBrFBVe/teFDvL+lWlg0uyxtgSsh7PmkpHQn4DGV3sCHAX9fgCe5kR8Deb3v7bqrXQ4IdYaoRe0nRCjoasSYiS00qEqIUZBT/k17hxEVu2WjWiBOMUJ7ajVUptKt6jn7E2lHbVaalPpFvWcvVMq/QsQrjouZKOwvQAAAABJRU5ErkJggg==" /></a>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -227,4 +245,5 @@ hheellll
     <!--========== MAIN JS ==========-->
     <script src="../../js/script.js"></script>
 </body>
+
 </html>

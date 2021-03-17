@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Python</title>
-    <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="../../css/style.css">
 </head>
+
 <body>
     <!--========== HEADER ==========-->
     <header class="header">
@@ -39,13 +40,13 @@
                 <div class="nav__list">
                     <div class="nav__items">
                         <a href="../../index.html" class="nav__link active">
-                            <i class='bx bx-home nav__icon' ></i>
+                            <i class='bx bx-home nav__icon'></i>
                             <span class="nav__name">Главная</span>
                         </a>
-                        
 
-                        
-                        
+
+
+
                         <div class="nav__dropdown">
                             <a href="#" class="nav__link">
                                 <i class='bx bxs-school nav__icon'></i>
@@ -62,24 +63,31 @@
                                     <a href="./lesson5.html" class="nav__dropdown-item">Программа не работает</a>
                                     <a href="./lesson6.html" class="nav__dropdown-item">Условный оператор if</a>
                                     <a href="./lesson7.html" class="nav__dropdown-item">Циклы</a>
-                                    <a href="./lesson8.html" class="nav__dropdown-item">Ключевые слова, модуль keyword</a>
-                                    <a href="./lesson9.html" class="nav__dropdown-item">Числа: целые, вещественные, комплексные</a>
+                                    <a href="./lesson8.html" class="nav__dropdown-item">Ключевые слова, модуль
+                                        keyword</a>
+                                    <a href="./lesson9.html" class="nav__dropdown-item">Числа: целые, вещественные,
+                                        комплексные</a>
                                     <a href="./lesson10.html" class="nav__dropdown-item">Строки</a>
                                     <a href="./lesson11.html" class="nav__dropdown-item">Списки (list)</a>
                                     <a href="./lesson12.html" class="nav__dropdown-item">Индексы и срезы</a>
                                     <a href="./lesson13.html" class="nav__dropdown-item">Кортежи (tuple)</a>
-                                    <a href="./lesson14.html" class="nav__dropdown-item">Словари (dict) и работа с ними</a>
+                                    <a href="./lesson14.html" class="nav__dropdown-item">Словари (dict) и работа с
+                                        ними</a>
                                     <a href="./lesson15.html" class="nav__dropdown-item">Множества (set и frozenset)</a>
                                     <a href="./lesson16.html" class="nav__dropdown-item">Функции и их аргументы</a>
                                     <a href="./lesson17.html" class="nav__dropdown-item">Исключения в python</a>
                                     <a href="./lesson18.html" class="nav__dropdown-item">Байты (bytes и bytearray)</a>
                                     <a href="./lesson19.html" class="nav__dropdown-item">Файлы. Работа с файлами</a>
-                                    <a href="./lesson20.html" class="nav__dropdown-item">With ... as - менеджеры контекста</a>
+                                    <a href="./lesson20.html" class="nav__dropdown-item">With ... as - менеджеры
+                                        контекста</a>
                                     <a href="./lesson21.html" class="nav__dropdown-item">PEP 8</a>
-                                    <a href="./lesson22.html" class="nav__dropdown-item">Документирование кода в Python</a>
+                                    <a href="./lesson22.html" class="nav__dropdown-item">Документирование кода в
+                                        Python</a>
                                     <a href="./lesson23.html" class="nav__dropdown-item">Работа с модулями</a>
-                                    <a href="./lesson24.html" class="nav__dropdown-item">Объектно-ориентированное программирование</a>
-                                    <a href="./lesson25.html" class="nav__dropdown-item">Инкапсуляция, наследование, полиморфизм</a>
+                                    <a href="./lesson24.html" class="nav__dropdown-item">Объектно-ориентированное
+                                        программирование</a>
+                                    <a href="./lesson25.html" class="nav__dropdown-item">Инкапсуляция, наследование,
+                                        полиморфизм</a>
                                     <a href="./lesson26.html" class="nav__dropdown-item">Перегрузка операторов</a>
                                     <a href="./lesson27.html" class="nav__dropdown-item">Декораторы</a>
                                 </div>
@@ -112,11 +120,11 @@
                     </div>
 
                     <div class="nav__items">
-                        
+
 
                         <div class="nav__dropdown">
                             <a href="#" class="nav__link">
-                                <i class='bx bx-test-tube nav__icon' ></i>
+                                <i class='bx bx-test-tube nav__icon'></i>
                                 <span class="nav__name">Лабораторные работы</span>
                                 <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
                             </a>
@@ -150,54 +158,74 @@
     <!--========== CONTENTS ==========-->
     <main>
         <section class="container">
-          <h1 id="first">Первая программа. Среда разработки IDLE</h1>
-          <p>Сегодня мы напишем свою первую программу в среде разработки IDLE.</p>
-          <p>После загрузки и установки python открываем IDLE (среда разработки на языке Python, поставляемая вместе с
-            дистрибутивом).</p>
-          <p>Здесь и далее буду приводить примеры под ОС Windows, так как именно она у меня сейчас под рукой.</p>
-          <img src="../../img/lesson3/1.png" alt="">
-          <p>Запускаем IDLE (изначально запускается в интерактивном режиме), после чего уже можно начинать писать первую
-            программу. Традиционно, первой программой у нас будет "hello world".</p>
-          <p>Чтобы написать "hello world" на python, достаточно всего одной строки:</p>
-          <pre>
+            <h1 id="first">Первая программа. Среда разработки IDLE</h1>
+            <p>Сегодня мы напишем свою первую программу в среде разработки IDLE.</p>
+            <p>После загрузки и установки python открываем IDLE (среда разработки на языке Python, поставляемая вместе с
+                дистрибутивом).</p>
+            <p>Здесь и далее буду приводить примеры под ОС Windows, так как именно она у меня сейчас под рукой.</p>
+            <img src="../../img/lesson3/1.png" alt="">
+            <p>Запускаем IDLE (изначально запускается в интерактивном режиме), после чего уже можно начинать писать
+                первую
+                программу. Традиционно, первой программой у нас будет "hello world".</p>
+            <p>Чтобы написать "hello world" на python, достаточно всего одной строки:</p>
+            <pre>
 <code>print("Hello world!")</code>
 </pre>
-          <p>Вводим этот код в IDLE и нажимаем Enter. Результат виден на картинке:</p>
-          <img src="../../img/lesson3/2.png" alt="">
-          <p>Поздравляю! Вы написали свою первую программу на python! (если что-то не работает).</p>
-          <p>С интерактивным режимом мы немного познакомились, можете с ним ещё поиграться, например, написать</p>
-          <pre>
+            <p>Вводим этот код в IDLE и нажимаем Enter. Результат виден на картинке:</p>
+            <img src="../../img/lesson3/2.png" alt="">
+            <p>Поздравляю! Вы написали свою первую программу на python! (если что-то не работает).</p>
+            <p>С интерактивным режимом мы немного познакомились, можете с ним ещё поиграться, например, написать</p>
+            <pre>
 <code>
 print(3 + 4)
 print(3 * 5)
 print(3 ** 2)
 </code>
 </pre>
-          <p>Но, всё-таки, интерактивный режим не будет являться основным. В основном, вы будете сохранять программный код в
-            файл и запускать уже файл.</p>
-          <p>Для того, чтобы создать новое окно, в интерактивном режиме IDLE выберите File → New File (или нажмите Ctrl +
-            N).</p>
-          <img src="../../img/lesson3/3.png" alt="">
-          <p>В открывшемся окне введите следующий код:</p>
-          <pre>
+            <p>Но, всё-таки, интерактивный режим не будет являться основным. В основном, вы будете сохранять программный
+                код в
+                файл и запускать уже файл.</p>
+            <p>Для того, чтобы создать новое окно, в интерактивном режиме IDLE выберите File → New File (или нажмите
+                Ctrl +
+                N).</p>
+            <img src="../../img/lesson3/3.png" alt="">
+            <p>В открывшемся окне введите следующий код:</p>
+            <pre>
 <code>
 name = input("Как Вас зовут? ")
 print("Привет,", name)
 </code>
 </pre>
-          <p>Первая строка печатает вопрос ("Как Вас зовут? "), ожидает, пока вы не напечатаете что-нибудь и не нажмёте
-            Enter и сохраняет введённое значение в переменной name.</p>
-          <p>Во второй строке мы используем функцию print для вывода текста на экран, в данном случае для вывода "Привет, "
-            и того, что хранится в переменной "name".</p>
-          <p>Теперь нажмём F5 (или выберем в меню IDLE Run → Run Module) и убедимся, что то, что мы написали, работает.
-            Перед запуском IDLE предложит нам сохранить файл. Сохраним туда, куда вам будет удобно, после чего программа
-            запустится.</p>
-          <p>Вы должны увидеть что-то наподобие этого (на скриншоте слева - файл с написанной вами программой, справа -
-            результат её работы):</p>
-          <img src="../../img/lesson3/4.png" alt="">
-          <p>Поздравляю! Вы научились писать простейшие программы, а также познакомились со средой разработки IDLE. Теперь
-            можно немного отдохнуть, а потом начать изучать python дальше. Можете посмотреть синтаксис python, циклы или
-            условия. Желаю удачи!</p>
+            <p>Первая строка печатает вопрос ("Как Вас зовут? "), ожидает, пока вы не напечатаете что-нибудь и не
+                нажмёте
+                Enter и сохраняет введённое значение в переменной name.</p>
+            <p>Во второй строке мы используем функцию print для вывода текста на экран, в данном случае для вывода
+                "Привет, "
+                и того, что хранится в переменной "name".</p>
+            <p>Теперь нажмём F5 (или выберем в меню IDLE Run → Run Module) и убедимся, что то, что мы написали,
+                работает.
+                Перед запуском IDLE предложит нам сохранить файл. Сохраним туда, куда вам будет удобно, после чего
+                программа
+                запустится.</p>
+            <p>Вы должны увидеть что-то наподобие этого (на скриншоте слева - файл с написанной вами программой, справа
+                -
+                результат её работы):</p>
+            <img src="../../img/lesson3/4.png" alt="">
+            <p>Поздравляю! Вы научились писать простейшие программы, а также познакомились со средой разработки IDLE.
+                Теперь
+                можно немного отдохнуть, а потом начать изучать python дальше. Можете посмотреть синтаксис python, циклы
+                или
+                условия. Желаю удачи!</p>
+
+            <div class="main__pagination">
+                <div class="paginator previous"><a href="./lesson2.html">
+                        <img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAABRklEQVRoQ+2X4W3CMBCFv0xQRmADugHdpIzQEWCCsgFsUDoBdIOO0BW6AXoSlixInDNtKl91lvIrl/jLy7tnu8Ph6BwyE9B/9ddC6VC6oEDYI+wR9rB5YAY8AQdbeV3VFI04B96Ad2Bdh2Or/m3oR+AISOmNB+gV8HoBlmTNQ79cgPP/2zT0HnjucWOT0PKtGk4p0Teag04JocYbGk1B5wlRyqhmoK8TogQtr+uyjG/g01Kompqc7ksI6zxjdR+F3rh51gothXdjM//g/iTQ4nGndBJRim+BB4OqUu9kqFPJV4X/qzyd5ld6CGYMvJn0SODKaW07F15yOnFqRRT40suKmHO62nvk4O52eUPJ0lwjDvVfnixuoPUxKVnUpC7OiHmyuDqNGxfB+8usG6b7Z5jgyYCeQNTeV4bSoXRBgbBH2OO/2eMMUaUwLofhnv8AAAAASUVORK5CYII=" />
+                        Скачать Python</a></div>
+                <div class="paginator next"><a href="./lesson4.html">Синтаксис языка Python <img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAABUUlEQVRoQ+2X0U3EMBBE31VAC5RAB0AFQAfQAVRwlAAdQCfQAXRACdABGnT5JN6xFfssraV83Tr3Mpkdb3ZMuHYTMpPQvd5aKp1KryiQ9kh7pD3iHrgG3oDv+JZY5ZaN+AhcATfAVwwnVrU19P6g9CXwEUMqV/WAFoUs8gC8lJHKFb2gF5J74LmMtV7RG1o0UvuuBXwEtHiVKmrQqmQZBS1wNWZVsoyEXhrUThYX+gw4CfrxFtBVWnayuNDy4nmJovL3cLIcE7SeValSzPJjgtbh8xR5Sy60PHoauTFwEbTSDyBrFBVe/teFDvL+lWlg0uyxtgSsh7PmkpHQn4DGV3sCHAX9fgCe5kR8Deb3v7bqrXQ4IdYaoRe0nRCjoasSYiS00qEqIUZBT/k17hxEVu2WjWiBOMUJ7ajVUptKt6jn7E2lHbVaalPpFvWcvVMq/QsQrjouZKOwvQAAAABJRU5ErkJggg==" /></a>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -205,4 +233,5 @@ print("Привет,", name)
     <!--========== MAIN JS ==========-->
     <script src="../../js/script.js"></script>
 </body>
+
 </html>

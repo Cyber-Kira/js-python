@@ -17,11 +17,11 @@
 
       <a href="../../index.html" class="header__logo">Python World</a>
 
-            <form class="header__search" action="http://google.com/search" target="_blank">
-                <input type="search" placeholder="Поиск" class="header__input">
-                <input type="hidden" name="as_sitesearch" value="pythonworld.ru">
-                <button class='bx bx-search header__icon header__submit'></button>
-            </form>
+      <form class="header__search" action="http://google.com/search" target="_blank">
+        <input type="search" placeholder="Поиск" class="header__input">
+        <input type="hidden" name="as_sitesearch" value="pythonworld.ru">
+        <button class='bx bx-search header__icon header__submit'></button>
+      </form>
 
       <div class="header__toggle">
         <i class='bx bx-menu' id="header-toggle"></i>
@@ -43,7 +43,7 @@
               <i class='bx bx-home nav__icon'></i>
               <span class="nav__name">Главная</span>
             </a>
-            
+
 
 
 
@@ -113,7 +113,7 @@
           </div>
 
           <div class="nav__items">
-            
+
 
             <div class="nav__dropdown">
               <a href="#" class="nav__link">
@@ -154,23 +154,23 @@
   <!--========== CONTENTS ==========-->
   <main>
     <section class="container">
-        <h1>Функции и их аргументы</h1>
-        <p>В этой статье я планирую рассказать о функциях, именных и анонимных, инструкциях def, return и lambda,
-            обязательных и необязательных аргументах функции, функциях с произвольным числом аргументов.</p>
+      <h1>Функции и их аргументы</h1>
+      <p>В этой статье я планирую рассказать о функциях, именных и анонимных, инструкциях def, return и lambda,
+        обязательных и необязательных аргументах функции, функциях с произвольным числом аргументов.</p>
 
-        <h2>Именные функции, инструкция def</h2>
-        <p>Функция в python - объект, принимающий аргументы и возвращающий значение. Обычно функция определяется с
-            помощью инструкции def.</p>
-        <p>Определим простейшую функцию:</p>
-<pre>
+      <h2>Именные функции, инструкция def</h2>
+      <p>Функция в python - объект, принимающий аргументы и возвращающий значение. Обычно функция определяется с
+        помощью инструкции def.</p>
+      <p>Определим простейшую функцию:</p>
+      <pre>
 <code>
 def add(x, y):
 return x + y
 </code>
 </pre>
-        <p>Инструкция return говорит, что нужно вернуть значение. В нашем случае функция возвращает сумму x и y.</p>
-        <p>Теперь мы ее можем вызвать:</p>
-<pre>
+      <p>Инструкция return говорит, что нужно вернуть значение. В нашем случае функция возвращает сумму x и y.</p>
+      <p>Теперь мы ее можем вызвать:</p>
+      <pre>
 <code>
 >>> add(1, 10)
 11
@@ -178,8 +178,8 @@ return x + y
 'abcdef'
 </code>
 </pre>
-        <p>Функция может быть любой сложности и возвращать любые объекты (списки, кортежи, и даже функции!):</p>
-<pre>
+      <p>Функция может быть любой сложности и возвращать любые объекты (списки, кортежи, и даже функции!):</p>
+      <pre>
 <code>
 >>> def newfunc(n):
 ...     def myfunc(x):
@@ -191,9 +191,8 @@ return x + y
 300
 </code>
 </pre>
-        <p>Функция может и не заканчиваться инструкцией return, при этом функция вернет значение <a
-                href="#">None</a>:</p>
-<pre>
+      <p>Функция может и не заканчиваться инструкцией return, при этом функция вернет значение <a href="#">None</a>:</p>
+      <pre>
 <code>
 >>> def func():
 ...     pass
@@ -203,11 +202,11 @@ None
 </code>
 </pre>
 
-        <h2>Аргументы функции</h2>
-        <p>Функция может принимать произвольное количество аргументов или не принимать их вовсе. Также
-            распространены функции с произвольным числом аргументов, функции с позиционными и именованными
-            аргументами, обязательными и необязательными.</p>
-<pre>
+      <h2>Аргументы функции</h2>
+      <p>Функция может принимать произвольное количество аргументов или не принимать их вовсе. Также
+        распространены функции с произвольным числом аргументов, функции с позиционными и именованными
+        аргументами, обязательными и необязательными.</p>
+      <pre>
 <code>
 >>> def func(a, b, c=2): # c - необязательный аргумент
 ...     return a + b + c
@@ -225,9 +224,9 @@ func(a=3, c=6)
 TypeError: func() takes at least 2 arguments (2 given)
 </code>
 </pre>
-        <p>Функция также может принимать переменное количество позиционных аргументов, тогда перед именем ставится
-            *:</p>
-<pre>
+      <p>Функция также может принимать переменное количество позиционных аргументов, тогда перед именем ставится
+        *:</p>
+      <pre>
 <code>
 >>> def func(*args):
 ...     return args
@@ -240,10 +239,10 @@ TypeError: func() takes at least 2 arguments (2 given)
 (1,)
 </code>
 </pre>
-        <p>Как видно из примера, args - это <a href="#">кортеж</a> из всех переданных аргументов функции, и с
-            переменной можно работать также, как и с кортежем.</p>
-        <p>Функция может принимать и произвольное число именованных аргументов, тогда перед именем ставится **:</p>
-<pre>
+      <p>Как видно из примера, args - это <a href="#">кортеж</a> из всех переданных аргументов функции, и с
+        переменной можно работать также, как и с кортежем.</p>
+      <p>Функция может принимать и произвольное число именованных аргументов, тогда перед именем ставится **:</p>
+      <pre>
 <code>
 >>> def func(**kwargs):
 ...     return kwargs
@@ -256,14 +255,14 @@ TypeError: func() takes at least 2 arguments (2 given)
 {'a': 'python'}
 </code>
 </pre>
-        <p>В переменной kwargs у нас хранится <a href="#">словарь</a>, с которым мы, опять-таки, можем делать все,
-            что нам заблагорассудится.</p>
+      <p>В переменной kwargs у нас хранится <a href="#">словарь</a>, с которым мы, опять-таки, можем делать все,
+        что нам заблагорассудится.</p>
 
-        <h2>Анонимные функции, инструкция lambda</h2>
-        <p>Анонимные функции могут содержать лишь одно выражение, но и выполняются они быстрее. Анонимные функции
-            создаются с помощью инструкции lambda. Кроме этого, их не обязательно присваивать переменной, как делали
-            мы инструкцией def func():</p>
-<pre>
+      <h2>Анонимные функции, инструкция lambda</h2>
+      <p>Анонимные функции могут содержать лишь одно выражение, но и выполняются они быстрее. Анонимные функции
+        создаются с помощью инструкции lambda. Кроме этого, их не обязательно присваивать переменной, как делали
+        мы инструкцией def func():</p>
+      <pre>
 <code>
 >>> func = lambda x, y: x + y
 >>> func(1, 2)
@@ -276,20 +275,30 @@ TypeError: func() takes at least 2 arguments (2 given)
 'ab'
 </code>
 </pre>
-        <p>lambda функции, в отличие от обычной, не требуется инструкция return, а в остальном, ведет себя точно так
-            же:</p>
-<pre>
+      <p>lambda функции, в отличие от обычной, не требуется инструкция return, а в остальном, ведет себя точно так
+        же:</p>
+      <pre>
 <code>
 >>> func = lambda *args: args
 >>> func(1, 2, 3, 4)
 (1, 2, 3, 4)
 </code>
 </pre>
+
+      <div class="main__pagination">
+        <div class="paginator previous"><a href="./lesson15.html">
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAABRklEQVRoQ+2X4W3CMBCFv0xQRmADugHdpIzQEWCCsgFsUDoBdIOO0BW6AXoSlixInDNtKl91lvIrl/jLy7tnu8Ph6BwyE9B/9ddC6VC6oEDYI+wR9rB5YAY8AQdbeV3VFI04B96Ad2Bdh2Or/m3oR+AISOmNB+gV8HoBlmTNQ79cgPP/2zT0HnjucWOT0PKtGk4p0Teag04JocYbGk1B5wlRyqhmoK8TogQtr+uyjG/g01Kompqc7ksI6zxjdR+F3rh51gothXdjM//g/iTQ4nGndBJRim+BB4OqUu9kqFPJV4X/qzyd5ld6CGYMvJn0SODKaW07F15yOnFqRRT40suKmHO62nvk4O52eUPJ0lwjDvVfnixuoPUxKVnUpC7OiHmyuDqNGxfB+8usG6b7Z5jgyYCeQNTeV4bSoXRBgbBH2OO/2eMMUaUwLofhnv8AAAAASUVORK5CYII=" />
+            Множества (set и frozenset)</a></div>
+        <div class="paginator next"><a href="./lesson17.html">Исключения в python<img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAABUUlEQVRoQ+2X0U3EMBBE31VAC5RAB0AFQAfQAVRwlAAdQCfQAXRACdABGnT5JN6xFfssraV83Tr3Mpkdb3ZMuHYTMpPQvd5aKp1KryiQ9kh7pD3iHrgG3oDv+JZY5ZaN+AhcATfAVwwnVrU19P6g9CXwEUMqV/WAFoUs8gC8lJHKFb2gF5J74LmMtV7RG1o0UvuuBXwEtHiVKmrQqmQZBS1wNWZVsoyEXhrUThYX+gw4CfrxFtBVWnayuNDy4nmJovL3cLIcE7SeValSzPJjgtbh8xR5Sy60PHoauTFwEbTSDyBrFBVe/teFDvL+lWlg0uyxtgSsh7PmkpHQn4DGV3sCHAX9fgCe5kR8Deb3v7bqrXQ4IdYaoRe0nRCjoasSYiS00qEqIUZBT/k17hxEVu2WjWiBOMUJ7ajVUptKt6jn7E2lHbVaalPpFvWcvVMq/QsQrjouZKOwvQAAAABJRU5ErkJggg==" /></a>
+        </div>
+      </div>
     </section>
   </main>
 
-    <div id="background"></div>
-    <!--========== MAIN JS ==========-->
+  <div id="background"></div>
+  <!--========== MAIN JS ==========-->
   <script src="../../js/script.js"></script>
 </body>
 

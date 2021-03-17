@@ -17,11 +17,11 @@
 
       <a href="../../index.html" class="header__logo">Python World</a>
 
-            <form class="header__search" action="http://google.com/search" target="_blank">
-                <input type="search" placeholder="Поиск" class="header__input">
-                <input type="hidden" name="as_sitesearch" value="pythonworld.ru">
-                <button class='bx bx-search header__icon header__submit'></button>
-            </form>
+      <form class="header__search" action="http://google.com/search" target="_blank">
+        <input type="search" placeholder="Поиск" class="header__input">
+        <input type="hidden" name="as_sitesearch" value="pythonworld.ru">
+        <button class='bx bx-search header__icon header__submit'></button>
+      </form>
 
       <div class="header__toggle">
         <i class='bx bx-menu' id="header-toggle"></i>
@@ -43,7 +43,7 @@
               <i class='bx bx-home nav__icon'></i>
               <span class="nav__name">Главная</span>
             </a>
-            
+
 
 
 
@@ -113,7 +113,7 @@
           </div>
 
           <div class="nav__items">
-            
+
 
             <div class="nav__dropdown">
               <a href="#" class="nav__link">
@@ -154,13 +154,13 @@
   <!--========== CONTENTS ==========-->
   <main>
     <section class="container">
-        <h1>Байты (bytes и bytearray)</h1>
-        <p>Байтовые строки в Python - что это такое и с чем это едят? Байтовые строки очень похожи на обычные
-            строки, но с некоторыми отличиями. Попробуем выяснить, с какими.</p>
-        <p>Что такое байты? Байт - минимальная единица хранения и обработки цифровой информации. Последовательность
-            байт представляет собой какую-либо информацию (текст, картинку, мелодию...).</p>
-        <p>Создаём байтовую строку:</p>
-<pre>
+      <h1>Байты (bytes и bytearray)</h1>
+      <p>Байтовые строки в Python - что это такое и с чем это едят? Байтовые строки очень похожи на обычные
+        строки, но с некоторыми отличиями. Попробуем выяснить, с какими.</p>
+      <p>Что такое байты? Байт - минимальная единица хранения и обработки цифровой информации. Последовательность
+        байт представляет собой какую-либо информацию (текст, картинку, мелодию...).</p>
+      <p>Создаём байтовую строку:</p>
+      <pre>
 <code>
 >>> b'bytes'
 b'bytes'
@@ -172,10 +172,10 @@ b'bytes'
 b'2dLH)'
 </code>
 </pre>
-        <p>Если первые три способа нам уже известны (<a href="#">тут</a>, <a href="#">тут</a> и <a
-                href="#">тут</a>), то последний нужно пояснить. Функция bytes принимает список чисел от 0 до 255 и
-            возвращает байты, получающиеся применением функции chr.</p>
-<pre>
+      <p>Если первые три способа нам уже известны (<a href="#">тут</a>, <a href="#">тут</a> и <a href="#">тут</a>), то
+        последний нужно пояснить. Функция bytes принимает список чисел от 0 до 255 и
+        возвращает байты, получающиеся применением функции chr.</p>
+      <pre>
 <code>
 >>> chr(50)
 '2'
@@ -185,21 +185,21 @@ b'2dLH)'
 'L'
 </code>
 </pre>
-        <p>Что делать с байтами? Хотя байтовые строки поддерживают практически все строковые методы, с ними мало что
-            нужно делать. Обычно их надо записать в <a href="#">файл</a> / прочесть из файла и преобразовать во
-            что-либо другое (конечно, если очень хочется, то можно и распечатать). Для преобразования в строку
-            используется метод decode:</p>
-<pre>
+      <p>Что делать с байтами? Хотя байтовые строки поддерживают практически все строковые методы, с ними мало что
+        нужно делать. Обычно их надо записать в <a href="#">файл</a> / прочесть из файла и преобразовать во
+        что-либо другое (конечно, если очень хочется, то можно и распечатать). Для преобразования в строку
+        используется метод decode:</p>
+      <pre>
 <code>
 >>> b'\xd0\x91\xd0\xb0\xd0\xb9\xd1\x82\xd1\x8b'.decode('utf-8')
 'Байты'
 </code>
 </pre>
 
-        <h2>Bytearray</h2>
-        <p>Bytearray в python - массив байт. От типа bytes отличается только тем, что является изменяемым. Про него,
-            в общем-то, больше рассказать нечего.</p>
-<pre>
+      <h2>Bytearray</h2>
+      <p>Bytearray в python - массив байт. От типа bytes отличается только тем, что является изменяемым. Про него,
+        в общем-то, больше рассказать нечего.</p>
+      <pre>
 <code>
 >>> b = bytearray(b'hello world!')
 >>> b
@@ -221,11 +221,21 @@ bytearray(b'iello world!')
 bytearray(b'ifnos%}vzun,')
 </code>
 </pre>
+
+      <div class="main__pagination">
+        <div class="paginator previous"><a href="./lesson17.html">
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAABRklEQVRoQ+2X4W3CMBCFv0xQRmADugHdpIzQEWCCsgFsUDoBdIOO0BW6AXoSlixInDNtKl91lvIrl/jLy7tnu8Ph6BwyE9B/9ddC6VC6oEDYI+wR9rB5YAY8AQdbeV3VFI04B96Ad2Bdh2Or/m3oR+AISOmNB+gV8HoBlmTNQ79cgPP/2zT0HnjucWOT0PKtGk4p0Teag04JocYbGk1B5wlRyqhmoK8TogQtr+uyjG/g01Kompqc7ksI6zxjdR+F3rh51gothXdjM//g/iTQ4nGndBJRim+BB4OqUu9kqFPJV4X/qzyd5ld6CGYMvJn0SODKaW07F15yOnFqRRT40suKmHO62nvk4O52eUPJ0lwjDvVfnixuoPUxKVnUpC7OiHmyuDqNGxfB+8usG6b7Z5jgyYCeQNTeV4bSoXRBgbBH2OO/2eMMUaUwLofhnv8AAAAASUVORK5CYII=" />
+            Исключения в python</a></div>
+        <div class="paginator next"><a href="./lesson19.html">Файлы. Работа с файлами<img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAABUUlEQVRoQ+2X0U3EMBBE31VAC5RAB0AFQAfQAVRwlAAdQCfQAXRACdABGnT5JN6xFfssraV83Tr3Mpkdb3ZMuHYTMpPQvd5aKp1KryiQ9kh7pD3iHrgG3oDv+JZY5ZaN+AhcATfAVwwnVrU19P6g9CXwEUMqV/WAFoUs8gC8lJHKFb2gF5J74LmMtV7RG1o0UvuuBXwEtHiVKmrQqmQZBS1wNWZVsoyEXhrUThYX+gw4CfrxFtBVWnayuNDy4nmJovL3cLIcE7SeValSzPJjgtbh8xR5Sy60PHoauTFwEbTSDyBrFBVe/teFDvL+lWlg0uyxtgSsh7PmkpHQn4DGV3sCHAX9fgCe5kR8Deb3v7bqrXQ4IdYaoRe0nRCjoasSYiS00qEqIUZBT/k17hxEVu2WjWiBOMUJ7ajVUptKt6jn7E2lHbVaalPpFvWcvVMq/QsQrjouZKOwvQAAAABJRU5ErkJggg==" /></a>
+        </div>
+      </div>
     </section>
   </main>
 
-    <div id="background"></div>
-    <!--========== MAIN JS ==========-->
+  <div id="background"></div>
+  <!--========== MAIN JS ==========-->
   <script src="../../js/script.js"></script>
 </body>
 
