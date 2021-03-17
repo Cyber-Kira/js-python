@@ -17,10 +17,11 @@
 
       <a href="../../index.html" class="header__logo">Python World</a>
 
-      <div class="header__search">
-        <input type="search" placeholder="Поиск" class="header__input">
-        <i class='bx bx-search header__icon'></i>
-      </div>
+      <form class="header__search" action="http://google.com/search" target="_blank">
+        <input type="search" name="q" placeholder="Поиск" class="header__input">
+        <input type="hidden" name="as_sitesearch" value="cyber-kira.github.io">
+        <button class='bx bx-search header__icon header__submit'></button>
+      </form>
 
       <div class="header__toggle">
         <i class='bx bx-menu' id="header-toggle"></i>
@@ -42,7 +43,7 @@
               <i class='bx bx-home nav__icon'></i>
               <span class="nav__name">Главная</span>
             </a>
-            <h3 class="nav__subtitle">Методическое пособие</h3>
+
 
 
 
@@ -112,7 +113,7 @@
           </div>
 
           <div class="nav__items">
-            <h3 class="nav__subtitle">Практика</h3>
+
 
             <div class="nav__dropdown">
               <a href="#" class="nav__link">
@@ -153,19 +154,19 @@
   <!--========== CONTENTS ==========-->
   <main>
     <section class="container">
-        <h1>Инкапсуляция, наследование, полиморфизм</h1>
-        <p>Недавно мы говорили об <a href="#">основах объектно-ориентированного программирования в python</a>,
-            теперь продолжим эту тему и поговорим о таких понятиях ООП, как инкапсуляция, наследование и
-            полиморфизм.</p>
+      <h1>Инкапсуляция, наследование, полиморфизм</h1>
+      <p>Недавно мы говорили об <a href="#">основах объектно-ориентированного программирования в python</a>,
+        теперь продолжим эту тему и поговорим о таких понятиях ООП, как инкапсуляция, наследование и
+        полиморфизм.</p>
 
-        <h2>Инкапсуляция</h2>
-        <p>Инкапсуляция — ограничение доступа к составляющим объект компонентам (методам и переменным). Инкапсуляция
-            делает некоторые из компонент доступными только внутри класса.</p>
-        <p>Инкапсуляция в Python работает лишь на уровне соглашения между программистами о том, какие атрибуты
-            являются общедоступными, а какие — внутренними.</p>
-        <p>Одиночное подчеркивание в начале имени атрибута говорит о том, что переменная или метод не предназначен
-            для использования вне методов класса, однако атрибут доступен по этому имени.</p>
-<pre>
+      <h2>Инкапсуляция</h2>
+      <p>Инкапсуляция — ограничение доступа к составляющим объект компонентам (методам и переменным). Инкапсуляция
+        делает некоторые из компонент доступными только внутри класса.</p>
+      <p>Инкапсуляция в Python работает лишь на уровне соглашения между программистами о том, какие атрибуты
+        являются общедоступными, а какие — внутренними.</p>
+      <p>Одиночное подчеркивание в начале имени атрибута говорит о том, что переменная или метод не предназначен
+        для использования вне методов класса, однако атрибут доступен по этому имени.</p>
+      <pre>
 <code>
 class A:
 def _private(self):
@@ -176,9 +177,9 @@ def _private(self):
 Это приватный метод!
 </code>
 </pre>
-        <p>Двойное подчеркивание в начале имени атрибута даёт большую защиту: атрибут становится недоступным по
-            этому имени.</p>
-<pre>
+      <p>Двойное подчеркивание в начале имени атрибута даёт большую защиту: атрибут становится недоступным по
+        этому имени.</p>
+      <pre>
 <code>
 >>> class B:
 ...     def __private(self):
@@ -191,19 +192,19 @@ File "<stdin>", line 1, in <module>
 AttributeError: 'B' object has no attribute '__private'
 </code>
 </pre>
-        <p>Однако полностью это не защищает, так как атрибут всё равно остаётся доступным под именем
-            _ИмяКласса__ИмяАтрибута:</p>
-<pre>
+      <p>Однако полностью это не защищает, так как атрибут всё равно остаётся доступным под именем
+        _ИмяКласса__ИмяАтрибута:</p>
+      <pre>
 <code>
 >>> b._B__private()
 Это приватный метод!
 </code>
 </pre>
-        <h2>Наследование</h2>
-        <p>Наследование подразумевает то, что дочерний класс содержит все атрибуты родительского класса, при этом
-            некоторые из них могут быть переопределены или добавлены в дочернем. Например, мы можем создать свой
-            класс, похожий на <a href="#">словарь</a>:</p>
-<pre>
+      <h2>Наследование</h2>
+      <p>Наследование подразумевает то, что дочерний класс содержит все атрибуты родительского класса, при этом
+        некоторые из них могут быть переопределены или добавлены в дочернем. Например, мы можем создать свой
+        класс, похожий на <a href="#">словарь</a>:</p>
+      <pre>
 <code>
 >>> class Mydict(dict):
 ...     def get(self, key, default = 0):
@@ -213,9 +214,9 @@ AttributeError: 'B' object has no attribute '__private'
 >>> b = Mydict(a=1, b=2)
 </code>
 </pre>
-        <p>Класс Mydict ведёт себя точно так же, как и словарь, за исключением того, что метод get по умолчанию
-            возвращает не None, а 0.</p>
-<pre>
+      <p>Класс Mydict ведёт себя точно так же, как и словарь, за исключением того, что метод get по умолчанию
+        возвращает не None, а 0.</p>
+      <pre>
 <code>
 >>> b['c'] = 4
 >>> print(b)
@@ -226,11 +227,11 @@ None
 0
 </code>
 </pre>
-        <h2>Полиморфизм</h2>
-        <p>Полиморфизм - разное поведение одного и того же метода в разных классах. Например, мы можем сложить два
-            числа, и можем сложить две строки. При этом получим разный результат, так как числа и строки являются
-            разными классами.</p>
-<pre>
+      <h2>Полиморфизм</h2>
+      <p>Полиморфизм - разное поведение одного и того же метода в разных классах. Например, мы можем сложить два
+        числа, и можем сложить две строки. При этом получим разный результат, так как числа и строки являются
+        разными классами.</p>
+      <pre>
 <code>
 >>> 1 + 1
 2
@@ -238,9 +239,20 @@ None
 '11'
 </code>
 </pre>
+
+      <div class="main__pagination">
+        <div class="paginator previous"><a href="./lesson24.html">
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAABRklEQVRoQ+2X4W3CMBCFv0xQRmADugHdpIzQEWCCsgFsUDoBdIOO0BW6AXoSlixInDNtKl91lvIrl/jLy7tnu8Ph6BwyE9B/9ddC6VC6oEDYI+wR9rB5YAY8AQdbeV3VFI04B96Ad2Bdh2Or/m3oR+AISOmNB+gV8HoBlmTNQ79cgPP/2zT0HnjucWOT0PKtGk4p0Teag04JocYbGk1B5wlRyqhmoK8TogQtr+uyjG/g01Kompqc7ksI6zxjdR+F3rh51gothXdjM//g/iTQ4nGndBJRim+BB4OqUu9kqFPJV4X/qzyd5ld6CGYMvJn0SODKaW07F15yOnFqRRT40suKmHO62nvk4O52eUPJ0lwjDvVfnixuoPUxKVnUpC7OiHmyuDqNGxfB+8usG6b7Z5jgyYCeQNTeV4bSoXRBgbBH2OO/2eMMUaUwLofhnv8AAAAASUVORK5CYII=" />
+            Объектно-ориентированное программирование</a></div>
+        <div class="paginator next"><a href="./lesson26.html">Перегрузка операторов<img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAABUUlEQVRoQ+2X0U3EMBBE31VAC5RAB0AFQAfQAVRwlAAdQCfQAXRACdABGnT5JN6xFfssraV83Tr3Mpkdb3ZMuHYTMpPQvd5aKp1KryiQ9kh7pD3iHrgG3oDv+JZY5ZaN+AhcATfAVwwnVrU19P6g9CXwEUMqV/WAFoUs8gC8lJHKFb2gF5J74LmMtV7RG1o0UvuuBXwEtHiVKmrQqmQZBS1wNWZVsoyEXhrUThYX+gw4CfrxFtBVWnayuNDy4nmJovL3cLIcE7SeValSzPJjgtbh8xR5Sy60PHoauTFwEbTSDyBrFBVe/teFDvL+lWlg0uyxtgSsh7PmkpHQn4DGV3sCHAX9fgCe5kR8Deb3v7bqrXQ4IdYaoRe0nRCjoasSYiS00qEqIUZBT/k17hxEVu2WjWiBOMUJ7ajVUptKt6jn7E2lHbVaalPpFvWcvVMq/QsQrjouZKOwvQAAAABJRU5ErkJggg==" /></a>
+        </div>
+      </div>
     </section>
   </main>
 
+  <div id="background"></div>
   <!--========== MAIN JS ==========-->
   <script src="../../js/script.js"></script>
 </body>

@@ -17,10 +17,11 @@
 
       <a href="../../index.html" class="header__logo">Python World</a>
 
-      <div class="header__search">
-        <input type="search" placeholder="Поиск" class="header__input">
-        <i class='bx bx-search header__icon'></i>
-      </div>
+      <form class="header__search" action="http://google.com/search" target="_blank">
+        <input type="search" name="q" placeholder="Поиск" class="header__input">
+        <input type="hidden" name="as_sitesearch" value="cyber-kira.github.io">
+        <button class='bx bx-search header__icon header__submit'></button>
+      </form>
 
       <div class="header__toggle">
         <i class='bx bx-menu' id="header-toggle"></i>
@@ -42,7 +43,7 @@
               <i class='bx bx-home nav__icon'></i>
               <span class="nav__name">Главная</span>
             </a>
-            <h3 class="nav__subtitle">Методическое пособие</h3>
+
 
 
 
@@ -112,7 +113,7 @@
           </div>
 
           <div class="nav__items">
-            <h3 class="nav__subtitle">Практика</h3>
+
 
             <div class="nav__dropdown">
               <a href="#" class="nav__link">
@@ -277,7 +278,7 @@
         отступа следует применять следующие соображения: на первой линии не должно быть аргументов, а остальные строки
         должны четко восприниматься как продолжение линии.</p>
       <p>Правильно:</p>
-<pre>
+      <pre>
 <code>
 # Выровнено по открывающему разделителю
 foo = long_function_name(var_one, var_two,
@@ -291,7 +292,7 @@ print(var_one)
 </code>
 </pre>
       <p>Неправильно:</p>
-<pre>
+      <pre>
 <code>
 # Аргументы на первой линии запрещены, если не используется вертикальное выравнивание
 foo = long_function_name(var_one, var_two,
@@ -305,7 +306,7 @@ print(var_one)
 </code>
 </pre>
       <p>Опционально:</p>
-<pre>
+      <pre>
 <code>
 # Нет необходимости в большем количестве отступов.
 foo = long_function_name(
@@ -315,7 +316,7 @@ var_three, var_four)
 </pre>
       <p>Закрывающие круглые/квадратные/фигурные скобки в многострочных конструкциях могут находиться под первым
         непробельным символом последней строки списка, например:</p>
-<pre>
+      <pre>
 <code>
 my_list = [
 1, 2, 3,
@@ -328,7 +329,7 @@ result = some_function_that_takes_arguments(
 </code>
 </pre>
       <p>либо быть под первым символом строки, начинающей многострочную конструкцию:</p>
-<pre>
+      <pre>
 <code>
 my_list = [
 1, 2, 3,
@@ -365,7 +366,7 @@ result = some_function_that_takes_arguments(
         скобки. Это предпочтительнее использования обратной косой черты для продолжения строки.</p>
       <p>Обратная косая черта все еще может быть использована время от времени. Например, длинная конструкция with не
         может использовать неявные продолжения, так что обратная косая черта является приемлемой:</p>
-<pre>
+      <pre>
 <code>
 with open('/path/to/some/file/you/want/to/read') as file_1, \
   open('/path/to/some/file/being/written', 'w') as file_2:
@@ -376,7 +377,7 @@ file_2.write(file_1.read())
       <p>Сделайте правильные отступы для перенесённой строки. Предпочтительнее вставить перенос строки после логического
         оператора, но не перед ним.</p>
       <p>Например:</p>
-<pre>
+      <pre>
 <code>
 class Rectangle(Blob):
 
@@ -423,18 +424,18 @@ def __init__(self, width, height,
         <li>
           <p>Каждый импорт, как правило, должен быть на отдельной строке.</p>
           <p>Правильно:</p>
-<pre>
+          <pre>
 <code>
 import os
 import sys
 </code>
 </pre>
           <p>Неправильно:</p>
-<pre>
+          <pre>
 <code>import sys, os</code>
 </pre>
           <p>В то же время, можно писать так:</p>
-<pre>
+          <pre>
 <code>from subprocess import Popen, PIPE</code>
 </pre>
         </li>
@@ -460,7 +461,7 @@ import sys
           <p>Рекомендуется абсолютное импортирование, так как оно обычно более читаемо и ведет себя лучше (или, по
             крайней мере, даёт понятные сообщения об ошибках) если импортируемая система настроена неправильно
             (например, когда каталог внутри пакета заканчивается на sys.path):</p>
-<pre>
+          <pre>
 <code>
 import mypkg.sibling
 from mypkg import sibling
@@ -469,7 +470,7 @@ from mypkg.sibling import example
 </pre>
           <p>Тем не менее, явный относительный импорт является приемлемой альтернативой абсолютному импорту, особенно
             при работе со сложными пакетами, где использование абсолютного импорта было бы излишне подробным:</p>
-<pre>
+          <pre>
 <code>
 from . import sibling
 from .sibling import example
@@ -481,14 +482,14 @@ from .sibling import example
         </li>
         <li>
           <p>Когда вы импортируете класс из модуля, вполне можно писать вот так:</p>
-<pre>
+          <pre>
 <code>
 from myclass import MyClass
 from foo.bar.yourclass import YourClass
 </code>
 </pre>
           <p>Если такое написание вызывает конфликт имен, тогда пишите:</p>
-<pre>
+          <pre>
 <code>
 import myclass
 import foo.bar.yourclass
@@ -511,44 +512,44 @@ import foo.bar.yourclass
         <li>
           <p>Непосредственно внутри круглых, квадратных или фигурных скобок.</p>
           <p>Правильно:</p>
-<pre>
+          <pre>
 <code>spam(ham[1], {eggs: 2})</code>
 </pre>
           <p>Неправильно:</p>
-<pre>
+          <pre>
 <code>spam( ham[ 1 ], { eggs: 2 } )</code>
 </pre>
         </li>
         <li>
           <p>Непосредственно перед запятой, точкой с запятой или двоеточием:</p>
           <p>Правильно:</p>
-<pre>
+          <pre>
 <code>if x == 4: print(x, y); x, y = y, x</code>
 </pre>
           <p>Неправильно:</p>
-<pre>
+          <pre>
 <code>if x == 4 : print(x , y) ; x , y = y , x</code>
 </pre>
         </li>
         <li>
           <p>Сразу перед открывающей скобкой, после которой начинается список аргументов при вызове функции:</p>
           <p>Правильно:</p>
-<pre>
+          <pre>
 <code>spam(1)</code>
 </pre>
           <p>Неправильно:</p>
-<pre>
+          <pre>
 <code>spam (1)</code>
 </pre>
         </li>
         <li>
           <p>Сразу перед открывающей скобкой, после которой следует индекс или срез:</p>
           <p>Правильно:</p>
-<pre>
+          <pre>
 <code>dict['key'] = list[index]</code>
 </pre>
           <p>Неправильно:</p>
-<pre>
+          <pre>
 <code>dict ['key'] = list [index]</code>
 </pre>
         </li>
@@ -556,7 +557,7 @@ import foo.bar.yourclass
           <p>Использование более одного пробела вокруг оператора присваивания (или любого другого) для того, чтобы
             выровнять его с другим:</p>
           <p>Правильно:</p>
-<pre>
+          <pre>
 <code>
 x = 1
 y = 2
@@ -564,7 +565,7 @@ long_variable = 3
 </code>
 </pre>
           <p>Неправильно:</p>
-<pre>
+          <pre>
 <code>
 x             = 1
 y             = 2
@@ -584,7 +585,7 @@ long_variable = 3
             низким приоритетом. Используйте свои собственные суждения, однако, никогда не используйте более одного
             пробела, и всегда используйте одинаковое количество пробелов по обе стороны бинарного оператора.</p>
           <p>Правильно:</p>
-<pre>
+          <pre>
 <code>
 i = i + 1
 submitted += 1
@@ -594,7 +595,7 @@ c = (a+b) * (a-b)
 </code>
 </pre>
           <p>Неправильно:</p>
-<pre>
+          <pre>
 <code>
 i=i+1
 submitted +=1
@@ -608,14 +609,14 @@ c = (a + b) * (a - b)
           <p>Не используйте пробелы вокруг знака =, если он используется для обозначения именованного аргумента или
             значения параметров по умолчанию.</p>
           <p>Правильно:</p>
-<pre>
+          <pre>
 <code>
 def complex(real, imag=0.0):
     return magic(r=real, i=imag)
 </code>
 </pre>
           <p>Неправильно:</p>
-<pre>
+          <pre>
 <code>
 def complex(real, imag = 0.0):
     return magic(r = real, i = imag)
@@ -625,7 +626,7 @@ def complex(real, imag = 0.0):
         <li>
           <p>Не используйте составные инструкции (несколько команд в одной строке).</p>
           <p>Правильно:</p>
-<pre>
+          <pre>
 <code>
 if foo == 'blah':
     do_blah_thing()
@@ -635,7 +636,7 @@ do_three()
 </code>
 </pre>
           <p>Неправильно:</p>
-<pre>
+          <pre>
 <code>
 if foo == 'blah': do_blah_thing()
 do_one(); do_two(); do_three()
@@ -646,7 +647,7 @@ do_one(); do_two(); do_three()
           <p>Иногда можно писать тело циклов while, for или ветку if в той же строке, если команда короткая, но если
             команд несколько, никогда так не пишите. А также избегайте длинных строк!</p>
           <p>Точно неправильно:</p>
-<pre>
+          <pre>
 <code>
 if foo == 'blah': do_blah_thing()
 for x in lst: total += x
@@ -654,7 +655,7 @@ while t < 10: t = delay()
 </code>
 </pre>
           <p>Вероятно, неправильно:</p>
-<pre>
+          <pre>
 <code>
 if foo == 'blah': do_blah_thing()
 else: do_non_blah_thing()
@@ -694,11 +695,11 @@ if foo == 'blah': one(); two(); three()
         крайней мере двумя пробелами от инструкции. Они должны начинаться с символа # и одного пробела.</p>
       <p>Комментарии в строке с кодом не нужны и только отвлекают от чтения, если они объясняют очевидное. Не пишите вот
         так:</p>
-<pre>
+      <pre>
 <code>x = x + 1                 # Increment x</code>
 </pre>
       <p>Впрочем, такие комментарии иногда полезны:</p>
-<pre>
+      <pre>
 <code>x = x + 1                 # Компенсация границы</code>
 </pre>
       <h3>Строки документации</h3>
@@ -712,7 +713,7 @@ if foo == 'blah': one(); two(); three()
           <p><a href="#">PEP 257</a> объясняет, как правильно и хорошо документировать. Заметьте, очень важно, чтобы
             закрывающие кавычки стояли на отдельной строке. А еще лучше, если перед ними будет ещё и пустая строка,
             например:</p>
-<pre>
+          <pre>
 <code>
 """Return a foobang
 
@@ -729,7 +730,7 @@ Optional plotz says to frobnicate the bizbaz first.
 
       <h2>Контроль версий</h2>
       <p>Если вам нужно использовать Subversion, CVS или RCS в ваших исходных кодах, делайте вот так:</p>
-<pre>
+      <pre>
 <code>
 __version__ = "$Revision: 1a40d4eaa00b $"
 # $Source$
@@ -798,7 +799,7 @@ __version__ = "$Revision: 1a40d4eaa00b $"
         <li>
           <p>single_trailing_underscore_: используется по соглашению для избежания конфликтов с ключевыми словами языка
             python, например:</p>
-<pre>
+          <pre>
 <code>Tkinter.Toplevel(master, class_='ClassName')</code>
 </pre>
         </li>
@@ -948,11 +949,11 @@ __version__ = "$Revision: 1a40d4eaa00b $"
         <li>
           <p>Всегда используйте выражение def, а не присваивание лямбда-выражения к имени.</p>
           <p>Правильно:</p>
-<pre>
+          <pre>
 <code>def f(x): return 2*x</code>
 </pre>
           <p>Неправильно:</p>
-<pre>
+          <pre>
 <code>f = lambda x: 2*x</code>
 </pre>
         </li>
@@ -978,7 +979,7 @@ __version__ = "$Revision: 1a40d4eaa00b $"
         <li>
           <p>Когда код перехватывает исключения, перехватывайте конкретные ошибки вместо простого выражения except:.</p>
           <p>К примеру, пишите вот так:</p>
-<pre>
+          <pre>
 <code>
 try:
     import platform_specific_module
@@ -1004,7 +1005,7 @@ except ImportError:
         <li>
           <p>При связывании перехваченных исключений с именем, предпочитайте явный синтаксис привязки, добавленный в
             Python 2.6:</p>
-<pre>
+          <pre>
 <code>
 try:
     process_data()
@@ -1023,7 +1024,7 @@ except Exception as exc:
           <p>Постарайтесь заключать в каждую конструкцию try...except минимум кода, чтобы легче отлавливать ошибки.
             Опять же, это позволяет избежать замаскированных ошибок.</p>
           <p>Правильно:</p>
-<pre>
+          <pre>
 <code>
 try:
     value = collection[key]
@@ -1034,7 +1035,7 @@ else:
 </code>
 </pre>
           <p>Неправильно:</p>
-<pre>
+          <pre>
 <code>
 try:
     # Здесь много действий!
@@ -1053,14 +1054,14 @@ except KeyError:
           <p>Менеджеры контекста следует вызывать с помощью отдельной функции или метода, всякий раз, когда они делают
             что-то другое, чем получение и освобождение ресурсов. Например:</p>
           <p>Правильно:</p>
-<pre>
+          <pre>
 <code>
 with conn.begin_transaction():
     do_stuff_in_transaction(conn)
 </code>
 </pre>
           <p>Неправильно:</p>
-<pre>
+          <pre>
 <code>
 with conn:
     do_stuff_in_transaction(conn)
@@ -1080,7 +1081,7 @@ with conn:
             префиксов.</p>
           <p>startswith() и endswith() выглядят чище и порождают меньше ошибок. Например:</p>
           <p>Правильно:</p>
-<pre>
+          <pre>
 <code>if foo.startswith('bar'):</code>
 </pre>
           <p>Неправильно:</p>
@@ -1091,16 +1092,16 @@ with conn:
         <li>
           <p>Сравнение типов объектов нужно делать с помощью isinstance(), а не прямым сравнением типов:</p>
           <p>Правильно:</p>
-<pre>
+          <pre>
 <code>if isinstance(obj, int):</code>
 </pre>
           <p>Неправильно:</p>
-<pre>
+          <pre>
 <code>if type(obj) is type(1):</code>
 </pre>
           <p>Когда вы проверяете, является ли объект строкой, обратите внимание на то, что строка может быть
             unicode-строкой. В python 2 у str и unicode есть общий базовый класс, поэтому вы можете написать:</p>
-<pre>
+          <pre>
 <code>if isinstance(obj, basestring):</code>
 </pre>
           <p>Отметим, что в Python 3, unicode и basestring больше не существуют (есть только str) и bytes больше не
@@ -1110,14 +1111,14 @@ with conn:
           <p>Для последовательностей (строк, списков, кортежей) используйте тот факт, что пустая последовательность есть
             false:</p>
           <p>Правильно:</p>
-<pre>
+          <pre>
 <code>
 if not seq:
 if seq:
 </code>
 </pre>
           <p>Неправильно:</p>
-<pre>
+          <pre>
 <code>
 if len(seq)
 if not len(seq)
@@ -1131,22 +1132,33 @@ if not len(seq)
         <li>
           <p>Не сравнивайте логические типы с True и False с помощью ==:</p>
           <p>Правильно:</p>
-<pre>
+          <pre>
 <code>if greeting:</code>
 </pre>
           <p>Неправильно:</p>
-<pre>
+          <pre>
 <code>if greeting == True:</code>
 </pre>
           <p>Совсем неправильно:</p>
-<pre>
+          <pre>
 <code>if greeting is True:</code>
 </pre>
         </li>
       </ul>
+
+      <div class="main__pagination">
+        <div class="paginator previous"><a href="./lesson20.html">
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAABRklEQVRoQ+2X4W3CMBCFv0xQRmADugHdpIzQEWCCsgFsUDoBdIOO0BW6AXoSlixInDNtKl91lvIrl/jLy7tnu8Ph6BwyE9B/9ddC6VC6oEDYI+wR9rB5YAY8AQdbeV3VFI04B96Ad2Bdh2Or/m3oR+AISOmNB+gV8HoBlmTNQ79cgPP/2zT0HnjucWOT0PKtGk4p0Teag04JocYbGk1B5wlRyqhmoK8TogQtr+uyjG/g01Kompqc7ksI6zxjdR+F3rh51gothXdjM//g/iTQ4nGndBJRim+BB4OqUu9kqFPJV4X/qzyd5ld6CGYMvJn0SODKaW07F15yOnFqRRT40suKmHO62nvk4O52eUPJ0lwjDvVfnixuoPUxKVnUpC7OiHmyuDqNGxfB+8usG6b7Z5jgyYCeQNTeV4bSoXRBgbBH2OO/2eMMUaUwLofhnv8AAAAASUVORK5CYII=" />
+            With ... as - менеджеры контекста</a></div>
+        <div class="paginator next"><a href="./lesson22.html">Документирование кода в Python<img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAABUUlEQVRoQ+2X0U3EMBBE31VAC5RAB0AFQAfQAVRwlAAdQCfQAXRACdABGnT5JN6xFfssraV83Tr3Mpkdb3ZMuHYTMpPQvd5aKp1KryiQ9kh7pD3iHrgG3oDv+JZY5ZaN+AhcATfAVwwnVrU19P6g9CXwEUMqV/WAFoUs8gC8lJHKFb2gF5J74LmMtV7RG1o0UvuuBXwEtHiVKmrQqmQZBS1wNWZVsoyEXhrUThYX+gw4CfrxFtBVWnayuNDy4nmJovL3cLIcE7SeValSzPJjgtbh8xR5Sy60PHoauTFwEbTSDyBrFBVe/teFDvL+lWlg0uyxtgSsh7PmkpHQn4DGV3sCHAX9fgCe5kR8Deb3v7bqrXQ4IdYaoRe0nRCjoasSYiS00qEqIUZBT/k17hxEVu2WjWiBOMUJ7ajVUptKt6jn7E2lHbVaalPpFvWcvVMq/QsQrjouZKOwvQAAAABJRU5ErkJggg==" /></a>
+        </div>
+      </div>
     </section>
   </main>
 
+  <div id="background"></div>
   <!--========== MAIN JS ==========-->
   <script src="../../js/script.js"></script>
 </body>

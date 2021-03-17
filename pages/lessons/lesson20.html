@@ -17,10 +17,11 @@
 
       <a href="../../index.html" class="header__logo">Python World</a>
 
-      <div class="header__search">
-        <input type="search" placeholder="Поиск" class="header__input">
-        <i class='bx bx-search header__icon'></i>
-      </div>
+      <form class="header__search" action="http://google.com/search" target="_blank">
+        <input type="search" name="q" placeholder="Поиск" class="header__input">
+        <input type="hidden" name="as_sitesearch" value="cyber-kira.github.io">
+        <button class='bx bx-search header__icon header__submit'></button>
+      </form>
 
       <div class="header__toggle">
         <i class='bx bx-menu' id="header-toggle"></i>
@@ -42,7 +43,7 @@
               <i class='bx bx-home nav__icon'></i>
               <span class="nav__name">Главная</span>
             </a>
-            <h3 class="nav__subtitle">Методическое пособие</h3>
+
 
 
 
@@ -112,7 +113,7 @@
           </div>
 
           <div class="nav__items">
-            <h3 class="nav__subtitle">Практика</h3>
+
 
             <div class="nav__dropdown">
               <a href="#" class="nav__link">
@@ -153,69 +154,80 @@
   <!--========== CONTENTS ==========-->
   <main>
     <section class="container">
-        <h1>With ... as - менеджеры контекста</h1>
-        <p>Конструкция with ... as используется для оборачивания выполнения блока инструкций менеджером контекста.
-            Иногда это более удобная конструкция, чем <a href="#">try...except...finally</a>.</p>
-        <p>Синтаксис конструкции with ... as:</p>
-<pre>
+      <h1>With ... as - менеджеры контекста</h1>
+      <p>Конструкция with ... as используется для оборачивания выполнения блока инструкций менеджером контекста.
+        Иногда это более удобная конструкция, чем <a href="#">try...except...finally</a>.</p>
+      <p>Синтаксис конструкции with ... as:</p>
+      <pre>
 <code>
 "with" expression ["as" target] ("," expression ["as" target])* ":"
 suite
 </code>
 </pre>
-        <p>Теперь по порядку о том, что происходит при выполнении данного блока:</p>
-        <ol>
-            <li>
-                <p>Выполняется выражение в конструкции with ... as.</p>
-            </li>
-            <li>
-                <p>Загружается специальный метод __exit__ для дальнейшего использования.</p>
-            </li>
-            <li>
-                <p>Выполняется метод __enter__. Если конструкция with включает в себя слово as, то возвращаемое
-                    методом __enter__ значение записывается в переменную.</p>
-            </li>
-            <li>
-                <p>Выполняется suite.</p>
-            </li>
-            <li>
-                <p>Вызывается метод __exit__, причём неважно, выполнилось ли suite или произошло исключение. В этот
-                    метод передаются параметры исключения, если оно произошло, или во всех аргументах значение None,
-                    если исключения не было.</p>
-            </li>
-        </ol>
-        <p>Если в конструкции with - as было несколько выражений, то это эквивалентно нескольким вложенным
-            конструкциям:</p>
-<pre>
+      <p>Теперь по порядку о том, что происходит при выполнении данного блока:</p>
+      <ol>
+        <li>
+          <p>Выполняется выражение в конструкции with ... as.</p>
+        </li>
+        <li>
+          <p>Загружается специальный метод __exit__ для дальнейшего использования.</p>
+        </li>
+        <li>
+          <p>Выполняется метод __enter__. Если конструкция with включает в себя слово as, то возвращаемое
+            методом __enter__ значение записывается в переменную.</p>
+        </li>
+        <li>
+          <p>Выполняется suite.</p>
+        </li>
+        <li>
+          <p>Вызывается метод __exit__, причём неважно, выполнилось ли suite или произошло исключение. В этот
+            метод передаются параметры исключения, если оно произошло, или во всех аргументах значение None,
+            если исключения не было.</p>
+        </li>
+      </ol>
+      <p>Если в конструкции with - as было несколько выражений, то это эквивалентно нескольким вложенным
+        конструкциям:</p>
+      <pre>
 <code>
 with A() as a, B() as b:
 suite
 </code>
 </pre>
-        <p>эквивалентно</p>
-<pre>
+      <p>эквивалентно</p>
+      <pre>
 <code>
 with A() as a:
 with B() as b:
 suite
 </code>
 </pre>
-        <p>Для чего применяется конструкция with ... as? Для гарантии того, что критические функции выполнятся в
-            любом случае. Самый распространённый пример использования этой конструкции - открытие файлов. Я уже
-            рассказывал об <a href="#">открытии файлов с помощью функции open</a>, однако конструкция with ... as,
-            как правило, является более удобной и гарантирует закрытие файла в любом случае.</p>
-        <p>Например:</p>
-<pre>
+      <p>Для чего применяется конструкция with ... as? Для гарантии того, что критические функции выполнятся в
+        любом случае. Самый распространённый пример использования этой конструкции - открытие файлов. Я уже
+        рассказывал об <a href="#">открытии файлов с помощью функции open</a>, однако конструкция with ... as,
+        как правило, является более удобной и гарантирует закрытие файла в любом случае.</p>
+      <p>Например:</p>
+      <pre>
 <code>
 with open('newfile.txt', 'w', encoding='utf-8') as g:
 d = int(input())
 print('1 / {} = {}'.format(d, 1 / d), file=g)
 </code>
 </pre>
-        <p>И вы можете быть уверены, что файл будет закрыт вне зависимости от того, что введёт пользователь.</p>
+      <p>И вы можете быть уверены, что файл будет закрыт вне зависимости от того, что введёт пользователь.</p>
+
+      <div class="main__pagination">
+        <div class="paginator previous"><a href="./lesson19.html">
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAABRklEQVRoQ+2X4W3CMBCFv0xQRmADugHdpIzQEWCCsgFsUDoBdIOO0BW6AXoSlixInDNtKl91lvIrl/jLy7tnu8Ph6BwyE9B/9ddC6VC6oEDYI+wR9rB5YAY8AQdbeV3VFI04B96Ad2Bdh2Or/m3oR+AISOmNB+gV8HoBlmTNQ79cgPP/2zT0HnjucWOT0PKtGk4p0Teag04JocYbGk1B5wlRyqhmoK8TogQtr+uyjG/g01Kompqc7ksI6zxjdR+F3rh51gothXdjM//g/iTQ4nGndBJRim+BB4OqUu9kqFPJV4X/qzyd5ld6CGYMvJn0SODKaW07F15yOnFqRRT40suKmHO62nvk4O52eUPJ0lwjDvVfnixuoPUxKVnUpC7OiHmyuDqNGxfB+8usG6b7Z5jgyYCeQNTeV4bSoXRBgbBH2OO/2eMMUaUwLofhnv8AAAAASUVORK5CYII=" />
+            Файлы. Работа с файлами</a></div>
+        <div class="paginator next"><a href="./lesson21.html">PEP 8<img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAABUUlEQVRoQ+2X0U3EMBBE31VAC5RAB0AFQAfQAVRwlAAdQCfQAXRACdABGnT5JN6xFfssraV83Tr3Mpkdb3ZMuHYTMpPQvd5aKp1KryiQ9kh7pD3iHrgG3oDv+JZY5ZaN+AhcATfAVwwnVrU19P6g9CXwEUMqV/WAFoUs8gC8lJHKFb2gF5J74LmMtV7RG1o0UvuuBXwEtHiVKmrQqmQZBS1wNWZVsoyEXhrUThYX+gw4CfrxFtBVWnayuNDy4nmJovL3cLIcE7SeValSzPJjgtbh8xR5Sy60PHoauTFwEbTSDyBrFBVe/teFDvL+lWlg0uyxtgSsh7PmkpHQn4DGV3sCHAX9fgCe5kR8Deb3v7bqrXQ4IdYaoRe0nRCjoasSYiS00qEqIUZBT/k17hxEVu2WjWiBOMUJ7ajVUptKt6jn7E2lHbVaalPpFvWcvVMq/QsQrjouZKOwvQAAAABJRU5ErkJggg==" /></a>
+        </div>
+      </div>
     </section>
   </main>
 
+  <div id="background"></div>
   <!--========== MAIN JS ==========-->
   <script src="../../js/script.js"></script>
 </body>

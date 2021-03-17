@@ -17,10 +17,11 @@
 
       <a href="../../index.html" class="header__logo">Python World</a>
 
-      <div class="header__search">
-        <input type="search" placeholder="Поиск" class="header__input">
-        <i class='bx bx-search header__icon'></i>
-      </div>
+      <form class="header__search" action="http://google.com/search" target="_blank">
+        <input type="search" name="q" placeholder="Поиск" class="header__input">
+        <input type="hidden" name="as_sitesearch" value="cyber-kira.github.io">
+        <button class='bx bx-search header__icon header__submit'></button>
+      </form>
 
       <div class="header__toggle">
         <i class='bx bx-menu' id="header-toggle"></i>
@@ -42,7 +43,7 @@
               <i class='bx bx-home nav__icon'></i>
               <span class="nav__name">Главная</span>
             </a>
-            <h3 class="nav__subtitle">Методическое пособие</h3>
+
 
 
 
@@ -112,7 +113,7 @@
           </div>
 
           <div class="nav__items">
-            <h3 class="nav__subtitle">Практика</h3>
+
 
             <div class="nav__dropdown">
               <a href="#" class="nav__link">
@@ -178,7 +179,7 @@
       <h2>Однострочные строки документации</h2>
       <p>Однострочники предназначены для действительно очевидных случаев. Они должны умещаться на одной строке.
         Например:</p>
-<pre>
+      <pre>
 <code>
 def kos_root():
     """Return the pathname of the KOS root directory."""
@@ -192,7 +193,7 @@ def kos_root():
       <p>Нет пустых строк перед или после документации.</p>
       <p>Однострочная строка документации не должна быть "подписью" параметров функции / метода (которые могут быть
         получены с помощью интроспекции). Не делайте:</p>
-<pre>
+      <pre>
 <code>
 def function(a, b):
     """function(a, b) -> list"""
@@ -201,7 +202,7 @@ def function(a, b):
       <p>Этот тип строк документации подходит только для C функций (таких, как встроенные модули), где интроспекция не
         представляется возможной. Тем не менее, возвращаемое значение не может быть определено путем интроспекции.
         Предпочтительный вариант для такой строки документации будет что-то вроде:</p>
-<pre>
+      <pre>
 <code>
 def function(a, b):
     """Do X and return a list."""
@@ -242,7 +243,7 @@ def function(a, b):
         подкласса заменяет метод суперкласса и не вызывает его; используйте глагол "extend", чтобы указать, что метод
         подкласса вызывает метод суперкласса (в дополнение к собственному поведению).</p>
       <p>И, напоследок, пример:</p>
-<pre>
+      <pre>
 <code>
 def complex(real=0.0, imag=0.0):
     """Form a complex number.
@@ -256,11 +257,22 @@ def complex(real=0.0, imag=0.0):
     ...
 </code>
 </pre>
-<p>А ещё больше примеров можно посмотреть в стандартной библиотеке python (например, в папке Lib вашего
+      <p>А ещё больше примеров можно посмотреть в стандартной библиотеке python (например, в папке Lib вашего
         интерпретатора python).</p>
+
+      <div class="main__pagination">
+        <div class="paginator previous"><a href="./lesson21.html">
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAABRklEQVRoQ+2X4W3CMBCFv0xQRmADugHdpIzQEWCCsgFsUDoBdIOO0BW6AXoSlixInDNtKl91lvIrl/jLy7tnu8Ph6BwyE9B/9ddC6VC6oEDYI+wR9rB5YAY8AQdbeV3VFI04B96Ad2Bdh2Or/m3oR+AISOmNB+gV8HoBlmTNQ79cgPP/2zT0HnjucWOT0PKtGk4p0Teag04JocYbGk1B5wlRyqhmoK8TogQtr+uyjG/g01Kompqc7ksI6zxjdR+F3rh51gothXdjM//g/iTQ4nGndBJRim+BB4OqUu9kqFPJV4X/qzyd5ld6CGYMvJn0SODKaW07F15yOnFqRRT40suKmHO62nvk4O52eUPJ0lwjDvVfnixuoPUxKVnUpC7OiHmyuDqNGxfB+8usG6b7Z5jgyYCeQNTeV4bSoXRBgbBH2OO/2eMMUaUwLofhnv8AAAAASUVORK5CYII=" />
+            PEP 8</a></div>
+        <div class="paginator next"><a href="./lesson23.html">Работа с модулями<img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAABUUlEQVRoQ+2X0U3EMBBE31VAC5RAB0AFQAfQAVRwlAAdQCfQAXRACdABGnT5JN6xFfssraV83Tr3Mpkdb3ZMuHYTMpPQvd5aKp1KryiQ9kh7pD3iHrgG3oDv+JZY5ZaN+AhcATfAVwwnVrU19P6g9CXwEUMqV/WAFoUs8gC8lJHKFb2gF5J74LmMtV7RG1o0UvuuBXwEtHiVKmrQqmQZBS1wNWZVsoyEXhrUThYX+gw4CfrxFtBVWnayuNDy4nmJovL3cLIcE7SeValSzPJjgtbh8xR5Sy60PHoauTFwEbTSDyBrFBVe/teFDvL+lWlg0uyxtgSsh7PmkpHQn4DGV3sCHAX9fgCe5kR8Deb3v7bqrXQ4IdYaoRe0nRCjoasSYiS00qEqIUZBT/k17hxEVu2WjWiBOMUJ7ajVUptKt6jn7E2lHbVaalPpFvWcvVMq/QsQrjouZKOwvQAAAABJRU5ErkJggg==" /></a>
+        </div>
+      </div>
     </section>
   </main>
 
+  <div id="background"></div>
   <!--========== MAIN JS ==========-->
   <script src="../../js/script.js"></script>
 </body>

@@ -17,10 +17,11 @@
 
       <a href="../../index.html" class="header__logo">Python World</a>
 
-      <div class="header__search">
-        <input type="search" placeholder="Поиск" class="header__input">
-        <i class='bx bx-search header__icon'></i>
-      </div>
+      <form class="header__search" action="http://google.com/search" target="_blank">
+        <input type="search" name="q" placeholder="Поиск" class="header__input">
+        <input type="hidden" name="as_sitesearch" value="cyber-kira.github.io">
+        <button class='bx bx-search header__icon header__submit'></button>
+      </form>
 
       <div class="header__toggle">
         <i class='bx bx-menu' id="header-toggle"></i>
@@ -42,7 +43,7 @@
               <i class='bx bx-home nav__icon'></i>
               <span class="nav__name">Главная</span>
             </a>
-            <h3 class="nav__subtitle">Методическое пособие</h3>
+
 
 
 
@@ -112,7 +113,7 @@
           </div>
 
           <div class="nav__items">
-            <h3 class="nav__subtitle">Практика</h3>
+
 
             <div class="nav__dropdown">
               <a href="#" class="nav__link">
@@ -153,14 +154,14 @@
   <!--========== CONTENTS ==========-->
   <main>
     <section class="container">
-        <h1>Словари (dict) и работа с ними. Методы словарей</h1>
-        <p>Сегодня я расскажу о таком типе данных, как словари, о работе со словарями, операциях над ними, методах,
-            о генераторах словарей.</p>
-        <p>Словари в Python - неупорядоченные коллекции произвольных объектов с доступом по ключу. Их иногда ещё
-            называют ассоциативными массивами или хеш-таблицами.</p>
-        <p>Чтобы работать со словарём, его нужно создать. Создать его можно несколькими способами. Во-первых, с
-            помощью литерала:</p>
-        <pre>
+      <h1>Словари (dict) и работа с ними. Методы словарей</h1>
+      <p>Сегодня я расскажу о таком типе данных, как словари, о работе со словарями, операциях над ними, методах,
+        о генераторах словарей.</p>
+      <p>Словари в Python - неупорядоченные коллекции произвольных объектов с доступом по ключу. Их иногда ещё
+        называют ассоциативными массивами или хеш-таблицами.</p>
+      <p>Чтобы работать со словарём, его нужно создать. Создать его можно несколькими способами. Во-первых, с
+        помощью литерала:</p>
+      <pre>
 <code>
 >>> d = {}
 >>> d
@@ -170,8 +171,8 @@
 {'dict': 1, 'dictionary': 2}
 </code>
 </pre>
-        <p>Во-вторых, с помощью функции dict:</p>
-        <pre>
+      <p>Во-вторых, с помощью функции dict:</p>
+      <pre>
 <code>
 >>> d = dict(short='dict', long='dictionary')
 >>> d
@@ -182,8 +183,8 @@
 
 </code>
 </pre>
-        <p>В-третьих, с помощью метода fromkeys:</p>
-        <pre>
+      <p>В-третьих, с помощью метода fromkeys:</p>
+      <pre>
 <code>
 >>> d = dict.fromkeys(['a', 'b'])
 >>> d
@@ -193,17 +194,17 @@
 {'a': 100, 'b': 100}
 </code>
 </pre>
-        <p>В-четвертых, с помощью генераторов словарей, которые очень похожи на <a href="#">генераторы списков</a>.
-        </p>
-        <pre>
+      <p>В-четвертых, с помощью генераторов словарей, которые очень похожи на <a href="#">генераторы списков</a>.
+      </p>
+      <pre>
 <code>
 >>> d = {a: a ** 2 for a in range(7)}
 >>> d
 {0: 0, 1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36}
 </code>
 </pre>
-        <p>Теперь попробуем добавить записей в словарь и извлечь значения ключей:</p>
-        <pre>
+      <p>Теперь попробуем добавить записей в словарь и извлечь значения ключей:</p>
+      <pre>
 <code>
 >>> d = {1: 2, 2: 4, 3: 9}
 >>> d[1]
@@ -218,58 +219,73 @@ d['1']
 KeyError: '1'
 </code>
 </pre>
-        <p>Как видно из примера, присвоение по новому ключу расширяет словарь, присвоение по существующему ключу
-            перезаписывает его, а попытка извлечения несуществующего ключа порождает исключение. Для избежания
-            исключения есть специальный метод (см. ниже), или можно <a href="#">перехватывать исключение</a>.</p>
-        <p>Что же можно еще делать со словарями? Да то же самое, что и с другими объектами: <a href="#">встроенные
-                функции</a>, <a href="#">ключевые слова</a> (например, <a href="#">циклы for и while</a>), а также
-            специальные методы словарей.</p>
+      <p>Как видно из примера, присвоение по новому ключу расширяет словарь, присвоение по существующему ключу
+        перезаписывает его, а попытка извлечения несуществующего ключа порождает исключение. Для избежания
+        исключения есть специальный метод (см. ниже), или можно <a href="#">перехватывать исключение</a>.</p>
+      <p>Что же можно еще делать со словарями? Да то же самое, что и с другими объектами: <a href="#">встроенные
+          функции</a>, <a href="#">ключевые слова</a> (например, <a href="#">циклы for и while</a>), а также
+        специальные методы словарей.</p>
 
-        <h2>Методы словарей</h2>
-        <ul>
-            <li>
-                <p><strong>dict.clear()</strong> - очищает словарь.</p>
-            </li>
-            <li>
-                <p><strong>dict.copy()</strong> - возвращает копию словаря.</p>
-            </li>
-            <li>
-                <p><strong>classmethod dict.fromkeys(seq[, value])</strong> - создает словарь с ключами из seq и значением value (по
-                    умолчанию None).</p>
-            </li>
-            <li>
-                <p><strong>dict.get(key[, default])</strong> - возвращает значение ключа, но если его нет, не бросает исключение, а
-                    возвращает default (по умолчанию None).</p>
-            </li>
-            <li>
-                <p><strong>dict.items()</strong> - возвращает пары (ключ, значение).</p>
-            </li>
-            <li>
-                <p><strong>dict.keys()</strong> - возвращает ключи в словаре.</p>
-            </li>
-            <li>
-                <p><strong>dict.pop(key[, default])</strong> - удаляет ключ и возвращает значение. Если ключа нет, возвращает default
-                    (по умолчанию бросает исключение).</p>
-            </li>
-            <li>
-                <p><strong>dict.popitem()</strong> - удаляет и возвращает пару (ключ, значение). Если словарь пуст, бросает
-                    исключение KeyError. Помните, что словари неупорядочены.</p>
-            </li>
-            <li>
-                <p><strong>dict.setdefault(key[, default])</strong> - возвращает значение ключа, но если его нет, не бросает
-                    исключение, а создает ключ с значением default (по умолчанию None).</p>
-            </li>
-            <li>
-                <p><strong>dict.update([other])</strong> - обновляет словарь, добавляя пары (ключ, значение) из other. Существующие
-                    ключи перезаписываются. Возвращает None (не новый словарь!).</p>
-            </li>
-            <li>
-                <p><strong>dict.values()</strong> - возвращает значения в словаре.</p>
-            </li>
-        </ul>
+      <h2>Методы словарей</h2>
+      <ul>
+        <li>
+          <p><strong>dict.clear()</strong> - очищает словарь.</p>
+        </li>
+        <li>
+          <p><strong>dict.copy()</strong> - возвращает копию словаря.</p>
+        </li>
+        <li>
+          <p><strong>classmethod dict.fromkeys(seq[, value])</strong> - создает словарь с ключами из seq и значением
+            value (по
+            умолчанию None).</p>
+        </li>
+        <li>
+          <p><strong>dict.get(key[, default])</strong> - возвращает значение ключа, но если его нет, не бросает
+            исключение, а
+            возвращает default (по умолчанию None).</p>
+        </li>
+        <li>
+          <p><strong>dict.items()</strong> - возвращает пары (ключ, значение).</p>
+        </li>
+        <li>
+          <p><strong>dict.keys()</strong> - возвращает ключи в словаре.</p>
+        </li>
+        <li>
+          <p><strong>dict.pop(key[, default])</strong> - удаляет ключ и возвращает значение. Если ключа нет, возвращает
+            default
+            (по умолчанию бросает исключение).</p>
+        </li>
+        <li>
+          <p><strong>dict.popitem()</strong> - удаляет и возвращает пару (ключ, значение). Если словарь пуст, бросает
+            исключение KeyError. Помните, что словари неупорядочены.</p>
+        </li>
+        <li>
+          <p><strong>dict.setdefault(key[, default])</strong> - возвращает значение ключа, но если его нет, не бросает
+            исключение, а создает ключ с значением default (по умолчанию None).</p>
+        </li>
+        <li>
+          <p><strong>dict.update([other])</strong> - обновляет словарь, добавляя пары (ключ, значение) из other.
+            Существующие
+            ключи перезаписываются. Возвращает None (не новый словарь!).</p>
+        </li>
+        <li>
+          <p><strong>dict.values()</strong> - возвращает значения в словаре.</p>
+        </li>
+      </ul>
+
+      <div class="main__pagination">
+        <div class="paginator previous"><a href="./lesson13.html">
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAABRklEQVRoQ+2X4W3CMBCFv0xQRmADugHdpIzQEWCCsgFsUDoBdIOO0BW6AXoSlixInDNtKl91lvIrl/jLy7tnu8Ph6BwyE9B/9ddC6VC6oEDYI+wR9rB5YAY8AQdbeV3VFI04B96Ad2Bdh2Or/m3oR+AISOmNB+gV8HoBlmTNQ79cgPP/2zT0HnjucWOT0PKtGk4p0Teag04JocYbGk1B5wlRyqhmoK8TogQtr+uyjG/g01Kompqc7ksI6zxjdR+F3rh51gothXdjM//g/iTQ4nGndBJRim+BB4OqUu9kqFPJV4X/qzyd5ld6CGYMvJn0SODKaW07F15yOnFqRRT40suKmHO62nvk4O52eUPJ0lwjDvVfnixuoPUxKVnUpC7OiHmyuDqNGxfB+8usG6b7Z5jgyYCeQNTeV4bSoXRBgbBH2OO/2eMMUaUwLofhnv8AAAAASUVORK5CYII=" />
+            Кортежи (tuple)</a></div>
+        <div class="paginator next"><a href="./lesson15.html">Множества (set и frozenset)<img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAABUUlEQVRoQ+2X0U3EMBBE31VAC5RAB0AFQAfQAVRwlAAdQCfQAXRACdABGnT5JN6xFfssraV83Tr3Mpkdb3ZMuHYTMpPQvd5aKp1KryiQ9kh7pD3iHrgG3oDv+JZY5ZaN+AhcATfAVwwnVrU19P6g9CXwEUMqV/WAFoUs8gC8lJHKFb2gF5J74LmMtV7RG1o0UvuuBXwEtHiVKmrQqmQZBS1wNWZVsoyEXhrUThYX+gw4CfrxFtBVWnayuNDy4nmJovL3cLIcE7SeValSzPJjgtbh8xR5Sy60PHoauTFwEbTSDyBrFBVe/teFDvL+lWlg0uyxtgSsh7PmkpHQn4DGV3sCHAX9fgCe5kR8Deb3v7bqrXQ4IdYaoRe0nRCjoasSYiS00qEqIUZBT/k17hxEVu2WjWiBOMUJ7ajVUptKt6jn7E2lHbVaalPpFvWcvVMq/QsQrjouZKOwvQAAAABJRU5ErkJggg==" /></a>
+        </div>
+      </div>
     </section>
   </main>
 
+  <div id="background"></div>
   <!--========== MAIN JS ==========-->
   <script src="../../js/script.js"></script>
 </body>

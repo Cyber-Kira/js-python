@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Python</title>
-    <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="../../css/style.css">
 </head>
+
 <body>
     <!--========== HEADER ==========-->
     <header class="header">
@@ -16,10 +17,11 @@
 
             <a href="../../index.html" class="header__logo">Python World</a>
 
-            <div class="header__search">
-                <input type="search" placeholder="Поиск" class="header__input">
-                <i class='bx bx-search header__icon'></i>
-            </div>
+            <form class="header__search" action="http://google.com/search" target="_blank">
+                <input type="search" name="q" placeholder="Поиск" class="header__input">
+                <input type="hidden" name="as_sitesearch" value="cyber-kira.github.io">
+                <button class='bx bx-search header__icon header__submit'></button>
+            </form>
 
             <div class="header__toggle">
                 <i class='bx bx-menu' id="header-toggle"></i>
@@ -38,13 +40,13 @@
                 <div class="nav__list">
                     <div class="nav__items">
                         <a href="../../index.html" class="nav__link active">
-                            <i class='bx bx-home nav__icon' ></i>
+                            <i class='bx bx-home nav__icon'></i>
                             <span class="nav__name">Главная</span>
                         </a>
-                        <h3 class="nav__subtitle">Методическое пособие</h3>
 
-                        
-                        
+
+
+
                         <div class="nav__dropdown">
                             <a href="#" class="nav__link">
                                 <i class='bx bxs-school nav__icon'></i>
@@ -61,24 +63,31 @@
                                     <a href="./lesson5.html" class="nav__dropdown-item">Программа не работает</a>
                                     <a href="./lesson6.html" class="nav__dropdown-item">Условный оператор if</a>
                                     <a href="./lesson7.html" class="nav__dropdown-item">Циклы</a>
-                                    <a href="./lesson8.html" class="nav__dropdown-item">Ключевые слова, модуль keyword</a>
-                                    <a href="./lesson9.html" class="nav__dropdown-item">Числа: целые, вещественные, комплексные</a>
+                                    <a href="./lesson8.html" class="nav__dropdown-item">Ключевые слова, модуль
+                                        keyword</a>
+                                    <a href="./lesson9.html" class="nav__dropdown-item">Числа: целые, вещественные,
+                                        комплексные</a>
                                     <a href="./lesson10.html" class="nav__dropdown-item">Строки</a>
                                     <a href="./lesson11.html" class="nav__dropdown-item">Списки (list)</a>
                                     <a href="./lesson12.html" class="nav__dropdown-item">Индексы и срезы</a>
                                     <a href="./lesson13.html" class="nav__dropdown-item">Кортежи (tuple)</a>
-                                    <a href="./lesson14.html" class="nav__dropdown-item">Словари (dict) и работа с ними</a>
+                                    <a href="./lesson14.html" class="nav__dropdown-item">Словари (dict) и работа с
+                                        ними</a>
                                     <a href="./lesson15.html" class="nav__dropdown-item">Множества (set и frozenset)</a>
                                     <a href="./lesson16.html" class="nav__dropdown-item">Функции и их аргументы</a>
                                     <a href="./lesson17.html" class="nav__dropdown-item">Исключения в python</a>
                                     <a href="./lesson18.html" class="nav__dropdown-item">Байты (bytes и bytearray)</a>
                                     <a href="./lesson19.html" class="nav__dropdown-item">Файлы. Работа с файлами</a>
-                                    <a href="./lesson20.html" class="nav__dropdown-item">With ... as - менеджеры контекста</a>
+                                    <a href="./lesson20.html" class="nav__dropdown-item">With ... as - менеджеры
+                                        контекста</a>
                                     <a href="./lesson21.html" class="nav__dropdown-item">PEP 8</a>
-                                    <a href="./lesson22.html" class="nav__dropdown-item">Документирование кода в Python</a>
+                                    <a href="./lesson22.html" class="nav__dropdown-item">Документирование кода в
+                                        Python</a>
                                     <a href="./lesson23.html" class="nav__dropdown-item">Работа с модулями</a>
-                                    <a href="./lesson24.html" class="nav__dropdown-item">Объектно-ориентированное программирование</a>
-                                    <a href="./lesson25.html" class="nav__dropdown-item">Инкапсуляция, наследование, полиморфизм</a>
+                                    <a href="./lesson24.html" class="nav__dropdown-item">Объектно-ориентированное
+                                        программирование</a>
+                                    <a href="./lesson25.html" class="nav__dropdown-item">Инкапсуляция, наследование,
+                                        полиморфизм</a>
                                     <a href="./lesson26.html" class="nav__dropdown-item">Перегрузка операторов</a>
                                     <a href="./lesson27.html" class="nav__dropdown-item">Декораторы</a>
                                 </div>
@@ -111,11 +120,11 @@
                     </div>
 
                     <div class="nav__items">
-                        <h3 class="nav__subtitle">Практика</h3>
+
 
                         <div class="nav__dropdown">
                             <a href="#" class="nav__link">
-                                <i class='bx bx-test-tube nav__icon' ></i>
+                                <i class='bx bx-test-tube nav__icon'></i>
                                 <span class="nav__name">Лабораторные работы</span>
                                 <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
                             </a>
@@ -150,52 +159,68 @@
     <main>
         <section class="container">
             <h1>Ключевые слова, модуль keyword</h1>
-         <p>Сегодня я по-быстрому пробегусь по всем ключевым словам в Python, а заодно и по модулю keyword.</p>
-      
-         <h2></h2>
-         <ul>
-            <li><strong>False</strong> - ложь.</li>
-            <li><strong>True</strong> - правда.</li>
-            <li><strong>None</strong> - "пустой" объект.</li>
-            <li><strong>and</strong> - логическое И.</li>
-            <li><strong>with / as</strong> - <a href="#">менеджер контекста</a>.</li>
-            <li><strong>assert</strong> условие - возбуждает исключение, если условие ложно.</li>
-            <li><strong>break</strong> - выход из цикла.</li>
-            <li><strong>class</strong> - <a href="#">пользовательский тип</a>, состоящий из методов и атрибутов.</li>
-            <li><strong>continue</strong> - переход на следующую итерацию цикла.</li>
-            <li><strong>def</strong> - определение <a href="#">функции</a>.</li>
-            <li><strong>del</strong> - удаление объекта.</li>
-            <li><strong>elif</strong> - в противном случае, если.</li>
-            <li><strong>else</strong> - см. <a href="#">for/else</a> или <a href="#">if/else</a>.</li>
-            <li><strong>except</strong> - перехватить исключение.</li>
-            <li><strong>finally</strong> - вкупе с инструкцией try, выполняет инструкции независимо от того, было ли исключение или нет.</li>
-            <li><strong>for</strong> - цикл for.</li>
-            <li><strong>from</strong> - импорт нескольких функций из модуля.</li>
-            <li><strong>global</strong> - позволяет сделать значение переменной, присвоенное ей внутри функции, доступным и за пределами этой функции.</li>
-            <li><strong>if</strong> - <a href="#">если</a>.</li>
-            <li><strong>import</strong> - импорт модуля.</li>
-            <li><strong>in</strong> - проверка на вхождение.</li>
-            <li><strong>is</strong> - ссылаются ли 2 объекта на одно и то же место в памяти.</li>
-            <li><strong>lambda</strong> - определение анонимной функции.</li>
-            <li><strong>nonlocal</strong> - позволяет сделать значение переменной, присвоенное ей внутри функции, доступным в объемлющей инструкции.</li>
-            <li><strong>not</strong> - логическое НЕ.</li>
-            <li><strong>or</strong> - логическое ИЛИ.</li>
-            <li><strong>pass</strong> - ничего не делающая конструкция.</li>
-            <li><strong>raise</strong> - возбудить исключение.</li>
-            <li><strong>return</strong> - вернуть результат.</li>
-            <li><strong>try</strong> - выполнить инструкции, перехватывая <a href="#">исключения</a>.</li>
-            <li><strong>while</strong> - <a href="#">цикл</a> while.</li>
-            <li><strong>yield</strong> - определение функции-генератора.</li>
-         </ul>
-      
-         <h2></h2>
-         <p>В общем-то, keyword - не такой уж и модуль, но все же.</p>
-         <p><strong>keyword.kwlist</strong> - список всех доступных ключевых слов.</p>
-         <p><strong>keyword.iskeyword(строка)</strong> - является ли строка ключевым словом.</p>
+            <p>Сегодня я по-быстрому пробегусь по всем ключевым словам в Python, а заодно и по модулю keyword.</p>
+
+            <h2></h2>
+            <ul>
+                <li><strong>False</strong> - ложь.</li>
+                <li><strong>True</strong> - правда.</li>
+                <li><strong>None</strong> - "пустой" объект.</li>
+                <li><strong>and</strong> - логическое И.</li>
+                <li><strong>with / as</strong> - <a href="#">менеджер контекста</a>.</li>
+                <li><strong>assert</strong> условие - возбуждает исключение, если условие ложно.</li>
+                <li><strong>break</strong> - выход из цикла.</li>
+                <li><strong>class</strong> - <a href="#">пользовательский тип</a>, состоящий из методов и атрибутов.
+                </li>
+                <li><strong>continue</strong> - переход на следующую итерацию цикла.</li>
+                <li><strong>def</strong> - определение <a href="#">функции</a>.</li>
+                <li><strong>del</strong> - удаление объекта.</li>
+                <li><strong>elif</strong> - в противном случае, если.</li>
+                <li><strong>else</strong> - см. <a href="#">for/else</a> или <a href="#">if/else</a>.</li>
+                <li><strong>except</strong> - перехватить исключение.</li>
+                <li><strong>finally</strong> - вкупе с инструкцией try, выполняет инструкции независимо от того, было ли
+                    исключение или нет.</li>
+                <li><strong>for</strong> - цикл for.</li>
+                <li><strong>from</strong> - импорт нескольких функций из модуля.</li>
+                <li><strong>global</strong> - позволяет сделать значение переменной, присвоенное ей внутри функции,
+                    доступным и за пределами этой функции.</li>
+                <li><strong>if</strong> - <a href="#">если</a>.</li>
+                <li><strong>import</strong> - импорт модуля.</li>
+                <li><strong>in</strong> - проверка на вхождение.</li>
+                <li><strong>is</strong> - ссылаются ли 2 объекта на одно и то же место в памяти.</li>
+                <li><strong>lambda</strong> - определение анонимной функции.</li>
+                <li><strong>nonlocal</strong> - позволяет сделать значение переменной, присвоенное ей внутри функции,
+                    доступным в объемлющей инструкции.</li>
+                <li><strong>not</strong> - логическое НЕ.</li>
+                <li><strong>or</strong> - логическое ИЛИ.</li>
+                <li><strong>pass</strong> - ничего не делающая конструкция.</li>
+                <li><strong>raise</strong> - возбудить исключение.</li>
+                <li><strong>return</strong> - вернуть результат.</li>
+                <li><strong>try</strong> - выполнить инструкции, перехватывая <a href="#">исключения</a>.</li>
+                <li><strong>while</strong> - <a href="#">цикл</a> while.</li>
+                <li><strong>yield</strong> - определение функции-генератора.</li>
+            </ul>
+
+            <h2></h2>
+            <p>В общем-то, keyword - не такой уж и модуль, но все же.</p>
+            <p><strong>keyword.kwlist</strong> - список всех доступных ключевых слов.</p>
+            <p><strong>keyword.iskeyword(строка)</strong> - является ли строка ключевым словом.</p>
+
+            <div class="main__pagination">
+                <div class="paginator previous"><a href="./lesson7.html">
+                        <img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAABRklEQVRoQ+2X4W3CMBCFv0xQRmADugHdpIzQEWCCsgFsUDoBdIOO0BW6AXoSlixInDNtKl91lvIrl/jLy7tnu8Ph6BwyE9B/9ddC6VC6oEDYI+wR9rB5YAY8AQdbeV3VFI04B96Ad2Bdh2Or/m3oR+AISOmNB+gV8HoBlmTNQ79cgPP/2zT0HnjucWOT0PKtGk4p0Teag04JocYbGk1B5wlRyqhmoK8TogQtr+uyjG/g01Kompqc7ksI6zxjdR+F3rh51gothXdjM//g/iTQ4nGndBJRim+BB4OqUu9kqFPJV4X/qzyd5ld6CGYMvJn0SODKaW07F15yOnFqRRT40suKmHO62nvk4O52eUPJ0lwjDvVfnixuoPUxKVnUpC7OiHmyuDqNGxfB+8usG6b7Z5jgyYCeQNTeV4bSoXRBgbBH2OO/2eMMUaUwLofhnv8AAAAASUVORK5CYII=" />
+                        Циклы</a></div>
+                <div class="paginator next"><a href="./lesson9.html">Числа: целые, вещественные, комплексные <img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAABUUlEQVRoQ+2X0U3EMBBE31VAC5RAB0AFQAfQAVRwlAAdQCfQAXRACdABGnT5JN6xFfssraV83Tr3Mpkdb3ZMuHYTMpPQvd5aKp1KryiQ9kh7pD3iHrgG3oDv+JZY5ZaN+AhcATfAVwwnVrU19P6g9CXwEUMqV/WAFoUs8gC8lJHKFb2gF5J74LmMtV7RG1o0UvuuBXwEtHiVKmrQqmQZBS1wNWZVsoyEXhrUThYX+gw4CfrxFtBVWnayuNDy4nmJovL3cLIcE7SeValSzPJjgtbh8xR5Sy60PHoauTFwEbTSDyBrFBVe/teFDvL+lWlg0uyxtgSsh7PmkpHQn4DGV3sCHAX9fgCe5kR8Deb3v7bqrXQ4IdYaoRe0nRCjoasSYiS00qEqIUZBT/k17hxEVu2WjWiBOMUJ7ajVUptKt6jn7E2lHbVaalPpFvWcvVMq/QsQrjouZKOwvQAAAABJRU5ErkJggg==" /></a>
+                </div>
+            </div>
         </section>
     </main>
 
+    <div id="background"></div>
     <!--========== MAIN JS ==========-->
     <script src="../../js/script.js"></script>
 </body>
+
 </html>

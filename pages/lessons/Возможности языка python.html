@@ -18,8 +18,8 @@
             <a href="../../index.html" class="header__logo">Python World</a>
 
             <form class="header__search" action="http://google.com/search" target="_blank">
-                <input type="search" name="q" placeholder="Поиск" class="header__input">
-                <input type="hidden" name="as_sitesearch" value="cyber-kira.github.io">
+                <input type="search" placeholder="Поиск" class="header__input">
+                <input type="hidden" name="as_sitesearch" value="pythonworld.ru">
                 <button class='bx bx-search header__icon header__submit'></button>
             </form>
 
@@ -43,8 +43,6 @@
                             <i class='bx bx-home nav__icon'></i>
                             <span class="nav__name">Главная</span>
                         </a>
-
-
 
 
                         <div class="nav__dropdown">
@@ -157,103 +155,34 @@
 
     <!--========== CONTENTS ==========-->
     <main>
-        <section class="container">
-            <h1>Индексы и срезы</h1>
-            <p>Сегодня мы поговорим об операциях взятия индекса и среза.</p>
-
-            <h2>Взятие элемента по индексу</h2>
-            <p>Как и в других языках программирования, взятие по индексу:</p>
-            <pre>
-<code>
->>> a = [1, 3, 8, 7]
->>> a[0]
-1
->>> a[3]
-7
->>> a[4]
-Traceback (most recent call last):
-File "<stdin>", line 1, in <module>
-IndexError: list index out of range
-</code>
-</pre>
-            <p>Как и во многих других языках, нумерация элементов начинается с нуля. При попытке доступа к
-                несуществующему индексу возникает исключение IndexError.</p>
-            <p>В данном примере переменная a являлась <a href="#">списком</a>, однако взять элемент по индексу можно и у
-                других типов: строк, кортежей.</p>
-            <p>В Python также поддерживаются отрицательные индексы, при этом нумерация идёт с конца, например:</p>
-            <pre>
-<code>
->>> a = [1, 3, 8, 7]
->>> a[-1]
-7
->>> a[-4]
-1
->>> a[-5]
-Traceback (most recent call last):
-File "<stdin>", line 1, in <module>
-IndexError: list index out of range
-</code>
-</pre>
-            <h2>Срезы</h2>
-            <p>В Python, кроме индексов, существуют ещё и срезы.</p>
-            <p>item[START:STOP:STEP] - берёт срез от номера START, до STOP (не включая его), с шагом STEP. По умолчанию
-                START = 0, STOP = длине объекта, STEP = 1.</p>
-            <p>Соответственно, какие-нибудь (а возможно, и все) параметры могут быть опущены.</p>
-            <pre>
-<code>
->>> a = [1, 3, 8, 7]
->>> a[:]
-[1, 3, 8, 7]
->>> a[1:]
-[3, 8, 7]
->>> a[:3]
-[1, 3, 8]
->>> a[::2]
-[1, 8]
-</code>
-</pre>
-            <p>Также все эти параметры могут быть и отрицательными:</p>
-            <pre>
-<code>
->>> a = [1, 3, 8, 7]
->>> a[::-1]
-[7, 8, 3, 1]
->>> a[:-2]
-[1, 3]
->>> a[-2::-1]
-[8, 3, 1]
->>> a[1:4:-1]
-[]
-</code>
-</pre>
-            <p>В последнем примере получился пустой список, так как START < STOP, а STEP отрицательный. То же самое
-                    произойдёт, если диапазон значений окажется за пределами объекта:</p> <pre>
-                    <code>
-                        >>> a = [1, 3, 8, 7]
-                        >>> a[10:20]
-                        []
-                    </code>
-            </pre>
-            <p>Также с помощью срезов можно не только извлекать элементы, но и добавлять и удалять элементы (разумеется,
-                только для изменяемых последовательностей).</p>
-            <pre>
-<code>
->>> a = [1, 3, 8, 7]
->>> a[1:3] = [0, 0, 0]
->>> a
-[1, 0, 0, 0, 7]
->>> del a[:-3]
->>> a
-[0, 0, 7]
-</code>
-</pre>
+        <section class="container fade">
+            <h1>Возможности языка python</h1>
+            <p>Так как мне часто стали задавать вопросы о том, чем может быть полезен Python, я решила написать
+                небольшую обзорную статью на эту тему.</p>
+            <h2>Вот лишь некоторые вещи, которые умеет делать python:</h2>
+            <ul>
+                <li>Работа с xml/html файлами</li>
+                <li>Работа с http запросами</li>
+                <li>GUI (графический интерфейс)</li>
+                <li>Создание веб-сценариев</li>
+                <li>Работа с FTP</li>
+                <li>Работа с изображениями, аудио и видео файлами</li>
+                <li>Робототехника</li>
+                <li>Программирование математических и научных вычислений</li>
+            </ul>
+            <p>Таким образом, python подходит для решения львиной доли повседневных задач, будь то резервное
+                копирование, чтение электронной почты, либо же какая-нибудь игрушка. Язык программирования Python
+                практически ничем не ограничен, поэтому также может использоваться в крупных проектах. К примеру, python
+                интенсивно применяется IT-гигантами, такими как, например, Google и Yandex. К тому же простота и
+                универсальность python делают его одним из лучших языков программирования.</p>
 
             <div class="main__pagination">
-                <div class="paginator previous"><a href="./lesson11.html">
+                <div class="paginator previous"><a href="#">
                         <img
                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAABRklEQVRoQ+2X4W3CMBCFv0xQRmADugHdpIzQEWCCsgFsUDoBdIOO0BW6AXoSlixInDNtKl91lvIrl/jLy7tnu8Ph6BwyE9B/9ddC6VC6oEDYI+wR9rB5YAY8AQdbeV3VFI04B96Ad2Bdh2Or/m3oR+AISOmNB+gV8HoBlmTNQ79cgPP/2zT0HnjucWOT0PKtGk4p0Teag04JocYbGk1B5wlRyqhmoK8TogQtr+uyjG/g01Kompqc7ksI6zxjdR+F3rh51gothXdjM//g/iTQ4nGndBJRim+BB4OqUu9kqFPJV4X/qzyd5ld6CGYMvJn0SODKaW07F15yOnFqRRT40suKmHO62nvk4O52eUPJ0lwjDvVfnixuoPUxKVnUpC7OiHmyuDqNGxfB+8usG6b7Z5jgyYCeQNTeV4bSoXRBgbBH2OO/2eMMUaUwLofhnv8AAAAASUVORK5CYII=" />
-                        Списки (list)</a></div>
-                <div class="paginator next"><a href="./lesson13.html">Кортежи (tuple)<img
+                        Возможности языка
+                        python</a></div>
+                <div class="paginator next"><a href="./lesson2.html">Скачать Python <img
                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAABUUlEQVRoQ+2X0U3EMBBE31VAC5RAB0AFQAfQAVRwlAAdQCfQAXRACdABGnT5JN6xFfssraV83Tr3Mpkdb3ZMuHYTMpPQvd5aKp1KryiQ9kh7pD3iHrgG3oDv+JZY5ZaN+AhcATfAVwwnVrU19P6g9CXwEUMqV/WAFoUs8gC8lJHKFb2gF5J74LmMtV7RG1o0UvuuBXwEtHiVKmrQqmQZBS1wNWZVsoyEXhrUThYX+gw4CfrxFtBVWnayuNDy4nmJovL3cLIcE7SeValSzPJjgtbh8xR5Sy60PHoauTFwEbTSDyBrFBVe/teFDvL+lWlg0uyxtgSsh7PmkpHQn4DGV3sCHAX9fgCe5kR8Deb3v7bqrXQ4IdYaoRe0nRCjoasSYiS00qEqIUZBT/k17hxEVu2WjWiBOMUJ7ajVUptKt6jn7E2lHbVaalPpFvWcvVMq/QsQrjouZKOwvQAAAABJRU5ErkJggg==" /></a>
                 </div>
             </div>
@@ -266,3 +195,6 @@ IndexError: list index out of range
 </body>
 
 </html>
+
+<!-- Методоческое пособие
+лекцииц пракетические работы, лабораторные работы-->

@@ -17,10 +17,11 @@
 
             <a href="../../index.html" class="header__logo">Python World</a>
 
-            <div class="header__search">
-                <input type="search" placeholder="Поиск" class="header__input">
-                <i class='bx bx-search header__icon'></i>
-            </div>
+            <form class="header__search" action="http://google.com/search" target="_blank">
+                <input type="search" name="q" placeholder="Поиск" class="header__input">
+                <input type="hidden" name="as_sitesearch" value="cyber-kira.github.io">
+                <button class='bx bx-search header__icon header__submit'></button>
+            </form>
 
             <div class="header__toggle">
                 <i class='bx bx-menu' id="header-toggle"></i>
@@ -42,7 +43,7 @@
                             <i class='bx bx-home nav__icon'></i>
                             <span class="nav__name">Главная</span>
                         </a>
-                        <h3 class="nav__subtitle">Методическое пособие</h3>
+
 
                         <div class="nav__dropdown">
                             <a href="#" class="nav__link">
@@ -117,7 +118,7 @@
                     </div>
 
                     <div class="nav__items">
-                        <h3 class="nav__subtitle">Практика</h3>
+
 
                         <div class="nav__dropdown">
                             <a href="#" class="nav__link">
@@ -174,9 +175,16 @@
                 практически ничем не ограничен, поэтому также может использоваться в крупных проектах. К примеру, python
                 интенсивно применяется IT-гигантами, такими как, например, Google и Yandex. К тому же простота и
                 универсальность python делают его одним из лучших языков программирования.</p>
+
+            <div class="main__pagination">
+                <div class="paginator next"><a href="./lesson2.html">Скачать Python <img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAABUUlEQVRoQ+2X0U3EMBBE31VAC5RAB0AFQAfQAVRwlAAdQCfQAXRACdABGnT5JN6xFfssraV83Tr3Mpkdb3ZMuHYTMpPQvd5aKp1KryiQ9kh7pD3iHrgG3oDv+JZY5ZaN+AhcATfAVwwnVrU19P6g9CXwEUMqV/WAFoUs8gC8lJHKFb2gF5J74LmMtV7RG1o0UvuuBXwEtHiVKmrQqmQZBS1wNWZVsoyEXhrUThYX+gw4CfrxFtBVWnayuNDy4nmJovL3cLIcE7SeValSzPJjgtbh8xR5Sy60PHoauTFwEbTSDyBrFBVe/teFDvL+lWlg0uyxtgSsh7PmkpHQn4DGV3sCHAX9fgCe5kR8Deb3v7bqrXQ4IdYaoRe0nRCjoasSYiS00qEqIUZBT/k17hxEVu2WjWiBOMUJ7ajVUptKt6jn7E2lHbVaalPpFvWcvVMq/QsQrjouZKOwvQAAAABJRU5ErkJggg==" /></a>
+                </div>
+            </div>
         </section>
     </main>
 
+    <div id="background"></div>
     <!--========== MAIN JS ==========-->
     <script src="../../js/script.js"></script>
 </body>
