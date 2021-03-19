@@ -127,7 +127,7 @@ table {
     margin-bottom: 1rem;
 }
 
-table thead th,
+table thead th ,
 table tfoot th {
     color: #777;
     background: rgba(0, 0, 0, .1);
