@@ -5,6 +5,8 @@ const autoprefixer = require("autoprefixer");
 const cleanCSS = require("gulp-clean-css");
 const postcss = require("gulp-postcss");
 const browsersync = require("browser-sync");
+const cssnext = require("postcss-cssnext");
+const shortcss = require("postcss-short");
 
 const dist = "./dist";
 
@@ -174,9 +176,15 @@ gulp.task("prod", () => {
     )
     .pipe(gulp.dest(dist + "/js"));
 
+  var plugins = [
+    shortcss,
+    cssnext,
+    autoprefixer({ overrideBrowserslist: ["defaults"], cascade: false }),
+  ];
+
   return gulp
     .src("./src/css/style.css")
-    .pipe(postcss([autoprefixer()]))
+    .pipe(postcss(plugins))
     .pipe(gulp.dest(dist + "/css"));
 });
 
