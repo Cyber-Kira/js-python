@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Python</title>
+  <title>Декораторы</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
   <link rel="stylesheet" href="../../css/style.css">
 </head>
@@ -17,11 +17,7 @@
 
       <a href="../../index.html" class="header__logo">Python World</a>
 
-      <form class="header__search" action="https://google.com/search" target="_blank">
-        <input type="search" name="q" placeholder="Поиск" class="header__input">
-        <input type="hidden" name="as_sitesearch" value="cyber-kira.github.io">
-        <button class='bx bx-search header__icon header__submit'></button>
-      </form>
+
 
       <div class="header__toggle">
         <i class='bx bx-menu' id="header-toggle"></i>
@@ -160,7 +156,7 @@
         вспомнить, что функции в python являются объектами, соответственно, их можно возвращать из другой
         функции или передавать в качестве аргумента. Также следует помнить, что <a href="#">функция в python</a>
         может быть определена и внутри другой функции.</p>
-      <p>Вспомнив это, можно смело переходить к декораторам. Декораторы — это, по сути, "обёртки", которые дают
+      <p>Вспомнив это, можно переходить к декораторам. Декораторы — это, по сути, "обёртки", которые дают
         нам возможность изменить поведение функции, не изменяя её код.</p>
       <p>Создадим свой декоратор "вручную":</p>
       <pre>
@@ -177,17 +173,17 @@
 ...
 >>> # Представим теперь, что у нас есть функция, которую мы не планируем больше трогать.
 >>> def stand_alone_function():
-...     print("Я простая одинокая функция, ты ведь не посмеешь меня изменять?")
+...     print("Я простая функция, которую нельзя изменять")
 ...
 >>> stand_alone_function()
-Я простая одинокая функция, ты ведь не посмеешь меня изменять?
+Я простая функция, которую нельзя изменять
 >>> # Однако, чтобы изменить её поведение, мы можем декорировать её, то есть просто передать декоратору,
 >>> # который обернет исходную функцию в любой код, который нам потребуется, и вернёт новую,
 >>> # готовую к использованию функцию:
 >>> stand_alone_function_decorated = my_shiny_new_decorator(stand_alone_function)
 >>> stand_alone_function_decorated()
 Я - код, который отработает до вызова функции
-Я простая одинокая функция, ты ведь не посмеешь меня изменять?
+Я простая функция, которую нельзя изменять
 А я - код, срабатывающий после
         </code>
 </pre>
@@ -489,7 +485,7 @@ Python is cool, no argument here.
       <h2>Некоторые особенности работы с декораторами</h2>
       <ul>
         <li>
-          <p>Декораторы несколько замедляют вызов функции, не забывайте об этом.</p>
+          <p>Декораторы несколько замедляют вызов функции.</p>
         </li>
         <li>
           <p>Вы не можете "раздекорировать" функцию. Безусловно, существуют трюки, позволяющие создать

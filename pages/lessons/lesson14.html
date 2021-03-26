@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Python</title>
+  <title>Словари</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
   <link rel="stylesheet" href="../../css/style.css">
 </head>
@@ -17,11 +17,7 @@
 
       <a href="../../index.html" class="header__logo">Python World</a>
 
-      <form class="header__search" action="https://google.com/search" target="_blank">
-        <input type="search" name="q" placeholder="Поиск" class="header__input">
-        <input type="hidden" name="as_sitesearch" value="cyber-kira.github.io">
-        <button class='bx bx-search header__icon header__submit'></button>
-      </form>
+
 
       <div class="header__toggle">
         <i class='bx bx-menu' id="header-toggle"></i>
@@ -155,8 +151,6 @@
   <main>
     <section class="container">
       <h1>Словари (dict) и работа с ними. Методы словарей</h1>
-      <p>Сегодня я расскажу о таком типе данных, как словари, о работе со словарями, операциях над ними, методах,
-        о генераторах словарей.</p>
       <p>Словари в Python - неупорядоченные коллекции произвольных объектов с доступом по ключу. Их иногда ещё
         называют ассоциативными массивами или хеш-таблицами.</p>
       <p>Чтобы работать со словарём, его нужно создать. Создать его можно несколькими способами. Во-первых, с
@@ -221,7 +215,7 @@ KeyError: '1'
 </pre>
       <p>Как видно из примера, присвоение по новому ключу расширяет словарь, присвоение по существующему ключу
         перезаписывает его, а попытка извлечения несуществующего ключа порождает исключение. Для избежания
-        исключения есть специальный метод (см. ниже), или можно <a href="#">перехватывать исключение</a>.</p>
+        исключения есть специальный метод, или можно <a href="#">перехватывать исключение</a>.</p>
       <p>Что же можно еще делать со словарями? Да то же самое, что и с другими объектами: <a href="#">встроенные
           функции</a>, <a href="#">ключевые слова</a> (например, <a href="#">циклы for и while</a>), а также
         специальные методы словарей.</p>
@@ -265,8 +259,7 @@ KeyError: '1'
         </li>
         <li>
           <p><strong>dict.update([other])</strong> - обновляет словарь, добавляя пары (ключ, значение) из other.
-            Существующие
-            ключи перезаписываются. Возвращает None (не новый словарь!).</p>
+            Существующие ключи перезаписываются. Возвращает None (не новый словарь!).</p>
         </li>
         <li>
           <p><strong>dict.values()</strong> - возвращает значения в словаре.</p>

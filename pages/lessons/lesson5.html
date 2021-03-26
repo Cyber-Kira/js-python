@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Python</title>
+    <title>Наиболее частые ошибки</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="../../css/style.css">
 </head>
@@ -17,11 +17,7 @@
 
             <a href="../../index.html" class="header__logo">Python World</a>
 
-            <form class="header__search" action="https://google.com/search" target="_blank">
-                <input type="search" name="q" placeholder="Поиск" class="header__input">
-                <input type="hidden" name="as_sitesearch" value="cyber-kira.github.io">
-                <button class='bx bx-search header__icon header__submit'></button>
-            </form>
+
 
             <div class="header__toggle">
                 <i class='bx bx-menu' id="header-toggle"></i>
@@ -159,15 +155,15 @@
     <main>
         <section class="container">
             <h1>Программа не работает. Что делать?</h1>
-            <p>В данной статье я постараюсь собрать наиболее частые ошибки
-                начинающих программировать на python 3, а также расскажу, как их исправлять.</p>
-            <p><strong>Проблема</strong>: Моя программа не запускается. На доли секунды появляется чёрное окошко, а
+            <p>В данной лекции собраны наиболее частые ошибки
+                начинающих программировать на python 3, а также инструкции как их исправлять.</p>
+            <p><strong>Проблема</strong>: Моя программа не запускается. На доли секунды появляется чёрное окно, а
                 затем исчезает.</p>
             <p><strong>Причина</strong>: после окончания выполнения программы (после выполнения всего кода или при
                 возникновении исключения
                 программа закрывается. И если вы её вызвали двойным кликом по иконке (а вы, скорее всего, вызвали её
                 именно
-                так), то она закроется вместе с окошком, в котором находится вывод программы.</p>
+                так), то она закроется вместе с окном, в котором находится вывод программы.</p>
             <p><strong>Решение</strong>: запускать программу через IDLE или через консоль.</p>
             <hr>
             <p><strong>Проблема</strong>: Не работает функция input. Пишет SyntaxError.</p>
@@ -185,7 +181,7 @@ SyntaxError: unexpected EOF while parsing
             <p><strong>Причина</strong>: Вы запустили Python 2.</p>
             <p><strong>Решение</strong>: Установить Python 3.</p>
             <hr>
-            <p><strong>Проблема</strong>: Где-то увидел простую программу, а она не работает.</p>
+            <p><strong>Проблема</strong>: Код найденной программы не работает.</p>
             <p><strong>Пример кода</strong>:</p>
             <pre>
 <code>
@@ -202,7 +198,7 @@ print name
 SyntaxError: invalid syntax
 </code>
 </pre>
-            <p><strong>Причина</strong>: Вам подсунули программу на Python 2.</p>
+            <p><strong>Причина</strong>: Данная программа написана на Python 2.</p>
             <p><strong>Решение</strong>: Прочитать об отличиях Python 2 от Python 3. Переписать её на Python 3.
                 Например, данная программа
                 на Python 3 будет выглядеть так:</p>
@@ -225,7 +221,7 @@ TypeError: Can't convert 'int' object to str implicitly
 </code>
 </pre>
             <p><strong>Причина</strong>: Нельзя складывать строку с числом.</p>
-            <p><strong>Решение</strong>: Привести строку к числу с помощью функции int(). Кстати, заметьте, что функция
+            <p><strong>Решение</strong>: Привести строку к числу с помощью функции int(). Стоит заметить, что функция
                 input() всегда
                 возвращает строку!</p>
             <pre>

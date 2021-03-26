@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Python</title>
+  <title>Файлы</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
   <link rel="stylesheet" href="../../css/style.css">
 </head>
@@ -17,11 +17,7 @@
 
       <a href="../../index.html" class="header__logo">Python World</a>
 
-      <form class="header__search" action="https://google.com/search" target="_blank">
-        <input type="search" name="q" placeholder="Поиск" class="header__input">
-        <input type="hidden" name="as_sitesearch" value="cyber-kira.github.io">
-        <button class='bx bx-search header__icon header__submit'></button>
-      </form>
+
 
       <div class="header__toggle">
         <i class='bx bx-menu' id="header-toggle"></i>
@@ -155,9 +151,7 @@
   <main>
     <section class="container">
       <h1>Файлы. Работа с файлами.</h1>
-      <p>В данной статье мы рассмотрим встроенные средства python для работы с файлами: открытие / закрытие, чтение и
-        запись.</p>
-      <p>Итак, начнем. Прежде, чем работать с файлом, его надо открыть. С этим замечательно справится встроенная
+      <p> Прежде, чем работать с файлом, его надо открыть. С этим замечательно справится встроенная
         функция open:</p>
       <pre>
 <code>f = open('text.txt', 'r')</code>
@@ -207,7 +201,7 @@
         кодировку.</p>
 
       <h2>Чтение из файла</h2>
-      <p>Открыли мы файл, а теперь мы хотим прочитать из него информацию. Для этого есть несколько способов, но
+      <p>Открыв файл, мы хотим прочитать из него информацию. Для этого есть несколько способов, но
         большого интереса заслуживают лишь два из них.</p>
       <p>Первый - метод read, читающий весь файл целиком, если был вызван без аргументов, и n символов, если был
         вызван с аргументом (целым числом n).</p>
@@ -260,13 +254,12 @@
 3
 </code>
 </pre>
-      <p>Для тех, кто не понял, что это за цифры, поясню: метод write возвращает число записанных символов.</p>
+      <p>Метод write возвращает число записанных символов.</p>
       <p>После окончания работы с файлом его обязательно нужно закрыть с помощью метода close:</p>
       <pre>
 <code>>>> f.close()</code>
 </pre>
-      <p>Теперь попробуем воссоздать этот список из получившегося файла. Откроем файл на чтение (надеюсь, вы поняли,
-        как это сделать?), и прочитаем строки.</p>
+      <p>Теперь попробуем воссоздать этот список из получившегося файла. Откроем файл на чтение и прочитаем строки.</p>
       <pre>
 <code>
 >>> f = open('text.txt', 'r')
